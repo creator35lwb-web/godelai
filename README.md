@@ -5,6 +5,7 @@
 **A Multi-Model Genesis Project for Wisdom-Preserving AI**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18048374.svg)](https://doi.org/10.5281/zenodo.18048374)
 [![GitHub Discussions](https://img.shields.io/github/discussions/creator35lwb-web/godelai)](https://github.com/creator35lwb-web/godelai/discussions)
 [![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)](https://github.com/creator35lwb-web/godelai)
 
