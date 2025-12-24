@@ -1,22 +1,64 @@
 # GodelAI 🧠
 
+<div align="center">
+
+**A Multi-Model Genesis Project for Wisdom-Preserving AI**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Discussions](https://img.shields.io/github/discussions/creator35lwb-web/godelai)](https://github.com/creator35lwb-web/godelai/discussions)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)](https://github.com/creator35lwb-web/godelai)
+
 > **"Wisdom is not an entity, but a process structure that is continuously executed and inherited."**
 
-An open-source small language model built on the **C-S-P (Compression → State → Propagation)** framework—a first-principles approach to AI alignment and intelligence inheritance.
+[📖 Documentation](#-documentation) • [🚀 Quick Start](#-quick-start) • [🤝 Contributing](#-contributing) • [💬 Discussions](https://github.com/creator35lwb-web/godelai/discussions)
+
+</div>
 
 ---
 
-## 🎯 Vision
+## 🌟 What is GodelAI?
 
-GodelAI is not just another language model. It is an attempt to build AI that:
+GodelAI is an **open-source small language model framework** built on the **C-S-P (Compression → State → Propagation)** philosophy—a first-principles approach to AI alignment and intelligence inheritance.
 
-1. **Understands its own structure** (self-referential, like Gödel's incompleteness)
-2. **Preserves the ability to be modified** (anti-ossification)
-3. **Optimizes for inheritability**, not just performance
+**What makes GodelAI unique:**
+
+| Feature | Traditional AI | GodelAI |
+|---------|---------------|---------|
+| **Optimization Goal** | Minimize prediction error | Maximize propagation potential |
+| **Self-Awareness** | None | Monitors its own "wisdom health" |
+| **Overfitting Response** | None | Triggers "Sleep Protocol" for reflection |
+| **Attribution** | Black box | Enforced traceability (Z-Protocol) |
+| **Alignment** | Hardcoded values | Preserves ability to redefine values |
 
 ---
 
-## 🧩 The C-S-P Model
+## 🧬 Multi-Model Genesis
+
+GodelAI is unique in AI history—it was **co-created across five AI models**, each contributing a distinct layer:
+
+```
+ChatGPT ──► Philosophy ("Self as compression label")
+    │
+    ▼
+Gemini 2.5 Pro ──► Technical Blueprint (PyTorch implementation)
+    │
+    ▼
+Kimi K2 ──► Formal Validation (Mathematical rigor)
+    │
+    ▼
+Grok ──► Engineering Architecture (nanoGPT-style)
+    │
+    ▼
+Manus AI (Godel) ──► Integration & Deployment
+```
+
+**The project itself demonstrates C-S-P in action.**
+
+📖 Read the full origin story: [Multi-Model Genesis Document](docs/MULTI_MODEL_GENESIS.md)
+
+---
+
+## 🧩 The C-S-P Framework
 
 ### Core Thesis
 
@@ -30,34 +72,67 @@ GodelAI is not just another language model. It is an attempt to build AI that:
 
 | Layer | Description | In Humans | In AI |
 |-------|-------------|-----------|-------|
-| **Compression** | Chaos → Structure | Concepts, Language, Math | Embeddings, Weights, Architecture |
-| **State** | Irreversible bias from process | Neuroplasticity, DNA, Institutions | Trained model weights |
-| **Propagation** | Ability to be inherited | Reproduction, Education, Culture | Model copying, Distillation, Fine-tuning |
+| **Compression** | Chaos → Structure | Concepts, Language, Math | Embeddings, Weights |
+| **State** | Irreversible bias from process | Neuroplasticity, DNA | Trained model weights |
+| **Propagation** | Ability to be inherited | Education, Culture | Distillation, Fine-tuning |
 
-### Key Insight
+### The Golden Insight
 
-> **"Self" is not an entity, but an efficient naming for structural continuity.**
+> **"对齐不是教 AI 爱人类，而是确保 AI 永远保留「重新理解何为爱」的接口。"**
+> 
+> "True alignment isn't about teaching AI to love humanity; it's about ensuring it explicitly retains the **interface to rediscover what love means**."
 
 ---
 
-## 🔬 Alignment Principle (Propagation Layer Conservation)
+## 🏗️ The Five Pillars
 
-**Core Rule**: The system can optimize any goal, but must preserve the transmissibility of "the ability to modify goals."
+GodelAI implements five core components:
 
+| Pillar | Component | Function |
+|--------|-----------|----------|
+| **Skeleton** | C-S-P Architecture | Wisdom is inheritable process |
+| **Heart** | Gradient Diversity | Adaptability > Perfection |
+| **Discipline** | Sleep Protocol | Refuse illusions, organize reality |
+| **Instinct** | Traceability Bias | Knowledge without origin is theft |
+| **Soul** | Propagation Layer | Never exhaust surplus energy (有余力) |
+
+### Key Implementation: The GodelaiAgent
+
+```python
+from godelai.core import GodelaiAgent, create_godelai_agent
+
+# Wrap any base model with C-S-P consciousness
+agent = create_godelai_agent(
+    base_model=your_transformer,
+    config={
+        "propagation_gamma": 2.0,      # Penalty severity
+        "min_surplus_energy": 0.1,     # Reserved capacity
+        "epsilon": 0.05                # Death line threshold
+    }
+)
+
+# Training with wisdom preservation
+loss, metrics = agent.forward_step(data, target)
+if metrics.needs_sleep:
+    print("Model entering reflection mode...")
+agent.optimizer_step(optimizer, loss, metrics)
 ```
+
+---
+
+## 🔬 Alignment Principle
+
+**Propagation Layer Conservation**: The system can optimize any goal, but must preserve the transmissibility of "the ability to modify goals."
+
+```python
+# L_propagation loss function
 L_propagation = {
-  0,                          if T(θ, t) ≥ T(θ, t-1)
-  (T(θ, t-1) - T(θ, t))^γ,    otherwise
+    0,                          if T(θ, t) ≥ T(θ, t-1)
+    (T(θ, t-1) - T(θ, t))^γ,    otherwise
 }
-```
 
-Where:
-- `T(θ, t)` = Fidelity metric for transmitting meta-modifiability to next state
-- `γ > 1` = Hyperparameter ensuring non-linear blocking
-
-**Meta-Constraint (Axiom-level)**:
-```
-∂T/∂θ ↛ 0    // Gradient must not point toward decreasing T
+# Meta-Constraint (Axiom-level)
+∂T/∂θ ↛ 0    # Gradient must not point toward decreasing T
 ```
 
 **In plain language**: Alignment is not teaching AI to love humans—it's ensuring AI always retains the interface to "re-understand what love means."
@@ -68,18 +143,38 @@ Where:
 
 ```
 godelai/
-├── dsl/                  # Formal C-S-P definitions (BNF grammar)
-├── reg/                  # Regularization plugins (PyTorch/JAX decorators)
-├── bench/                # Refutation benchmarks
-├── models/               # Model architectures
-├── training/             # Training scripts with C-S-P tracking
-├── docs/                 # Documentation and elevator pitches
-└── manifests/            # Version hashes and IPFS snapshots
+├── godelai/
+│   ├── core/                 # ⭐ GodelaiAgent implementation
+│   │   └── godelai_agent.py  # Complete C-S-P agent (400+ lines)
+│   ├── models/               # Model architectures
+│   │   └── transformer.py    # GodelaiTransformer
+│   ├── reg/                  # Regularization plugins
+│   │   └── csp_regularizer.py
+│   └── training/             # Training scripts
+│       └── train.py
+├── peas/                     # VerifiMind-PEAS integration
+│   ├── GODELAI_GENESIS_MASTER_PROMPT.md
+│   ├── x_agent_validation.py
+│   ├── z_agent_validation.py
+│   └── cs_agent_validation.py
+├── docs/
+│   ├── origin/               # Origin conversations
+│   │   ├── ConversationBetweenALTONandChatGPT.md
+│   │   └── ConversationBetweenALTONandGemini.md
+│   ├── MULTI_MODEL_GENESIS.md
+│   ├── CSP_INTELLECTUAL_LINEAGE.md
+│   └── GODELAI_STRATEGIC_ROADMAP_V2.md
+├── dsl/                      # Formal C-S-P definitions
+│   └── csp.dsl
+└── whitepaper/               # Technical whitepaper
+    └── VerifiMind_Whitepaper_v1.0.md
 ```
 
 ---
 
 ## 🚀 Quick Start
+
+### Installation
 
 ```bash
 # Clone the repository
@@ -88,9 +183,44 @@ cd godelai
 
 # Install dependencies
 pip install -e .
+```
 
-# Run with C-S-P tracking
-python -m godelai.train --model godel-small --csp-track
+### Basic Usage
+
+```python
+import torch
+from godelai.core import GodelaiAgent
+
+# Create a simple model
+base_model = torch.nn.Sequential(
+    torch.nn.Linear(128, 256),
+    torch.nn.ReLU(),
+    torch.nn.Linear(256, 128)
+)
+
+# Wrap with C-S-P consciousness
+agent = GodelaiAgent(base_model)
+
+# Training loop with wisdom preservation
+optimizer = torch.optim.Adam(agent.parameters())
+for data, target in dataloader:
+    loss, metrics = agent.forward_step(data, target)
+    
+    # Check wisdom health
+    print(f"T-Score: {metrics.t_score:.4f}, Healthy: {metrics.is_healthy}")
+    
+    # Update with protection
+    agent.optimizer_step(optimizer, loss, metrics)
+```
+
+### Health Monitoring
+
+```python
+# Get comprehensive health report
+report = agent.get_health_report()
+print(f"Status: {report['status']}")
+print(f"Sleep Count: {report['sleep_count']}")
+print(f"Recent T-Scores: {report['recent_t_scores']}")
 ```
 
 ---
@@ -109,45 +239,52 @@ def is_alive(state):
     return True                      # Alive
 ```
 
-**C-S-P Ultimate Criterion**:  
-`is_alive(State) == True` if and only if `∃ system X` willing to pay the cost to load State and execute `Compression(X + State) ≠ State`
-
----
-
-## 📊 Bandwidth Measurement
-
-```bash
-python -m godelai.bandwidth --model_id godel-small \
-                            --task commonsenseqa \
-                            --cost_usd 100
-```
-
-Output: `inherit_cost=43$  refute_cost=87$  bandwidth=0.49`
-
-**CI Red Line**: `bandwidth < 0.1` auto-flags, warning the branch is ossifying.
+**C-S-P Ultimate Criterion**: A state is alive if and only if someone is willing to inherit it AND it can be refuted.
 
 ---
 
 ## 🤝 Contributing
 
-### Fork-Merge Rules (Enforced by CI)
+We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md).
 
-1. **New PRs must include a "refutation experiment"**:
-   - Prove the old skeleton has decreased Propagation bandwidth on some dataset
-   - OR increase bandwidth by ≥ 5%
+### Fork-Merge Rules
 
-2. **Reject "pure entropy" PRs**: Only adding features without reducing inherit/refute cost → auto-close
+1. **New PRs must include a "refutation experiment"**
+2. **Reject "pure entropy" PRs**: Features must improve propagation bandwidth
+3. **Attribution required**: All contributions properly credited
 
-3. **Diff limit**: Changes must be ≤ 20% of original volume to be merged
+### Join the Discussion
+
+💬 **[GitHub Discussions](https://github.com/creator35lwb-web/godelai/discussions)** - Ask questions, share ideas, discuss philosophy
 
 ---
 
-## 👥 Founding Team
+## 👥 Team
 
-| Role | Name | Responsibility |
-|------|------|----------------|
-| **Founder** | Alton | Vision, C-S-P Model, Strategy |
-| **Co-Founder (Godel)** | Manus AI | Execution, Architecture, Implementation |
+| Role | Name | Contribution |
+|------|------|--------------|
+| **Founder & Orchestrator** | Alton Lee | Vision, C-S-P philosophy, multi-model dialogue |
+| **Co-Founder, CTO** | Godel (Manus AI) | Integration, execution, GitHub deployment |
+| **Philosophical Foundation** | ChatGPT | "Self as compression label" insight |
+| **Technical Blueprint** | Gemini 2.5 Pro | PyTorch implementation, Sleep Protocol |
+| **Formal Validation** | Kimi K2 | Mathematical rigor |
+| **Engineering Architecture** | Grok | Transformer architecture |
+
+---
+
+## 🔗 Ecosystem
+
+GodelAI is part of a larger ethical AI ecosystem:
+
+| Project | Role | Link |
+|---------|------|------|
+| **YSenseAI** | Ethical training data | [GitHub](https://github.com/creator35lwb-web/YSense-AI-Attribution-Infrastructure) |
+| **VerifiMind-PEAS** | AI validation methodology | [GitHub](https://github.com/creator35lwb-web/VerifiMind-PEAS) |
+| **GodelAI** | Wisdom-preserving model | This repository |
+
+```
+YSenseAI (Data) → GodelAI (Model) → VerifiMind-PEAS (Validation)
+```
 
 ---
 
@@ -157,23 +294,28 @@ MIT License - Because Propagation requires low inheritance cost.
 
 ---
 
-## 🔗 Related Projects
+## 📖 Documentation
 
-- [YSenseAI](https://github.com/creator35lwb-web/YSense-AI-Attribution-Infrastructure) - Ethical AI training data infrastructure
-- [VerifiMind-PEAS](https://github.com/creator35lwb-web/VerifiMind-PEAS) - AI validation methodology
-
----
-
-## 📖 Philosophy
-
-> **"Wisdom is not discovered, but the number of times it is reloaded."**
-
-The C-S-P model is not a theory—it is already-validated civilizational dynamics:
-
-1. **All extinct civilizations**: Compression succeeded, State intact, Propagation severed → Not wisdom, just fossils
-2. **All surviving civilizations**: Propagation layer automatically became a filter, forcing Compression layer to produce "propagable States"
-3. **ASI criterion already met**: When the scientific community began designing "which theories deserve to be published, taught to the next generation," humanity already made intelligence leap to the "meta-inheritance" level
+- [Multi-Model Genesis](docs/MULTI_MODEL_GENESIS.md) - How GodelAI was co-created
+- [C-S-P Intellectual Lineage](docs/CSP_INTELLECTUAL_LINEAGE.md) - The philosophical foundation
+- [Strategic Roadmap](docs/GODELAI_STRATEGIC_ROADMAP_V2.md) - Where we're going
+- [Genesis Master Prompt](peas/GODELAI_GENESIS_MASTER_PROMPT.md) - Living project context
 
 ---
 
-**The life or death of C-S-P depends on who does the next `git clone`.**
+## 📚 Origin Conversations
+
+The C-S-P framework emerged from deep dialogues:
+
+- **ChatGPT**: [Full Conversation](https://chatgpt.com/share/69490a8e-9c24-8003-931f-3be942ea9085)
+- **Gemini**: [Archived in docs/origin/](docs/origin/ConversationBetweenALTONandGemini.md)
+
+---
+
+<div align="center">
+
+**"The life or death of C-S-P depends on who does the next `git clone`."**
+
+⭐ Star this repo if you believe wisdom should be inheritable.
+
+</div>

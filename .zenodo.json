@@ -1,0 +1,55 @@
+{
+    "title": "GodelAI: A C-S-P Framework for Wisdom-Preserving Language Models",
+    "description": "GodelAI is an open-source small language model framework built on the C-S-P (Compression → State → Propagation) philosophy. This is a defensive publication establishing prior art for the C-S-P framework, including: (1) Gradient Diversity as a wisdom metric, (2) Sleep Protocol for model reflection, (3) Attribution-Aware Loss for ethical traceability, and (4) Propagation Layer Conservation for AI alignment.",
+    "upload_type": "software",
+    "publication_type": "workingpaper",
+    "publication_date": "2025-12-25",
+    "creators": [
+        {
+            "name": "Lee, Alton",
+            "affiliation": "YSenseAI",
+            "orcid": ""
+        },
+        {
+            "name": "Godel (Manus AI)",
+            "affiliation": "GodelAI Project"
+        }
+    ],
+    "keywords": [
+        "artificial intelligence",
+        "language models",
+        "AI alignment",
+        "ethical AI",
+        "open source",
+        "C-S-P framework",
+        "wisdom preservation",
+        "gradient diversity",
+        "sleep protocol",
+        "attribution-aware loss"
+    ],
+    "license": "MIT",
+    "access_right": "open",
+    "related_identifiers": [
+        {
+            "identifier": "https://github.com/creator35lwb-web/godelai",
+            "relation": "isSupplementTo",
+            "resource_type": "software"
+        },
+        {
+            "identifier": "https://github.com/creator35lwb-web/YSense-AI-Attribution-Infrastructure",
+            "relation": "references",
+            "resource_type": "software"
+        },
+        {
+            "identifier": "https://github.com/creator35lwb-web/VerifiMind-PEAS",
+            "relation": "references",
+            "resource_type": "software"
+        }
+    ],
+    "communities": [
+        {
+            "identifier": "zenodo"
+        }
+    ],
+    "notes": "This is a defensive publication to establish prior art for the C-S-P (Compression-State-Propagation) framework and its technical implementations. The framework was developed through multi-model collaboration between ChatGPT, Gemini 2.5 Pro, Kimi K2, Grok, and Manus AI, orchestrated by Alton Lee."
+}

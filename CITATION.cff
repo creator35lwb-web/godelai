@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "GodelAI: A C-S-P Framework for Wisdom-Preserving Language Models"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Lee"
+    given-names: "Alton"
+    affiliation: "YSenseAI"
+  - name: "Godel (Manus AI)"
+    affiliation: "GodelAI Project"
+repository-code: "https://github.com/creator35lwb-web/godelai"
+url: "https://github.com/creator35lwb-web/godelai"
+abstract: "GodelAI is an open-source small language model framework built on the C-S-P (Compression → State → Propagation) philosophy. It implements wisdom-preserving mechanisms including Gradient Diversity, Sleep Protocol, and Attribution-Aware Loss."
+keywords:
+  - artificial intelligence
+  - language models
+  - AI alignment
+  - ethical AI
+  - C-S-P framework
+license: MIT
+version: "1.0.0"
+date-released: "2025-12-25"
