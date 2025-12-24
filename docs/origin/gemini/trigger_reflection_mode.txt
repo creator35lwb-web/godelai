@@ -1,0 +1,37 @@
+def trigger_reflection_mode(self):
+        """
+        Implementation of Option 1: The 'Sleep' Protocol.
+        
+        Philosophy:
+        "Sleep determines our emotion and thinking."
+        We function by reducing noise and clearing space, NOT by generating illusions.
+        """
+        print(">>> [System] Brain fog detected (Low T-Score). Entering Deep Sleep Mode...")
+        
+        with torch.no_grad(): # No new learning, just organizing
+            for name, param in self.compression_layer.named_parameters():
+                if 'weight' in name:
+                    # 1. The "Detox" (Pruning / 修剪噪音)
+                    # Identify weak connections that are just "noise" (below a threshold)
+                    # These are the "trivial worries" cluttering the mind.
+                    threshold = torch.std(param) * 0.1
+                    mask = torch.abs(param) > threshold
+                    
+                    # Apply the mask: Zero out the noise.
+                    # This creates "Space" (Sparsity) -> Restoring "Surplus Energy"
+                    param.data.mul_(mask)
+                    
+                    # 2. The "Calm Down" (Weight Decay / 情绪平复)
+                    # Gently shrink the remaining strong weights.
+                    # Prevents obsession (overfitting) and arrogance (too large weights).
+                    param.data.mul_(0.99) 
+                    
+                    # 3. The "Refresh" (Minor Noise Injection / 激活生机)
+                    # Add tiny gaussian noise to shake the system out of local rigid spots.
+                    # Like stretching after waking up.
+                    noise = torch.randn_like(param) * 0.001
+                    param.data.add_(noise)
+                    
+        # Reset the Wisdom Metric after sleep
+        self.last_T_score = 1.0 
+        print(">>> [System] Woke up refreshed. Surplus Energy restored.")

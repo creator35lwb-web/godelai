@@ -1,0 +1,27 @@
+def measure_propagation_potential(self, batch_gradients):
+        """
+        Implementation of Option B: Gradient Diversity.
+        Calculates 'T' based on the angular diversity of gradients in a batch.
+        
+        Philosophy: 
+        If all data points pull the model in the EXACT same direction, 
+        the model is developing 'Tunnel Vision' (Becoming rigid/obsessive).
+        We want the model to maintain a broad perspective (High Diversity).
+        """
+        # 1. Calculate the norm of the sum of gradients (Global Direction)
+        # sum_grad = || Σ g_i ||^2
+        sum_grad_norm = torch.norm(torch.sum(batch_gradients, dim=0))**2
+        
+        # 2. Calculate the sum of norms of individual gradients (Individual Directions)
+        # sum_norm_grad = Σ || g_i ||^2
+        sum_norm_grad = torch.sum(torch.norm(batch_gradients, dim=1)**2)
+        
+        # 3. Calculate Diversity Score (The "Wisdom" Ratio)
+        # High score = Gradients are pointing in different healthy directions (Robust)
+        # Low score = Gradients are collapsing into a single line (Rigid)
+        diversity_score = sum_norm_grad / (sum_grad_norm + 1e-8)
+        
+        # Normalize to 0-1 range for T metric
+        T_score = torch.sigmoid(diversity_score) 
+        
+        return T_score

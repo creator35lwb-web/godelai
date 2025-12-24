@@ -1,0 +1,24 @@
+def calculate_traceability_loss(self, generated_content, source_anchors):
+        """
+        Implementation of Option C: Traceability Bias.
+        
+        Philosophy:
+        "Knowledge without origin is hallucination or theft."
+        The model is penalized if it generates confident facts 
+        without a strong attention link to a trusted 'Source Anchor'.
+        """
+        # 1. Source Anchors: The 'Z-Protocol' certified data blocks (Ethical Sources)
+        # 2. Attention Map: How much did the model look at these anchors?
+        
+        # We enforce a "Citation Constraint":
+        # If the model outputs a high-entropy fact (not a common stop word),
+        # it MUST have a high attention score on at least one Source Anchor.
+        
+        fact_confidence = self.assess_factuality(generated_content)
+        source_connection = self.source_attention_layer(generated_content, source_anchors)
+        
+        # The "Plagiarism Penalty"
+        # If confident but no source connection -> High Loss
+        traceability_loss = fact_confidence * (1.0 - source_connection)
+        
+        return traceability_loss

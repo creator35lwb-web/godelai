@@ -1,0 +1,92 @@
+import torch
+import torch.nn as nn
+
+class GodelaiAgent(nn.Module):
+    def __init__(self, base_model, propagation_gamma=2.0, min_surplus_energy=0.1):
+        super().__init__()
+        self.compression_layer = base_model # The "Body" (Standard Transformer)
+        self.state_memory = []              # The "History" (State traces)
+        
+        # Hyperparameters for Wisdom
+        self.gamma = propagation_gamma      # Penalty severity for losing adaptability
+        self.epsilon = 0.05                 # "Death line" for adaptability
+        self.surplus_reservation = min_surplus_energy # "有余力": Reserved capacity
+        
+        # Metrics
+        self.last_T_score = 1.0             # Initial Propagation Potential (T)
+
+    def measure_propagation_potential(self, current_weights, gradients):
+        """
+        Calculates 'T': The Transmission Fidelity.
+        This measures the 'meta-modifiability' or 'generalizability' of the state.
+        
+        如果梯度指向极其狭窄的山谷（过拟合），T 会下降。
+        如果权重分布保持了广义的连接性（高熵），T 保持高位。
+        """
+        # (Simplified implementation: using Hessian spectrum or Gradient Diversity)
+        # Here we conceptually measure: "How hard is it to change my mind later?"
+        rigidity = torch.norm(gradients) / (torch.std(current_weights) + 1e-6)
+        T_score = 1.0 / (1.0 + rigidity) 
+        return T_score
+
+    def forward_step(self, data, target):
+        # 1. Standard Compression Step (Solving the Task)
+        # -------------------------------------------------------
+        prediction = self.compression_layer(data)
+        task_loss = nn.MSELoss()(prediction, target)
+        
+        # 2. The Propagation Check (The "Wisdom" Check)
+        # -------------------------------------------------------
+        # Before updating, we simulate the gradient step to see effect on T
+        gradients = torch.autograd.grad(task_loss, self.compression_layer.parameters(), create_graph=True)
+        
+        current_T = self.measure_propagation_potential(self.compression_layer.parameters(), gradients)
+        
+        # 3. Calculate Propagation Layer Loss (L_prop)
+        # Formulated from your "Propagation Layer Conservation" principle
+        # -------------------------------------------------------
+        if current_T < self.last_T_score:
+            # PENALTY: You are destroying your future adaptability!
+            # Non-linear penalty ensures the model "feels pain" when losing wisdom.
+            l_prop = (self.last_T_score - current_T) ** self.gamma
+        else:
+            l_prop = 0.0
+            
+        # 4. The "Surplus Energy" Constraint (有余力)
+        # -------------------------------------------------------
+        # Ensure that the update magnitude does not exhaust the "Surplus Energy" buffer.
+        # We clamp the task_loss influence if it threatens the reserve.
+        total_loss = task_loss + (10.0 * l_prop) # Wisdom is weighted heavily
+
+        return total_loss, current_T
+
+    def optimizer_step(self, optimizer, total_loss, current_T):
+        """
+        The Evolution Step.
+        Crucial: Triggers the "Fail-Safe" if wisdom drops too low.
+        """
+        # Fail-Safe Protocol (Trigger from your notes)
+        if current_T < self.epsilon:
+            print("[ALERT] Propagation Potential Critical! Triggering Forced Reflection.")
+            # FREEZE non-propagation layers. 
+            # Only allow updates that restore T (Architectural adjustments).
+            self.trigger_reflection_mode()
+            return # Skip standard update
+
+        # Standard Update
+        optimizer.zero_grad()
+        total_loss.backward()
+        
+        # Update State History
+        self.state_memory.append(self.last_T_score)
+        self.last_T_score = current_T.item() # Update the benchmark
+        
+        optimizer.step()
+
+    def trigger_reflection_mode(self):
+        """
+        The 'Sleep' or 'Meditation' Phase.
+        Re-organizes weights without ingesting new data to restore structure.
+        """
+        # Implementation of "Sleep" logic to restore T
+        pass
