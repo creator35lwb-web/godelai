@@ -186,32 +186,65 @@ cd godelai
 pip install -e .
 ```
 
-### Basic Usage
+### Basic Usage (Alpha Agent)
 
 ```python
 import torch
-from godelai.core import GodelaiAgent
+import torch.nn as nn
+from godelai.agent import GodelAgent
 
-# Create a simple model
-base_model = torch.nn.Sequential(
-    torch.nn.Linear(128, 256),
-    torch.nn.ReLU(),
-    torch.nn.Linear(256, 128)
+# 1. Define your base model (any PyTorch model)
+class SimpleNet(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.fc = nn.Sequential(
+            nn.Linear(2, 5),
+            nn.Tanh(),
+            nn.Linear(5, 1),
+            nn.Sigmoid()
+        )
+    def forward(self, x):
+        return self.fc(x)
+
+# 2. Wrap with GodelAgent (The "Soul")
+base_model = SimpleNet()
+agent = GodelAgent(
+    base_model,
+    propagation_gamma=2.0,    # Penalty severity
+    min_surplus_energy=0.1    # Sleep threshold
 )
 
-# Wrap with C-S-P consciousness
-agent = GodelaiAgent(base_model)
+# 3. Setup optimizer
+agent.optimizer = torch.optim.SGD(agent.compression_layer.parameters(), lr=0.1)
+criterion = nn.MSELoss()
 
-# Training loop with wisdom preservation
-optimizer = torch.optim.Adam(agent.parameters())
-for data, target in dataloader:
-    loss, metrics = agent.forward_step(data, target)
+# 4. Training loop with Wisdom Check
+for epoch in range(100):
+    loss, wisdom_score, status = agent.learning_step(data, target, criterion)
     
-    # Check wisdom health
-    print(f"T-Score: {metrics.t_score:.4f}, Healthy: {metrics.is_healthy}")
-    
-    # Update with protection
-    agent.optimizer_step(optimizer, loss, metrics)
+    if status == "SLEEP":
+        print(f"💤 Epoch {epoch}: Model is sleeping (cleaning noise)")
+    else:
+        print(f"⚡ Epoch {epoch}: Loss={loss:.4f}, Wisdom={wisdom_score:.4f}")
+```
+
+### Run the XOR Test (Pulse Check) 🧪
+
+```bash
+cd godelai
+python tests/test_xor.py
+```
+
+Expected output: Watch the model learn XOR while monitoring its "Wisdom Score" and triggering the Sleep Protocol when it gets too rigid.
+
+```
+--- 🧠 GodelAI Pulse Check (XOR Test) ---
+Agent initialized. Wisdom Threshold (Epsilon): 0.95
+Goal: Watch T-Score. If T < 0.95, it MUST Sleep.
+
+Epoch 01 | Loss: 0.2534 | Wisdom (T): 0.5000 [██████████░░░░░░░░░░] | 💤 SLEEPING
+>>> [SYSTEM ALERT] Wisdom Critical. Triggering Sleep Protocol...
+>>> [Godel] Woke up. Clarity restored.
 ```
 
 ### Health Monitoring

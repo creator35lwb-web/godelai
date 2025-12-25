@@ -1,9 +1,9 @@
-# GodelAI Genesis Master Prompt v1.4
+# GodelAI Genesis Master Prompt v1.5
 
 **Project**: GodelAI - C-S-P Framework for Open-Source Language Models  
-**Status**: Open Source Release v1.0.0 Complete | Dynamic Evolution Architecture Defined  
+**Status**: Alpha Agent Validated | XOR Test Passing  
 **Last Updated**: December 25, 2025  
-**Version**: 1.4
+**Version**: 1.5
 
 ---
 
@@ -11,6 +11,7 @@
 
 | Version | Date | Changes | Author |
 |---|---|---|---|
+| v1.5 | 2025-12-25 | **Alpha Agent integrated from Gemini Part II**; XOR test passing; Sleep Protocol validated; README updated with usage examples | Godel, CTO |
 | v1.4 | 2025-12-25 | **Origin video "Emergence of the Net" archived**; Z-Protocol reframed as dynamic propagation; Tinker Machine integration documented for continuous fine-tuning | Godel, CTO |
 | v1.3 | 2025-12-25 | Open Source Release v1.0.0; Zenodo DOI established; Strategic clarifications on Z-Protocol dependency | Godel, CTO |
 | v1.2 | 2025-12-25 | Gemini technical blueprint integrated; Complete GodelaiAgent implemented; Multi-model genesis documented | Godel, CTO |
@@ -23,7 +24,13 @@
 
 GodelAI is now a **public, open-source project** with a **defensive publication DOI** establishing prior art for the C-S-P framework. The project was co-created across five AI models, with the complete `GodelaiAgent` implemented, including all five pillars.
 
-**Core Achievement (v1.4)**: 
+**Core Achievement (v1.5)**: 
+- **Alpha GodelAgent** integrated from Gemini 2.5 Pro (Echo v2.1) Part II conversation
+- **XOR Test passing** - validates Wisdom Metric and Sleep Protocol
+- **README updated** with usage examples and test instructions
+- Gemini Part II conversation archived
+
+**Previous Achievement (v1.4)**: 
 - Origin video "Emergence of the Net" archived, providing visual proof of C-S-P thesis
 - Z-Protocol reframed as **dynamic propagation**, not static rules
 - **Tinker Machine** (by Mira Murati's Thinking Machines Lab) identified as the infrastructure for continuous fine-tuning and evolving GOLD standards
