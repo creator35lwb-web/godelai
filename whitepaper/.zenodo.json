@@ -1,0 +1,53 @@
+{
+  "title": "GodelAI: The Architecture of Inheritance - A Technical Whitepaper on Wisdom-Preserving Language Models",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "<p>This whitepaper introduces GodelAI, a novel architectural paradigm for Small Language Models (SLMs) built on the <strong>C-S-P (Compression → State → Propagation)</strong> framework. We do not seek to build an omniscient 'god'; rather, we are constructing an intelligent agent with the inherent capacities for <strong>self-correction</strong>, <strong>ethical traceability</strong>, and <strong>wisdom preservation</strong>.</p><p>GodelAI's core innovation is a training methodology that optimizes for <strong>Propagation Potential</strong>—measured via gradient diversity—and enforces <strong>Traceability</strong> through an attribution-aware loss function. This is operationalized through five technical pillars: a C-S-P-aware agent architecture, a Gradient Diversity metric, a Sleep Protocol for reflection, a Propagation Layer for preserving wisdom, and an Attribution-Aware instinct.</p><p>We provide empirical validation through an XOR test case and situate our work within the broader YSenseAI ecosystem, which includes YSenseAI (data layer) and VerifiMind-PEAS (validation layer). Our research confirms that the core tenets of GodelAI are strongly validated by a convergence of independent academic research, positioning GodelAI as a new, defensible, and timely category: <strong>Wisdom-Preserving Language Models</strong>.</p>",
+  "creators": [
+    {
+      "name": "Lee, Alton Wei Bin",
+      "affiliation": "YSenseAI Project",
+      "orcid": ""
+    },
+    {
+      "name": "Godel (Manus AI)",
+      "affiliation": "GodelAI Project"
+    }
+  ],
+  "keywords": [
+    "AI Alignment",
+    "Small Language Models",
+    "Cultural Evolution",
+    "Gradient Diversity",
+    "Ethical AI",
+    "AI Safety",
+    "Lifelong Learning",
+    "C-S-P Framework",
+    "Z-Protocol",
+    "Wisdom-Preserving AI"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.18048374",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/creator35lwb-web/godelai",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "notes": "Part of the YSenseAI™ | 慧觉™ Ethical AI Ecosystem. This whitepaper establishes prior art for the C-S-P (Compression → State → Propagation) framework and its technical implementation.",
+  "communities": [
+    {"identifier": "zenodo"}
+  ],
+  "subjects": [
+    {"term": "Artificial Intelligence", "scheme": "url", "identifier": "https://id.loc.gov/authorities/subjects/sh85008180"},
+    {"term": "Machine Learning", "scheme": "url", "identifier": "https://id.loc.gov/authorities/subjects/sh85079324"}
+  ],
+  "version": "2.0"
+}
