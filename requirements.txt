@@ -1,0 +1,24 @@
+# GodelAI - Pinned Dependencies
+# Generated: 2025-12-26
+# Python: >=3.9
+
+# Core ML Framework
+torch>=2.0.0,<3.0.0
+numpy>=1.24.0,<2.0.0
+
+# Development & Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Code Quality
+ruff>=0.3.0
+black>=24.0.0
+mypy>=1.9.0
+
+# Optional: Hugging Face Integration (uncomment when needed)
+# transformers>=4.35.0
+# datasets>=2.16.0
+
+# Optional: Visualization
+# matplotlib>=3.8.0
+# seaborn>=0.13.0

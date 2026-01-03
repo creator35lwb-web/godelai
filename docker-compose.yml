@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  godelai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: godelai
+    volumes:
+      - ./results:/app/results
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python -c "from godelai.agent import GodelAgent; print('GodelAI container running!')"
+
+  godelai-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: godelai-dev
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: bash -c "pip install -e '.[dev]' && pytest tests/ -v"
+
+  godelai-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: godelai-test
+    volumes:
+      - ./tests:/app/tests
+      - ./results:/app/results
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python tests/test_xor.py
