@@ -9,15 +9,11 @@ Date: December 26, 2025
 """
 
 import sys
-import io
 import os
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from datetime import datetime
-
-# Force UTF-8 encoding
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 # Add parent directory to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
