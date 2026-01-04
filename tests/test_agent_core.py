@@ -9,11 +9,30 @@ Tests cover:
 - Sleep protocol triggering
 - Learning step execution
 - Training summary generation
+
+Updated to match the FIXED GodelAgent implementation with per-sample gradients.
+Date: January 4, 2026
 """
 
 import pytest
 import torch
 import torch.nn as nn
+import torch.optim as optim
+
+
+class SimpleTestNet(nn.Module):
+    """Simple network for testing."""
+    def __init__(self, input_size=4, hidden_size=8, output_size=1):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(input_size, hidden_size),
+            nn.Tanh(),
+            nn.Linear(hidden_size, output_size),
+            nn.Sigmoid()
+        )
+
+    def forward(self, x):
+        return self.net(x)
 
 
 class TestGodelAgentInitialization:
@@ -23,29 +42,41 @@ class TestGodelAgentInitialization:
         """Test that GodelAgent can be created with default parameters."""
         from godelai.agent import GodelAgent
 
-        model = nn.Linear(10, 2)
+        model = SimpleTestNet()
         agent = GodelAgent(model)
 
-        assert agent.model is model
-        assert agent.epsilon == 0.5  # default threshold
-        assert agent.history == []
+        assert agent.compression_layer is model
+        assert agent.epsilon == 0.1  # default min_surplus_energy
+        assert agent.gamma == 2.0  # default propagation_gamma
+        assert agent.last_T_score == 1.0
 
     def test_agent_creation_with_custom_epsilon(self):
         """Test GodelAgent with custom epsilon threshold."""
         from godelai.agent import GodelAgent
 
-        model = nn.Linear(10, 2)
-        agent = GodelAgent(model, epsilon=0.8)
+        model = SimpleTestNet()
+        agent = GodelAgent(model, min_surplus_energy=0.8)
 
         assert agent.epsilon == 0.8
 
-    def test_agent_creation_with_custom_optimizer(self):
-        """Test GodelAgent with custom optimizer."""
+    def test_agent_creation_with_custom_gamma(self):
+        """Test GodelAgent with custom propagation gamma."""
         from godelai.agent import GodelAgent
 
-        model = nn.Linear(10, 2)
-        optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
-        agent = GodelAgent(model, optimizer=optimizer)
+        model = SimpleTestNet()
+        agent = GodelAgent(model, propagation_gamma=3.0)
+
+        assert agent.gamma == 3.0
+
+    def test_agent_optimizer_assignment(self):
+        """Test GodelAgent optimizer can be assigned after creation."""
+        from godelai.agent import GodelAgent
+
+        model = SimpleTestNet()
+        agent = GodelAgent(model)
+
+        optimizer = optim.Adam(agent.compression_layer.parameters(), lr=0.01)
+        agent.optimizer = optimizer
 
         assert agent.optimizer is optimizer
 
@@ -57,14 +88,15 @@ class TestWisdomMetric:
         """Test that gradient diversity measurement returns a tensor."""
         from godelai.agent import GodelAgent
 
-        model = nn.Linear(4, 2)
+        model = SimpleTestNet(input_size=4)
         agent = GodelAgent(model)
 
-        # Create dummy data
-        X = torch.randn(8, 4)
-        y = torch.randint(0, 2, (8,))
+        # Create per-sample gradients [batch_size, num_params]
+        batch_size = 4
+        num_params = sum(p.numel() for p in model.parameters())
+        batch_grads = torch.randn(batch_size, num_params)
 
-        t_score = agent.measure_gradient_diversity(X, y)
+        t_score = agent.measure_gradient_diversity(batch_grads)
 
         assert isinstance(t_score, torch.Tensor)
         assert t_score.dim() == 0  # scalar
@@ -73,165 +105,250 @@ class TestWisdomMetric:
         """Test that T-score is between 0 and 1."""
         from godelai.agent import GodelAgent
 
-        model = nn.Linear(4, 2)
+        model = SimpleTestNet(input_size=4)
         agent = GodelAgent(model)
 
-        X = torch.randn(8, 4)
-        y = torch.randint(0, 2, (8,))
+        batch_size = 4
+        num_params = sum(p.numel() for p in model.parameters())
+        batch_grads = torch.randn(batch_size, num_params)
 
-        t_score = agent.measure_gradient_diversity(X, y)
+        t_score = agent.measure_gradient_diversity(batch_grads)
 
         assert 0.0 <= t_score.item() <= 1.0
 
-
-class TestSleepProtocol:
-    """Tests for the Sleep Protocol functionality."""
-
-    def test_rest_and_reflect_modifies_weights(self):
-        """Test that rest_and_reflect modifies model weights."""
+    def test_single_sample_returns_default(self):
+        """Test that single sample returns default T-score of 0.5."""
         from godelai.agent import GodelAgent
 
-        model = nn.Linear(4, 2)
+        model = SimpleTestNet()
         agent = GodelAgent(model)
 
-        # Store original weights
-        original_weights = model.weight.data.clone()
+        num_params = sum(p.numel() for p in model.parameters())
+        single_grad = torch.randn(1, num_params)
 
-        agent.rest_and_reflect()
+        t_score = agent.measure_gradient_diversity(single_grad)
 
-        # Weights should be modified (noise added)
-        assert not torch.allclose(model.weight.data, original_weights)
+        assert t_score.item() == 0.5
 
-    def test_sleep_triggered_when_t_below_epsilon(self):
-        """Test that sleep is triggered when T-score falls below epsilon."""
+
+class TestSleepProtocol:
+    """Tests for the sleep protocol."""
+
+    def test_rest_and_reflect_modifies_weights(self):
+        """Test that sleep protocol modifies model weights."""
         from godelai.agent import GodelAgent
 
-        model = nn.Linear(4, 2)
-        agent = GodelAgent(model, epsilon=0.99)  # Very high threshold
+        model = SimpleTestNet()
+        agent = GodelAgent(model)
 
-        X = torch.randn(8, 4)
-        y = torch.randint(0, 2, (8,))
+        # Get initial weights
+        initial_weights = {
+            name: param.clone()
+            for name, param in model.named_parameters()
+        }
 
-        # This should trigger sleep due to high epsilon
-        result = agent.learning_step(X, y)
+        # Trigger sleep
+        agent.rest_and_reflect()
 
-        # Check that sleep was recorded in history
-        sleep_events = [h for h in agent.history if h.get('action') == 'sleep']
-        # May or may not trigger depending on gradient diversity
+        # Check weights changed
+        weights_changed = False
+        for name, param in model.named_parameters():
+            if not torch.allclose(param, initial_weights[name]):
+                weights_changed = True
+                break
+
+        assert weights_changed
+        assert agent.last_T_score == 1.0  # Reset after sleep
+
+    def test_sleep_increments_counter(self):
+        """Test that sleep increments the sleep counter."""
+        from godelai.agent import GodelAgent
+
+        model = SimpleTestNet()
+        agent = GodelAgent(model)
+
+        initial_count = agent.history['sleep_count']
+        agent.rest_and_reflect()
+
+        assert agent.history['sleep_count'] == initial_count + 1
 
 
 class TestLearningStep:
-    """Tests for the learning step execution."""
+    """Tests for the learning step."""
 
-    def test_learning_step_returns_dict(self):
-        """Test that learning_step returns a dictionary with expected keys."""
+    def test_learning_step_returns_tuple(self):
+        """Test that learning_step returns (loss, wisdom, status)."""
         from godelai.agent import GodelAgent
 
-        model = nn.Linear(4, 2)
-        agent = GodelAgent(model)
+        model = SimpleTestNet(input_size=2, output_size=1)
+        agent = GodelAgent(model, min_surplus_energy=0.1)
+        agent.optimizer = optim.SGD(agent.compression_layer.parameters(), lr=0.1)
 
-        X = torch.randn(8, 4)
-        y = torch.randint(0, 2, (8,))
+        # Simple XOR data
+        X = torch.tensor([[0., 0.], [0., 1.], [1., 0.], [1., 1.]])
+        y = torch.tensor([[0.], [1.], [1.], [0.]])
 
-        result = agent.learning_step(X, y)
+        criterion = nn.MSELoss()
+        result = agent.learning_step(X, y, criterion)
 
-        assert isinstance(result, dict)
-        assert 'loss' in result
-        assert 't_score' in result
-        assert 'action' in result
+        assert isinstance(result, tuple)
+        assert len(result) == 3
+        loss, wisdom, status = result
+        assert isinstance(loss, float)
+        assert isinstance(wisdom, float)
+        assert status in ["LEARN", "SLEEP", "SKIP"]
 
-    def test_learning_step_decreases_loss(self):
-        """Test that multiple learning steps decrease loss."""
+    def test_learning_step_updates_history(self):
+        """Test that learning_step updates history."""
         from godelai.agent import GodelAgent
 
-        model = nn.Linear(4, 2)
-        agent = GodelAgent(model, epsilon=0.1)  # Low epsilon to avoid sleep
+        model = SimpleTestNet(input_size=2, output_size=1)
+        agent = GodelAgent(model, min_surplus_energy=0.1)
+        agent.optimizer = optim.SGD(agent.compression_layer.parameters(), lr=0.1)
 
-        X = torch.randn(16, 4)
-        y = torch.randint(0, 2, (16,))
+        X = torch.tensor([[0., 0.], [0., 1.], [1., 0.], [1., 1.]])
+        y = torch.tensor([[0.], [1.], [1.], [0.]])
 
-        initial_result = agent.learning_step(X, y)
-        initial_loss = initial_result['loss']
+        criterion = nn.MSELoss()
 
-        # Run multiple steps
-        for _ in range(10):
-            result = agent.learning_step(X, y)
+        initial_steps = len(agent.history['loss'])
+        agent.learning_step(X, y, criterion)
 
-        final_loss = result['loss']
-
-        # Loss should generally decrease (allowing some variance)
-        assert final_loss <= initial_loss * 1.5  # Allow some tolerance
+        assert len(agent.history['loss']) == initial_steps + 1
+        assert len(agent.history['wisdom_score']) == initial_steps + 1
+        assert len(agent.history['status']) == initial_steps + 1
 
 
 class TestTrainingSummary:
     """Tests for training summary generation."""
 
     def test_get_training_summary_empty_history(self):
-        """Test summary with no training history."""
+        """Test get_training_summary with no training history."""
         from godelai.agent import GodelAgent
 
-        model = nn.Linear(4, 2)
+        model = SimpleTestNet()
         agent = GodelAgent(model)
 
         summary = agent.get_training_summary()
 
-        assert isinstance(summary, dict)
-        assert summary['total_steps'] == 0
+        assert "message" in summary
+        assert summary["message"] == "No training history available"
 
     def test_get_training_summary_after_training(self):
-        """Test summary after some training steps."""
+        """Test get_training_summary after some training."""
         from godelai.agent import GodelAgent
 
-        model = nn.Linear(4, 2)
-        agent = GodelAgent(model, epsilon=0.1)
+        model = SimpleTestNet(input_size=2, output_size=1)
+        agent = GodelAgent(model, min_surplus_energy=0.1)
+        agent.optimizer = optim.SGD(agent.compression_layer.parameters(), lr=0.1)
 
-        X = torch.randn(8, 4)
-        y = torch.randint(0, 2, (8,))
+        X = torch.tensor([[0., 0.], [0., 1.], [1., 0.], [1., 1.]])
+        y = torch.tensor([[0.], [1.], [1.], [0.]])
+        criterion = nn.MSELoss()
 
-        # Run some training steps
+        # Train for a few steps
         for _ in range(5):
-            agent.learning_step(X, y)
+            agent.learning_step(X, y, criterion)
 
         summary = agent.get_training_summary()
 
         assert summary['total_steps'] == 5
-        assert 'avg_t_score' in summary
-        assert 'sleep_events' in summary
+        assert 'avg_loss' in summary
+        assert 'avg_wisdom' in summary
+        assert 'min_wisdom' in summary
+        assert 'max_wisdom' in summary
 
 
 class TestXORLearning:
-    """Integration test: XOR problem learning."""
+    """Test that agent can learn XOR problem."""
 
     def test_xor_learning_improves_accuracy(self):
-        """Test that the agent can learn the XOR problem."""
+        """Test that agent improves on XOR over training."""
         from godelai.agent import GodelAgent
 
-        # XOR dataset
-        X = torch.tensor([[0, 0], [0, 1], [1, 0], [1, 1]], dtype=torch.float32)
-        y = torch.tensor([0, 1, 1, 0], dtype=torch.long)
-
-        # Simple model for XOR
+        # Use improved architecture
         model = nn.Sequential(
             nn.Linear(2, 8),
-            nn.ReLU(),
-            nn.Linear(8, 2)
+            nn.Tanh(),
+            nn.Linear(8, 8),
+            nn.Tanh(),
+            nn.Linear(8, 1),
+            nn.Sigmoid()
         )
 
-        agent = GodelAgent(model, epsilon=0.1)
+        agent = GodelAgent(model, min_surplus_energy=0.1)
+        agent.optimizer = optim.Adam(agent.compression_layer.parameters(), lr=0.01)
 
-        # Train for multiple epochs
-        for _ in range(100):
-            agent.learning_step(X, y)
+        X = torch.tensor([[0., 0.], [0., 1.], [1., 0.], [1., 1.]])
+        y = torch.tensor([[0.], [1.], [1.], [0.]])
+        criterion = nn.MSELoss()
 
-        # Check accuracy
+        # Initial accuracy
         with torch.no_grad():
-            outputs = model(X)
-            predictions = outputs.argmax(dim=1)
-            accuracy = (predictions == y).float().mean().item()
+            initial_pred = agent.compression_layer(X)
+            initial_acc = ((initial_pred > 0.5).float() == y).float().mean().item()
 
-        # Should achieve reasonable accuracy
-        assert accuracy >= 0.5  # At least better than random
+        # Train
+        for _ in range(100):
+            agent.learning_step(X, y, criterion)
+
+        # Final accuracy
+        with torch.no_grad():
+            final_pred = agent.compression_layer(X)
+            final_acc = ((final_pred > 0.5).float() == y).float().mean().item()
+
+        # Should improve (though may not reach 100% in just 100 steps)
+        assert final_acc >= initial_acc
+        # Loss should decrease
+        assert agent.history['loss'][-1] < agent.history['loss'][0]
 
 
-if __name__ == "__main__":
-    pytest.main([__file__, "-v"])
+class TestCSPFramework:
+    """Tests for C-S-P framework integration."""
+
+    def test_propagation_penalty_applied(self):
+        """Test that propagation penalty is applied when wisdom drops."""
+        from godelai.agent import GodelAgent
+
+        model = SimpleTestNet(input_size=2, output_size=1)
+        agent = GodelAgent(model, min_surplus_energy=0.1, propagation_gamma=2.0)
+        agent.optimizer = optim.SGD(agent.compression_layer.parameters(), lr=0.1)
+
+        X = torch.tensor([[0., 0.], [0., 1.], [1., 0.], [1., 1.]])
+        y = torch.tensor([[0.], [1.], [1.], [0.]])
+        criterion = nn.MSELoss()
+
+        # Do a learning step
+        loss, wisdom, status = agent.learning_step(X, y, criterion)
+
+        # Verify T-score is tracked
+        assert wisdom > 0.0
+        assert agent.last_T_score == wisdom
+
+    def test_wisdom_metric_is_calculated_correctly(self):
+        """Test that wisdom metric is calculated (not stuck at old 0.7311 bug)."""
+        from godelai.agent import GodelAgent
+
+        model = SimpleTestNet(input_size=2, output_size=1)
+        agent = GodelAgent(model, min_surplus_energy=0.1)
+        agent.optimizer = optim.Adam(agent.compression_layer.parameters(), lr=0.01)
+
+        X = torch.tensor([[0., 0.], [0., 1.], [1., 0.], [1., 1.]])
+        y = torch.tensor([[0.], [1.], [1.], [0.]])
+        criterion = nn.MSELoss()
+
+        wisdom_scores = []
+        for _ in range(20):
+            _, wisdom, _ = agent.learning_step(X, y, criterion)
+            wisdom_scores.append(wisdom)
+
+        # Verify wisdom metric is being calculated
+        # For XOR, we expect high wisdom (close to 1.0) due to high gradient diversity
+        # The key is it's NOT the old constant bug value of 0.7311
+        avg_wisdom = sum(wisdom_scores) / len(wisdom_scores)
+
+        # Should be high for XOR (not the old bug value of 0.7311)
+        assert avg_wisdom > 0.9  # High diversity expected
+        assert avg_wisdom != 0.7311  # Not the old bug constant
+        # All scores should be valid
+        assert all(0.0 <= w <= 1.0 for w in wisdom_scores)
