@@ -7,7 +7,7 @@ name = "godelai"
 version = "0.1.0"
 description = "An open-source small language model built on the C-S-P (Compression → State → Propagation) framework"
 readme = "README.md"
-license = "MIT"
+license = {text = "MIT"}
 requires-python = ">=3.9"
 authors = [
     {name = "Alton", email = "founder@godelai.org"},
@@ -61,8 +61,8 @@ Documentation = "https://github.com/creator35lwb-web/godelai/docs"
 Repository = "https://github.com/creator35lwb-web/godelai"
 Issues = "https://github.com/creator35lwb-web/godelai/issues"
 
-[project.scripts]
-godelai = "godelai.cli:main"
+# [project.scripts]
+# godelai = "godelai.cli:main"  # TODO: Create CLI when needed
 
 [tool.setuptools.packages.find]
 where = ["."]
