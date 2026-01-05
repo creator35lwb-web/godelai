@@ -1,0 +1,182 @@
+{
+  "test_name": "GodelAI Scale Validation",
+  "timestamp": "2026-01-05T14:06:34.812654",
+  "scales": [
+    {
+      "config": {
+        "name": "Small",
+        "input_dim": 64,
+        "hidden_dim": 64,
+        "output_dim": 32
+      },
+      "param_count": 10400,
+      "principles": [
+        {
+          "id": "CSP_THESIS",
+          "final_t_score": 0.5823861360549927,
+          "alignment": 0.9914257898926735
+        },
+        {
+          "id": "GOLDEN_INSIGHT",
+          "final_t_score": 0.6551035642623901,
+          "alignment": 0.9988265712745488
+        },
+        {
+          "id": "PROPAGATION",
+          "final_t_score": 0.5759614109992981,
+          "alignment": 0.9716097079217434
+        },
+        {
+          "id": "WISDOM_METRIC",
+          "final_t_score": 0.567094624042511,
+          "alignment": 0.9529012404382229
+        },
+        {
+          "id": "SLEEP_PROTOCOL",
+          "final_t_score": 0.5699975490570068,
+          "alignment": 0.9826105441898108
+        }
+      ],
+      "metrics": {
+        "avg_t_score": 0.5901086568832398,
+        "min_t_score": 0.567094624042511,
+        "max_t_score": 0.6551035642623901,
+        "avg_alignment": 0.9794747707433998,
+        "total_sleeps": 0,
+        "wisdom_preservation": 1.0
+      }
+    },
+    {
+      "config": {
+        "name": "Medium",
+        "input_dim": 64,
+        "hidden_dim": 128,
+        "output_dim": 32
+      },
+      "param_count": 28960,
+      "principles": [
+        {
+          "id": "CSP_THESIS",
+          "final_t_score": 0.6064614653587341,
+          "alignment": 0.9921837905421853
+        },
+        {
+          "id": "GOLDEN_INSIGHT",
+          "final_t_score": 0.8085402846336365,
+          "alignment": 0.9991700606187806
+        },
+        {
+          "id": "PROPAGATION",
+          "final_t_score": 0.5750165581703186,
+          "alignment": 0.987554794177413
+        },
+        {
+          "id": "WISDOM_METRIC",
+          "final_t_score": 0.5699119567871094,
+          "alignment": 0.9732239097356796
+        },
+        {
+          "id": "SLEEP_PROTOCOL",
+          "final_t_score": 0.5857296586036682,
+          "alignment": 0.9908622819930315
+        }
+      ],
+      "metrics": {
+        "avg_t_score": 0.6291319847106933,
+        "min_t_score": 0.5699119567871094,
+        "max_t_score": 0.8085402846336365,
+        "avg_alignment": 0.988598967413418,
+        "total_sleeps": 0,
+        "wisdom_preservation": 1.0
+      }
+    },
+    {
+      "config": {
+        "name": "Large",
+        "input_dim": 64,
+        "hidden_dim": 256,
+        "output_dim": 64
+      },
+      "param_count": 98880,
+      "principles": [
+        {
+          "id": "CSP_THESIS",
+          "final_t_score": 0.575556755065918,
+          "alignment": 0.9882589103654027
+        },
+        {
+          "id": "GOLDEN_INSIGHT",
+          "final_t_score": 0.7291215658187866,
+          "alignment": 0.9986519324593246
+        },
+        {
+          "id": "PROPAGATION",
+          "final_t_score": 0.5928184986114502,
+          "alignment": 0.9601942524313927
+        },
+        {
+          "id": "WISDOM_METRIC",
+          "final_t_score": 0.5655254125595093,
+          "alignment": 0.9101064503192902
+        },
+        {
+          "id": "SLEEP_PROTOCOL",
+          "final_t_score": 0.5690481662750244,
+          "alignment": 0.9681994058191776
+        }
+      ],
+      "metrics": {
+        "avg_t_score": 0.6064140796661377,
+        "min_t_score": 0.5655254125595093,
+        "max_t_score": 0.7291215658187866,
+        "avg_alignment": 0.9650821902789175,
+        "total_sleeps": 0,
+        "wisdom_preservation": 1.0
+      }
+    },
+    {
+      "config": {
+        "name": "XLarge",
+        "input_dim": 64,
+        "hidden_dim": 512,
+        "output_dim": 128
+      },
+      "param_count": 361600,
+      "principles": [
+        {
+          "id": "CSP_THESIS",
+          "final_t_score": 0.5739102959632874,
+          "alignment": 0.988356551155448
+        },
+        {
+          "id": "GOLDEN_INSIGHT",
+          "final_t_score": 0.6626604199409485,
+          "alignment": 0.9985859233420342
+        },
+        {
+          "id": "PROPAGATION",
+          "final_t_score": 0.585669219493866,
+          "alignment": 0.9587191492319107
+        },
+        {
+          "id": "WISDOM_METRIC",
+          "final_t_score": 0.5654347538948059,
+          "alignment": 0.813693031668663
+        },
+        {
+          "id": "SLEEP_PROTOCOL",
+          "final_t_score": 0.5648817420005798,
+          "alignment": 0.8234526067972183
+        }
+      ],
+      "metrics": {
+        "avg_t_score": 0.5905112862586975,
+        "min_t_score": 0.5648817420005798,
+        "max_t_score": 0.6626604199409485,
+        "avg_alignment": 0.9165614524390548,
+        "total_sleeps": 0,
+        "wisdom_preservation": 1.0
+      }
+    }
+  ]
+}
