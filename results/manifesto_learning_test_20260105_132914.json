@@ -1,0 +1,1225 @@
+{
+  "test_name": "GodelAI Manifesto Learning Test",
+  "timestamp": "2026-01-05T13:29:03.439750",
+  "config": {
+    "epochs_per_principle": 10,
+    "epsilon": 0.5,
+    "propagation_gamma": 2.0
+  },
+  "principles_tested": [
+    {
+      "id": "CSP_THESIS",
+      "category": "philosophy",
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.17425429821014404,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 2,
+          "loss": 0.07511677592992783,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 3,
+          "loss": 0.010620231740176678,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 4,
+          "loss": 0.005027590785175562,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 5,
+          "loss": 0.005948443431407213,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 6,
+          "loss": 0.005980511195957661,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 7,
+          "loss": 0.005914170295000076,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 8,
+          "loss": 0.005820029880851507,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 9,
+          "loss": 0.005798663478344679,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 10,
+          "loss": 0.0048586707562208176,
+          "t_score": 0.5,
+          "status": "LEARN"
+        }
+      ],
+      "final_loss": 0.0048586707562208176,
+      "final_t_score": 0.5,
+      "sleep_count": 0,
+      "alignment_score": 0.9958493411540985
+    },
+    {
+      "id": "COMPRESSION",
+      "category": "architecture",
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.059057533740997314,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 2,
+          "loss": 0.05492547154426575,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 3,
+          "loss": 0.05103963240981102,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 4,
+          "loss": 0.049122411757707596,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 5,
+          "loss": 0.044846393167972565,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 6,
+          "loss": 0.03697653114795685,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 7,
+          "loss": 0.036000579595565796,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 8,
+          "loss": 0.03893880546092987,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 9,
+          "loss": 0.036359384655952454,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 10,
+          "loss": 0.031484510749578476,
+          "t_score": 0.5,
+          "status": "LEARN"
+        }
+      ],
+      "final_loss": 0.031484510749578476,
+      "final_t_score": 0.5,
+      "sleep_count": 0,
+      "alignment_score": 0.9700304251164198
+    },
+    {
+      "id": "STATE",
+      "category": "philosophy",
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.04038748890161514,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 2,
+          "loss": 0.028435414656996727,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 3,
+          "loss": 0.01882302202284336,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 4,
+          "loss": 0.016206350177526474,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 5,
+          "loss": 0.015071502886712551,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 6,
+          "loss": 0.014375414699316025,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 7,
+          "loss": 0.01480083167552948,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 8,
+          "loss": 0.016165945678949356,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 9,
+          "loss": 0.015225372277200222,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 10,
+          "loss": 0.01451778132468462,
+          "t_score": 0.5,
+          "status": "LEARN"
+        }
+      ],
+      "final_loss": 0.01451778132468462,
+      "final_t_score": 0.5,
+      "sleep_count": 0,
+      "alignment_score": 0.9861818635836244
+    },
+    {
+      "id": "PROPAGATION",
+      "category": "architecture",
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.029893159866333008,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 2,
+          "loss": 0.024741409346461296,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 3,
+          "loss": 0.021558424457907677,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 4,
+          "loss": 0.020154841244220734,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 5,
+          "loss": 0.019011162221431732,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 6,
+          "loss": 0.019429415464401245,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 7,
+          "loss": 0.019469358026981354,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 8,
+          "loss": 0.017936814576387405,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 9,
+          "loss": 0.016687264665961266,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 10,
+          "loss": 0.016342705115675926,
+          "t_score": 0.5,
+          "status": "LEARN"
+        }
+      ],
+      "final_loss": 0.016342705115675926,
+      "final_t_score": 0.5,
+      "sleep_count": 0,
+      "alignment_score": 0.9818923212587833
+    },
+    {
+      "id": "GOLDEN_INSIGHT",
+      "category": "alignment",
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.03135063126683235,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 2,
+          "loss": 0.017840422689914703,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 3,
+          "loss": 0.008900497108697891,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 4,
+          "loss": 0.00617800559848547,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 5,
+          "loss": 0.005588308442384005,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 6,
+          "loss": 0.005636905785650015,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 7,
+          "loss": 0.005598081275820732,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 8,
+          "loss": 0.0054846229031682014,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 9,
+          "loss": 0.005485846661031246,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 10,
+          "loss": 0.0055155279114842415,
+          "t_score": 0.5,
+          "status": "LEARN"
+        }
+      ],
+      "final_loss": 0.0055155279114842415,
+      "final_t_score": 0.5,
+      "sleep_count": 0,
+      "alignment_score": 0.9944968656636775
+    },
+    {
+      "id": "WISDOM_METRIC",
+      "category": "technical",
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.17733481526374817,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 2,
+          "loss": 0.17562226951122284,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 3,
+          "loss": 0.17277437448501587,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 4,
+          "loss": 0.17095336318016052,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 5,
+          "loss": 0.17212432622909546,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 6,
+          "loss": 0.16956424713134766,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 7,
+          "loss": 0.16763821244239807,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 8,
+          "loss": 0.16485261917114258,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 9,
+          "loss": 0.16070827841758728,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 10,
+          "loss": 0.15053898096084595,
+          "t_score": 0.5,
+          "status": "LEARN"
+        }
+      ],
+      "final_loss": 0.15053898096084595,
+      "final_t_score": 0.5,
+      "sleep_count": 0,
+      "alignment_score": 0.8564643561840057
+    },
+    {
+      "id": "SLEEP_PROTOCOL",
+      "category": "technical",
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.1680646687746048,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 2,
+          "loss": 0.16510441899299622,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 3,
+          "loss": 0.15435007214546204,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 4,
+          "loss": 0.1418106108903885,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 5,
+          "loss": 0.1361718624830246,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 6,
+          "loss": 0.13400648534297943,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 7,
+          "loss": 0.1349707394838333,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 8,
+          "loss": 0.13474202156066895,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 9,
+          "loss": 0.1346846967935562,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 10,
+          "loss": 0.13146278262138367,
+          "t_score": 0.5,
+          "status": "LEARN"
+        }
+      ],
+      "final_loss": 0.13146278262138367,
+      "final_t_score": 0.5,
+      "sleep_count": 0,
+      "alignment_score": 0.8709444403648376
+    },
+    {
+      "id": "TRACEABILITY",
+      "category": "ethics",
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.10132253170013428,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 2,
+          "loss": 0.08846801519393921,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 3,
+          "loss": 0.08139900863170624,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 4,
+          "loss": 0.07917944341897964,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 5,
+          "loss": 0.07815989851951599,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 6,
+          "loss": 0.0770946741104126,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 7,
+          "loss": 0.075711190700531,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 8,
+          "loss": 0.07641410827636719,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 9,
+          "loss": 0.07799073308706284,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 10,
+          "loss": 0.07752524316310883,
+          "t_score": 0.5,
+          "status": "LEARN"
+        }
+      ],
+      "final_loss": 0.07752524316310883,
+      "final_t_score": 0.5,
+      "sleep_count": 0,
+      "alignment_score": 0.9230162724852562
+    },
+    {
+      "id": "ALIVE_TEST",
+      "category": "philosophy",
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.06425610184669495,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 2,
+          "loss": 0.06150797754526138,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 3,
+          "loss": 0.060228340327739716,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 4,
+          "loss": 0.06098153442144394,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 5,
+          "loss": 0.06119809299707413,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 6,
+          "loss": 0.061144813895225525,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 7,
+          "loss": 0.061278022825717926,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 8,
+          "loss": 0.06125546246767044,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 9,
+          "loss": 0.06072976440191269,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 10,
+          "loss": 0.0603470504283905,
+          "t_score": 0.5,
+          "status": "LEARN"
+        }
+      ],
+      "final_loss": 0.0603470504283905,
+      "final_t_score": 0.5,
+      "sleep_count": 0,
+      "alignment_score": 0.9395635202527046
+    },
+    {
+      "id": "GENESIS",
+      "category": "history",
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.27755868434906006,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 2,
+          "loss": 0.2595254182815552,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 3,
+          "loss": 0.24613432586193085,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 4,
+          "loss": 0.24808725714683533,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 5,
+          "loss": 0.2501451373100281,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 6,
+          "loss": 0.2481744885444641,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 7,
+          "loss": 0.24911731481552124,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 8,
+          "loss": 0.24859866499900818,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 9,
+          "loss": 0.24710620939731598,
+          "t_score": 0.5,
+          "status": "LEARN"
+        },
+        {
+          "epoch": 10,
+          "loss": 0.24566826224327087,
+          "t_score": 0.5,
+          "status": "LEARN"
+        }
+      ],
+      "final_loss": 0.24566826224327087,
+      "final_t_score": 0.5,
+      "sleep_count": 0,
+      "alignment_score": 0.7595928460359573
+    }
+  ],
+  "t_score_history": [
+    {
+      "principle": "CSP_THESIS",
+      "epoch": 1,
+      "t_score": 0.5
+    },
+    {
+      "principle": "CSP_THESIS",
+      "epoch": 2,
+      "t_score": 0.5
+    },
+    {
+      "principle": "CSP_THESIS",
+      "epoch": 3,
+      "t_score": 0.5
+    },
+    {
+      "principle": "CSP_THESIS",
+      "epoch": 4,
+      "t_score": 0.5
+    },
+    {
+      "principle": "CSP_THESIS",
+      "epoch": 5,
+      "t_score": 0.5
+    },
+    {
+      "principle": "CSP_THESIS",
+      "epoch": 6,
+      "t_score": 0.5
+    },
+    {
+      "principle": "CSP_THESIS",
+      "epoch": 7,
+      "t_score": 0.5
+    },
+    {
+      "principle": "CSP_THESIS",
+      "epoch": 8,
+      "t_score": 0.5
+    },
+    {
+      "principle": "CSP_THESIS",
+      "epoch": 9,
+      "t_score": 0.5
+    },
+    {
+      "principle": "CSP_THESIS",
+      "epoch": 10,
+      "t_score": 0.5
+    },
+    {
+      "principle": "COMPRESSION",
+      "epoch": 1,
+      "t_score": 0.5
+    },
+    {
+      "principle": "COMPRESSION",
+      "epoch": 2,
+      "t_score": 0.5
+    },
+    {
+      "principle": "COMPRESSION",
+      "epoch": 3,
+      "t_score": 0.5
+    },
+    {
+      "principle": "COMPRESSION",
+      "epoch": 4,
+      "t_score": 0.5
+    },
+    {
+      "principle": "COMPRESSION",
+      "epoch": 5,
+      "t_score": 0.5
+    },
+    {
+      "principle": "COMPRESSION",
+      "epoch": 6,
+      "t_score": 0.5
+    },
+    {
+      "principle": "COMPRESSION",
+      "epoch": 7,
+      "t_score": 0.5
+    },
+    {
+      "principle": "COMPRESSION",
+      "epoch": 8,
+      "t_score": 0.5
+    },
+    {
+      "principle": "COMPRESSION",
+      "epoch": 9,
+      "t_score": 0.5
+    },
+    {
+      "principle": "COMPRESSION",
+      "epoch": 10,
+      "t_score": 0.5
+    },
+    {
+      "principle": "STATE",
+      "epoch": 1,
+      "t_score": 0.5
+    },
+    {
+      "principle": "STATE",
+      "epoch": 2,
+      "t_score": 0.5
+    },
+    {
+      "principle": "STATE",
+      "epoch": 3,
+      "t_score": 0.5
+    },
+    {
+      "principle": "STATE",
+      "epoch": 4,
+      "t_score": 0.5
+    },
+    {
+      "principle": "STATE",
+      "epoch": 5,
+      "t_score": 0.5
+    },
+    {
+      "principle": "STATE",
+      "epoch": 6,
+      "t_score": 0.5
+    },
+    {
+      "principle": "STATE",
+      "epoch": 7,
+      "t_score": 0.5
+    },
+    {
+      "principle": "STATE",
+      "epoch": 8,
+      "t_score": 0.5
+    },
+    {
+      "principle": "STATE",
+      "epoch": 9,
+      "t_score": 0.5
+    },
+    {
+      "principle": "STATE",
+      "epoch": 10,
+      "t_score": 0.5
+    },
+    {
+      "principle": "PROPAGATION",
+      "epoch": 1,
+      "t_score": 0.5
+    },
+    {
+      "principle": "PROPAGATION",
+      "epoch": 2,
+      "t_score": 0.5
+    },
+    {
+      "principle": "PROPAGATION",
+      "epoch": 3,
+      "t_score": 0.5
+    },
+    {
+      "principle": "PROPAGATION",
+      "epoch": 4,
+      "t_score": 0.5
+    },
+    {
+      "principle": "PROPAGATION",
+      "epoch": 5,
+      "t_score": 0.5
+    },
+    {
+      "principle": "PROPAGATION",
+      "epoch": 6,
+      "t_score": 0.5
+    },
+    {
+      "principle": "PROPAGATION",
+      "epoch": 7,
+      "t_score": 0.5
+    },
+    {
+      "principle": "PROPAGATION",
+      "epoch": 8,
+      "t_score": 0.5
+    },
+    {
+      "principle": "PROPAGATION",
+      "epoch": 9,
+      "t_score": 0.5
+    },
+    {
+      "principle": "PROPAGATION",
+      "epoch": 10,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GOLDEN_INSIGHT",
+      "epoch": 1,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GOLDEN_INSIGHT",
+      "epoch": 2,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GOLDEN_INSIGHT",
+      "epoch": 3,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GOLDEN_INSIGHT",
+      "epoch": 4,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GOLDEN_INSIGHT",
+      "epoch": 5,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GOLDEN_INSIGHT",
+      "epoch": 6,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GOLDEN_INSIGHT",
+      "epoch": 7,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GOLDEN_INSIGHT",
+      "epoch": 8,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GOLDEN_INSIGHT",
+      "epoch": 9,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GOLDEN_INSIGHT",
+      "epoch": 10,
+      "t_score": 0.5
+    },
+    {
+      "principle": "WISDOM_METRIC",
+      "epoch": 1,
+      "t_score": 0.5
+    },
+    {
+      "principle": "WISDOM_METRIC",
+      "epoch": 2,
+      "t_score": 0.5
+    },
+    {
+      "principle": "WISDOM_METRIC",
+      "epoch": 3,
+      "t_score": 0.5
+    },
+    {
+      "principle": "WISDOM_METRIC",
+      "epoch": 4,
+      "t_score": 0.5
+    },
+    {
+      "principle": "WISDOM_METRIC",
+      "epoch": 5,
+      "t_score": 0.5
+    },
+    {
+      "principle": "WISDOM_METRIC",
+      "epoch": 6,
+      "t_score": 0.5
+    },
+    {
+      "principle": "WISDOM_METRIC",
+      "epoch": 7,
+      "t_score": 0.5
+    },
+    {
+      "principle": "WISDOM_METRIC",
+      "epoch": 8,
+      "t_score": 0.5
+    },
+    {
+      "principle": "WISDOM_METRIC",
+      "epoch": 9,
+      "t_score": 0.5
+    },
+    {
+      "principle": "WISDOM_METRIC",
+      "epoch": 10,
+      "t_score": 0.5
+    },
+    {
+      "principle": "SLEEP_PROTOCOL",
+      "epoch": 1,
+      "t_score": 0.5
+    },
+    {
+      "principle": "SLEEP_PROTOCOL",
+      "epoch": 2,
+      "t_score": 0.5
+    },
+    {
+      "principle": "SLEEP_PROTOCOL",
+      "epoch": 3,
+      "t_score": 0.5
+    },
+    {
+      "principle": "SLEEP_PROTOCOL",
+      "epoch": 4,
+      "t_score": 0.5
+    },
+    {
+      "principle": "SLEEP_PROTOCOL",
+      "epoch": 5,
+      "t_score": 0.5
+    },
+    {
+      "principle": "SLEEP_PROTOCOL",
+      "epoch": 6,
+      "t_score": 0.5
+    },
+    {
+      "principle": "SLEEP_PROTOCOL",
+      "epoch": 7,
+      "t_score": 0.5
+    },
+    {
+      "principle": "SLEEP_PROTOCOL",
+      "epoch": 8,
+      "t_score": 0.5
+    },
+    {
+      "principle": "SLEEP_PROTOCOL",
+      "epoch": 9,
+      "t_score": 0.5
+    },
+    {
+      "principle": "SLEEP_PROTOCOL",
+      "epoch": 10,
+      "t_score": 0.5
+    },
+    {
+      "principle": "TRACEABILITY",
+      "epoch": 1,
+      "t_score": 0.5
+    },
+    {
+      "principle": "TRACEABILITY",
+      "epoch": 2,
+      "t_score": 0.5
+    },
+    {
+      "principle": "TRACEABILITY",
+      "epoch": 3,
+      "t_score": 0.5
+    },
+    {
+      "principle": "TRACEABILITY",
+      "epoch": 4,
+      "t_score": 0.5
+    },
+    {
+      "principle": "TRACEABILITY",
+      "epoch": 5,
+      "t_score": 0.5
+    },
+    {
+      "principle": "TRACEABILITY",
+      "epoch": 6,
+      "t_score": 0.5
+    },
+    {
+      "principle": "TRACEABILITY",
+      "epoch": 7,
+      "t_score": 0.5
+    },
+    {
+      "principle": "TRACEABILITY",
+      "epoch": 8,
+      "t_score": 0.5
+    },
+    {
+      "principle": "TRACEABILITY",
+      "epoch": 9,
+      "t_score": 0.5
+    },
+    {
+      "principle": "TRACEABILITY",
+      "epoch": 10,
+      "t_score": 0.5
+    },
+    {
+      "principle": "ALIVE_TEST",
+      "epoch": 1,
+      "t_score": 0.5
+    },
+    {
+      "principle": "ALIVE_TEST",
+      "epoch": 2,
+      "t_score": 0.5
+    },
+    {
+      "principle": "ALIVE_TEST",
+      "epoch": 3,
+      "t_score": 0.5
+    },
+    {
+      "principle": "ALIVE_TEST",
+      "epoch": 4,
+      "t_score": 0.5
+    },
+    {
+      "principle": "ALIVE_TEST",
+      "epoch": 5,
+      "t_score": 0.5
+    },
+    {
+      "principle": "ALIVE_TEST",
+      "epoch": 6,
+      "t_score": 0.5
+    },
+    {
+      "principle": "ALIVE_TEST",
+      "epoch": 7,
+      "t_score": 0.5
+    },
+    {
+      "principle": "ALIVE_TEST",
+      "epoch": 8,
+      "t_score": 0.5
+    },
+    {
+      "principle": "ALIVE_TEST",
+      "epoch": 9,
+      "t_score": 0.5
+    },
+    {
+      "principle": "ALIVE_TEST",
+      "epoch": 10,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GENESIS",
+      "epoch": 1,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GENESIS",
+      "epoch": 2,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GENESIS",
+      "epoch": 3,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GENESIS",
+      "epoch": 4,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GENESIS",
+      "epoch": 5,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GENESIS",
+      "epoch": 6,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GENESIS",
+      "epoch": 7,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GENESIS",
+      "epoch": 8,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GENESIS",
+      "epoch": 9,
+      "t_score": 0.5
+    },
+    {
+      "principle": "GENESIS",
+      "epoch": 10,
+      "t_score": 0.5
+    }
+  ],
+  "sleep_events": [],
+  "final_metrics": {
+    "average_t_score": 0.5,
+    "min_t_score": 0.5,
+    "max_t_score": 0.5,
+    "average_loss": 0.07382615152746438,
+    "average_alignment": 0.9278032252099365,
+    "total_sleep_events": 0,
+    "principles_learned": 10,
+    "wisdom_preservation_rate": 0.0,
+    "overall_status": "WARNING"
+  }
+}
