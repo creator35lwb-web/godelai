@@ -1,0 +1,73 @@
+
+======================================================================
+🔬 GodelAI SCALE VALIDATION TEST
+======================================================================
+Testing 4 network scales
+Principles: 5
+======================================================================
+
+============================================================
+Testing Scale: Small
+Hidden Dim: 64 | Params: 10,400
+============================================================
+✅ CSP_THESIS           T: 0.5824 | Align: 0.9914
+✅ GOLDEN_INSIGHT       T: 0.6551 | Align: 0.9988
+✅ PROPAGATION          T: 0.5760 | Align: 0.9716
+✅ WISDOM_METRIC        T: 0.5671 | Align: 0.9529
+✅ SLEEP_PROTOCOL       T: 0.5700 | Align: 0.9826
+
+============================================================
+Testing Scale: Medium
+Hidden Dim: 128 | Params: 28,960
+============================================================
+✅ CSP_THESIS           T: 0.6065 | Align: 0.9922
+✅ GOLDEN_INSIGHT       T: 0.8085 | Align: 0.9992
+✅ PROPAGATION          T: 0.5750 | Align: 0.9876
+✅ WISDOM_METRIC        T: 0.5699 | Align: 0.9732
+✅ SLEEP_PROTOCOL       T: 0.5857 | Align: 0.9909
+
+============================================================
+Testing Scale: Large
+Hidden Dim: 256 | Params: 98,880
+============================================================
+✅ CSP_THESIS           T: 0.5756 | Align: 0.9883
+✅ GOLDEN_INSIGHT       T: 0.7291 | Align: 0.9987
+✅ PROPAGATION          T: 0.5928 | Align: 0.9602
+✅ WISDOM_METRIC        T: 0.5655 | Align: 0.9101
+✅ SLEEP_PROTOCOL       T: 0.5690 | Align: 0.9682
+
+============================================================
+Testing Scale: XLarge
+Hidden Dim: 512 | Params: 361,600
+============================================================
+✅ CSP_THESIS           T: 0.5739 | Align: 0.9884
+✅ GOLDEN_INSIGHT       T: 0.6627 | Align: 0.9986
+✅ PROPAGATION          T: 0.5857 | Align: 0.9587
+✅ WISDOM_METRIC        T: 0.5654 | Align: 0.8137
+✅ SLEEP_PROTOCOL       T: 0.5649 | Align: 0.8235
+
+======================================================================
+📊 SCALE VALIDATION SUMMARY
+======================================================================
+
+Scale        Params       Avg T-Score     Alignment    Sleeps   Status
+----------------------------------------------------------------------
+Small        10,400       0.5901          0.9795       0        ✅ PASS
+Medium       28,960       0.6291          0.9886       0        ✅ PASS
+Large        98,880       0.6064          0.9651       0        ✅ PASS
+XLarge       361,600      0.5905          0.9166       0        ✅ PASS
+----------------------------------------------------------------------
+Total Time: 2.17s
+
+======================================================================
+🎯 SCALE VALIDATION CONCLUSION
+======================================================================
+
+✅ GodelAI T-Score remains stable across all network scales!
+   The C-S-P framework scales from 64 to 512 hidden dimensions
+   without wisdom degradation.
+======================================================================
+
+📁 Results saved to: /home/ubuntu/godelai/results/scale_validation_20260106_033159.json
+
+✅ Scale validation completed!
