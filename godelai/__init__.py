@@ -13,7 +13,7 @@ Alignment Principle:
     transmissibility of "the ability to modify goals."
 """
 
-__version__ = "0.1.0"
+__version__ = "1.1.0"
 __author__ = "Alton & Godel (Manus AI)"
 
 from godelai.reg.csp_regularizer import (

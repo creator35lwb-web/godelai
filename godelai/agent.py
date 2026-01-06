@@ -75,11 +75,18 @@ class GodelAgent(nn.Module):
 
         Returns:
             T_score: Wisdom score normalized to 0-1 range
+                     - 0.0 = Identical gradients (critical, triggers Sleep)
+                     - 1.0 = Maximally diverse gradients (healthy)
+
+        Fixed in v1.1.0: Replaced sigmoid normalization with linear normalization
+        to enable Sleep Protocol triggering. Previous sigmoid had floor of 0.5.
         """
         # Ensure we have multiple samples
         if batch_gradients.shape[0] == 1:
             # Cannot measure diversity with only 1 sample
             return torch.tensor(0.5)
+
+        n = batch_gradients.shape[0]
 
         # 1. Global Direction Strength (Everyone rushing together)
         # sum_grad = || Σ g_i ||^2
@@ -89,12 +96,18 @@ class GodelAgent(nn.Module):
         # sum_norm_grad = Σ || g_i ||^2
         sum_norm_grad = torch.sum(torch.norm(batch_gradients, dim=1)**2)
 
-        # 3. Calculate Diversity (Wisdom) Ratio
-        # Diversity = Individuals / (Crowd + epsilon)
-        diversity_score = sum_norm_grad / (sum_grad_norm + 1e-8)
+        # 3. Calculate Diversity Ratio
+        # When identical: ratio = N (all gradients add up perfectly)
+        # When diverse: ratio → 1 (gradients partially cancel)
+        # When opposite: ratio → 0 (gradients fully cancel)
+        ratio = sum_grad_norm / (sum_norm_grad + 1e-8)
 
-        # Normalize to 0-1 range using Sigmoid (or Tanh)
-        T_score = torch.sigmoid(diversity_score)
+        # 4. Linear Normalization (FIXED in v1.1.0)
+        # T = 1 - ratio/N
+        # - Identical gradients: ratio = N, T = 0 (triggers Sleep)
+        # - Diverse gradients: ratio ≈ 1, T ≈ 1 - 1/N ≈ 1 (healthy)
+        # - Opposite gradients: ratio ≈ 0, T = 1 (maximally diverse)
+        T_score = 1.0 - torch.clamp(ratio / n, 0, 1)
 
         return T_score
 

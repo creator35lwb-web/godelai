@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "godelai"
-version = "0.1.0"
+version = "1.1.0"
 description = "An open-source small language model built on the C-S-P (Compression → State → Propagation) framework"
 readme = "README.md"
 license = {text = "MIT"}
