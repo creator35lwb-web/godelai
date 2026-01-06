@@ -1,0 +1,81 @@
+{
+  "config": {
+    "seq_length": 100,
+    "batch_size": 32,
+    "embedding_dim": 64,
+    "hidden_dim": 128,
+    "num_layers": 2,
+    "epochs": 10,
+    "learning_rate": 0.002,
+    "min_surplus_energy": 0.3,
+    "propagation_gamma": 2.0
+  },
+  "history": {
+    "train_loss": [
+      2.7633894205093386,
+      2.310712297473635,
+      2.0298496050494057,
+      1.7813420414924621,
+      1.5555040087018694,
+      1.3488271410976138,
+      1.1785833678075246,
+      1.0345814500536237,
+      0.9054843651396888,
+      0.8042799425976617
+    ],
+    "val_loss": [
+      2.5107690493265786,
+      2.4585572878519693,
+      2.5382535258928933,
+      2.593908150990804,
+      2.6932193835576377,
+      2.859804650147756,
+      3.0112573703130088,
+      3.1948920488357544,
+      3.282268782456716,
+      3.45075253645579
+    ],
+    "t_score": [
+      0.5084240237871805,
+      0.508470336596171,
+      0.5085123777389526,
+      0.5086156924565634,
+      0.5087852478027344,
+      0.5089152455329895,
+      0.5090443889300028,
+      0.5093959371248881,
+      0.5097841819127401,
+      0.5100174347559611
+    ],
+    "sleep_events": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "final_metrics": {
+    "best_val_loss": 2.4585572878519693,
+    "final_t_score": 0.5100174347559611,
+    "total_sleep_events": 0,
+    "training_time_minutes": 5.208120048046112
+  },
+  "samples": [
+    "ROMEO:\nRTMIO:\nThef ore ofr nawu, and mat de ow of reow aqd.\nTh alt terind\nAnderyiche orerortigof of rathy wur owre naellsad de randy to doud tof darlve ?her ",
+    "ROMEO:\nAnd tout retath of at os ions ofrens mornd\nCothe ofal liser id iss oriss atlavee\nFou we ofor of ther rthigh hy ssorser he all' pakes\nAnce torather and",
+    "ROMEO:\nHAOn:\nNom?rice fly ow\nThe arte who cenond to to sarde trits of surnser,\nAs tratith rather, of er of owery o, rate to yale woulded constich thaw to in ",
+    "ROMEO:\nAnd to pale\nkon him the remy avke orerof gried turn retal we duyres the prie the of loth in the in to that that thy tith thy outher heir pries in the ",
+    "ROMEO:\nAnd the thit the oreal of ruseative orerop of recomeorow he\nThe in arm the oray of reconty thy to with the undatize!\nNomef of tomor;'ll and ontugient ",
+    "ROMEO:\nAll:\nAnd the to lung other this patient a weardius in this tyell\nwholes of to die,\nRoutly turn to autyoubry,\nBrenser whis dueat, tomorrow, and this we",
+    "ROMEO:\nAnd that to dreangthat to pangs of orits of nother would respeust country from will\nAnd tomorrow,\nCreeps pett our pronts to with this dueat, to dream:",
+    "ROMEO:\nAll:\nWe hund o, oprige thep his but the unrawost of?\nNiet of ther wive under owhis death's the wing love us all;\nAnd enterpress of ofer which he or in",
+    "ROMEO:\nBut the spurns retler bear that the with that the wrong nother that were\nwhe pangs of resolutions cabrcing and tomorrow, and them with to dreams make\n",
+    "ROMEO:\nAll:\nNo the day to dream, on would resomeo, of resolved.\n\nFirst Citizens, the law's we longing mis mortismons mort.\n\nBENVOLIO:\nO Montague, of resolded"
+  ]
+}
