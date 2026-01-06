@@ -374,7 +374,7 @@ class ManifestoLearningTestV2:
             if t_score < self.agent.epsilon:
                 status = "SLEEP"
                 # Execute sleep protocol
-                self.agent._execute_sleep_protocol()
+                self.agent.rest_and_reflect()
                 principle_result["sleep_count"] += 1
                 self.results["sleep_events"].append({
                     "principle": principle["id"],
