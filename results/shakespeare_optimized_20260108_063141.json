@@ -1,0 +1,86 @@
+{
+  "config": {
+    "epochs": 10,
+    "batch_size": 64,
+    "seq_length": 100,
+    "embedding_dim": 128,
+    "hidden_dim": 256,
+    "num_layers": 2,
+    "learning_rate": 0.002,
+    "min_surplus_energy": 0.3,
+    "propagation_gamma": 2.0,
+    "tscore_sample_batches": 3
+  },
+  "system": {
+    "device": "cpu",
+    "pytorch_version": "2.9.1+cpu",
+    "cuda_available": false
+  },
+  "history": {
+    "train_loss": [
+      2.211414051361573,
+      1.7090563957507794,
+      1.5518712049875505,
+      1.4661062772457416,
+      1.4126202502311804,
+      1.3751353323459625,
+      1.346101083052464,
+      1.3235790599615147,
+      1.3042540573156798,
+      1.2880527186088073
+    ],
+    "val_loss": [
+      1.892584534252391,
+      1.7455222536535824,
+      1.6760152297861435,
+      1.6315497720942778,
+      1.605390324312098,
+      1.581812809495365,
+      1.5730617256725536,
+      1.566699603024651,
+      1.5647841130985933,
+      1.567364117678474
+    ],
+    "t_score": [
+      0.9230722983678182,
+      0.937356154123942,
+      0.9482565522193909,
+      0.9484724005063375,
+      0.9473970333735148,
+      0.9498615066210429,
+      0.953586479028066,
+      0.9559857249259949,
+      0.9593856533368429,
+      0.9577164451281229
+    ],
+    "sleep_events": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "samples": [
+    "I'y anbeads humple you wook, for the is reparst beion\nIn thou have that her the's deseed where:\nYou agais,\nAnd I mine shall a see to your mark I'll purather by mexse:\nBelueg\nI well no a wellad:\nI spea",
+    "Away very lord in.\n\nDUKE VINCENTIO:\n'No houses Prunse:\nNo other.\n\nClaon: he that I grace, which, look'd for the grace is such sad on any must your letters in thy such brave it is you beging facule eat",
+    "He is I, sure are your motion, sir; sterpion, I'll head, and sacks your true, sir, good single, side.\n\nFLORIZAS:\nHark to it\nsay it now.\n\nANGELO:\nArra'd pardon me for her heard alone: for Aufornizy's t",
+    "Hast thou resolvece.\n\nMARTIUS:\nHis langeguant:\nThis is a true, from you, let you advise is the labour faults, hence, see, sir.\n\nLENES:\nHow fornial? 't!\n\nSecond Inot he seems and he hath been seath, I'",
+    "And then, if going Blunk, he I'll besides be\nbeen yet, good Camillo, sirrah upon me.\nHere strange to go other knowlendwith all assiles' years sway would set the enemy it. Are whos your hanging such we"
+  ],
+  "final_metrics": {
+    "final_train_loss": 1.2880527186088073,
+    "final_val_loss": 1.567364117678474,
+    "best_val_loss": 1.5647841130985933,
+    "final_t_score": 0.9577164451281229,
+    "avg_t_score": 0.9481090247631073,
+    "total_sleep_events": 0,
+    "total_params": 716225,
+    "training_time_minutes": 11.300741350650787
+  }
+}
