@@ -20,6 +20,26 @@ pipeline_tag: text-generation
 [![GitHub](https://img.shields.io/badge/GitHub-GodelAI-blue)](https://github.com/creator35lwb-web/godelai)
 [![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.9+-blue)](https://python.org)
+[![Version](https://img.shields.io/badge/Version-1.1.0-orange)](https://github.com/creator35lwb-web/godelai/releases)
+
+---
+
+## What's New in v1.1.0 (January 7, 2026)
+
+### 🔧 Critical Bug Fix: T-Score Sigmoid Floor
+
+**Fixed**: The T-Score formula had a critical bug where sigmoid normalization created a mathematical floor of ~0.5, preventing the Sleep Protocol from ever triggering (threshold is 0.3).
+
+**Impact**:
+- ✅ Sleep Protocol now functional (can trigger when T < 0.3)
+- ✅ Identical gradients now correctly produce T ≈ 0 (was stuck at 0.516)
+- ✅ Gradient Collapse detection now works as designed
+- ⚠️ T-Score values will be different (revealing true gradient diversity)
+
+**Before**: `T = sigmoid(diversity_score)` — Floor of 0.5
+**After**: `T = 1 - ratio/N` — True 0-1 range
+
+See [T-Score Formula Analysis](https://github.com/creator35lwb-web/godelai/blob/main/research/t_score_formula_analysis.md) for details.
 
 ---
 

@@ -1,0 +1,23 @@
+{
+  "config": {
+    "task_a_epochs": 5,
+    "task_b_epochs": 5,
+    "batch_size": 64,
+    "seq_length": 100,
+    "embedding_dim": 128,
+    "hidden_dim": 256,
+    "num_layers": 2,
+    "learning_rate": 0.002,
+    "seed": 42,
+    "min_surplus_energy": 0.3,
+    "propagation_gamma": 2.0,
+    "tscore_sample_batches": 3
+  },
+  "standard": {
+    "task_a_loss_after_phase1": 1.3854862332344056,
+    "task_a_loss_after_phase2": 1.4596369028091432,
+    "task_b_loss_final": 1.300108003616333,
+    "forgetting": 0.0741506695747376
+  },
+  "timestamp": "20260109_092340"
+}
