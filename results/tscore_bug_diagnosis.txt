@@ -1,0 +1,83 @@
+================================================================================
+T-SCORE BUG INVESTIGATION
+================================================================================
+
+Synthetic Data: 32 samples, 1000 parameters
+
+TEST 1: IDENTICAL GRADIENTS
+----------------------------------------
+All 32 gradients are identical
+
+Active mode (GodelAI):  0.0000
+Shadow mode (BUGGY):    0.9688
+Shadow mode (FIXED):    0.0000
+
+Expected: T ~= 0.0 (identical gradients should have low diversity)
+Active correct? True
+Shadow (buggy) correct? False
+Shadow (fixed) correct? True
+
+================================================================================
+TEST 2: DIVERSE GRADIENTS
+----------------------------------------
+32 random diverse gradients
+
+Active mode (GodelAI):  0.9695
+Shadow mode (BUGGY):    0.8210
+Shadow mode (FIXED):    0.9695
+
+Expected: T ~= 0.97 (diverse gradients, some cancellation)
+Active in range? True
+Shadow (buggy) in range? True
+Shadow (fixed) in range? True
+
+================================================================================
+TEST 3: OPPOSITE GRADIENTS (maximum cancellation)
+----------------------------------------
+16 gradients in one direction, 16 in opposite direction
+
+Active mode (GodelAI):  1.0000
+Shadow mode (BUGGY):    0.0000
+Shadow mode (FIXED):    1.0000
+
+Expected: T ~= 1.0 (opposite gradients cancel perfectly)
+Active correct? True
+Shadow (buggy) correct? False
+Shadow (fixed) correct? True
+
+================================================================================
+DIAGNOSIS
+================================================================================
+
+THE BUG:
+----------------------------------------
+
+Shadow mode (A/B test scripts) uses WRONG formula:
+
+  BUGGY Shadow:
+    sum_norm_grad = ||sum(g)||        (linear norm, NOT squared)
+    sum_grad_norm = sum(||g||)        (sum of linear norms)
+    ratio = sum(||g||) / ||sum(g)||
+
+  CORRECT Active (agent.py):
+    sum_grad_norm = ||sum(g)||^2      (SQUARED norm)
+    sum_norm_grad = sum(||g||^2)      (sum of SQUARED norms)
+    ratio = ||sum(g)||^2 / sum(||g||^2)
+
+These are COMPLETELY DIFFERENT formulas!
+
+For identical gradients:
+  Buggy: ratio = sum(||g||) / ||sum(g)|| = n*||g|| / (n*||g||) = 1
+         T = 1 - 1/n ~= 0.97 (WRONG! Should be ~=0)
+
+  Correct: ratio = ||sum(g)||^2 / sum(||g||^2) = (n*||g||)^2 / (n*||g||^2) = n
+           T = 1 - n/n = 0 (CORRECT!)
+
+================================================================================
+
+CONCLUSION:
+  - Active mode (GodelAI agent.py): [CORRECT]
+  - Shadow mode (A/B test scripts): [WRONG - INVERTED!]
+
+FIX: Replace Shadow mode implementation with correct formula (use squared norms)
+================================================================================

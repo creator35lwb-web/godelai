@@ -209,10 +209,11 @@ def compute_tscore_shadow(model, sample_batches, criterion, device):
 
         if len(batch_grads) > 0:
             grad_matrix = torch.stack(batch_grads)
+            # GodelAI T-Score formula (v1.1.0) - FIXED: Added **2 to match agent.py
             n = grad_matrix.shape[0]
             sum_grad = torch.sum(grad_matrix, dim=0)
-            sum_norm_grad = torch.norm(sum_grad)
-            sum_grad_norm = torch.sum(torch.norm(grad_matrix, dim=1))
+            sum_grad_norm = torch.norm(sum_grad)**2  # FIXED: Squared norm (was linear)
+            sum_norm_grad = torch.sum(torch.norm(grad_matrix, dim=1)**2)  # FIXED: Sum of squared norms (was linear)
             ratio = sum_grad_norm / (sum_norm_grad + 1e-8)
             t_score = 1.0 - torch.clamp(ratio / n, 0, 1)
             t_scores.append(t_score.item())
