@@ -1,0 +1,32 @@
+{
+  "config": {
+    "task_a_epochs": 5,
+    "task_b_epochs": 5,
+    "batch_size": 64,
+    "seq_length": 100,
+    "embedding_dim": 128,
+    "hidden_dim": 256,
+    "num_layers": 2,
+    "learning_rate": 0.002,
+    "seed": 42,
+    "ewc_lambda": 1000.0,
+    "fisher_samples": 100
+  },
+  "baseline_forgetting": 0.0742,
+  "baseline_sleep_loss": 4.17,
+  "ewc": {
+    "task_a_loss_after_phase1": 1.3854862332344056,
+    "task_a_loss_after_phase2": 1.4436584949493407,
+    "task_b_loss_final": 1.3149124026298522,
+    "forgetting": 0.05817226171493517
+  },
+  "comparison": {
+    "standard_forgetting": 0.0742,
+    "ewc_forgetting": 0.05817226171493517,
+    "improvement": 0.016027738285064833,
+    "improvement_percentage": 21.600725451569854,
+    "learning_preserved": true,
+    "better_than_sleep": true
+  },
+  "timestamp": "20260111_063039"
+}
