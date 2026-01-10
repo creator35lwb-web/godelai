@@ -1,0 +1,43 @@
+{
+  "config": {
+    "task_a_epochs": 5,
+    "task_b_epochs": 5,
+    "batch_size": 64,
+    "seq_length": 100,
+    "embedding_dim": 128,
+    "hidden_dim": 256,
+    "num_layers": 2,
+    "learning_rate": 0.002,
+    "seed": 42,
+    "min_surplus_energy": 0.935,
+    "propagation_gamma": 2.0,
+    "tscore_sample_batches": 3
+  },
+  "baseline_forgetting": 0.0742,
+  "godelai": {
+    "task_a_loss_after_phase1": 4.169293022155761,
+    "task_a_loss_after_phase2": 4.16794228553772,
+    "task_b_loss_final": 4.167710065841675,
+    "forgetting": -0.001350736618041637,
+    "total_sleep_events": 860,
+    "sleep_epochs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "comparison": {
+    "standard_forgetting": 0.0742,
+    "godelai_forgetting": -0.001350736618041637,
+    "improvement": 0.07555073661804164,
+    "improvement_percentage": 101.8203997547731
+  },
+  "timestamp": "20260111_055131"
+}
