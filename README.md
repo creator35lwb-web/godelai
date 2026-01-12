@@ -34,6 +34,42 @@ GodelAI is an **open-source small language model framework** built on the **C-S-
 
 ---
 
+## 🎯 Interactive Demo
+
+<div align="center">
+
+### 🧠 Mnemosyne: Defeating Catastrophic Forgetting
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/creator35lwb-web/godelai/blob/main/notebooks/GodelAI_EWC_Demo.ipynb)
+
+**See it in action:** Interactive Jupyter notebook demonstrating **21.6% reduction** in catastrophic forgetting
+
+</div>
+
+**What you'll witness:**
+
+| Stage | Standard Model | GodelAI-EWC |
+|-------|----------------|-------------|
+| **After Task A** | ✅ Learned (1.39 loss) | ✅ Learned (1.39 loss) |
+| **After Task B** | ❌ Forgot Task A (1.46 loss, +5.3%) | ✅ Remembers Task A (1.44 loss, +4.2%) |
+| **Verdict** | 🔴 Catastrophic forgetting | 🟢 Memory preserved (-21.6% forgetting) |
+
+**The Demo Flow:**
+1. 📥 **Setup**: One-click install from GitHub
+2. 🔴 **Experiment 1**: Standard model forgets Task A when learning Task B
+3. 🟢 **Experiment 2**: GodelAI-EWC remembers Task A while learning Task B
+4. 📊 **Visual Proof**: Green line (EWC) stays below red line (Standard)
+
+**Key Features:**
+- ⏱️ **Runtime**: ~15 minutes on Google Colab Free Tier (T4 GPU)
+- 📚 **Dataset**: Tiny Shakespeare (sequential learning demo)
+- 🎨 **Visualizations**: Professional matplotlib plots showing memory retention
+- 🧠 **Educational**: Explains Fisher Information Matrix and EWC penalty
+
+> **Named after Mnemosyne** (Μνημοσύνη): Greek goddess of memory, symbolizing GodelAI's ability to preserve knowledge while learning new tasks.
+
+---
+
 ## 🧬 Multi-Model Genesis
 
 GodelAI is unique in AI history—it was **co-created across five AI models**, each contributing a distinct layer:
