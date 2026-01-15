@@ -1,0 +1,81 @@
+{
+  "config": {
+    "seq_length": 100,
+    "batch_size": 32,
+    "embedding_dim": 64,
+    "hidden_dim": 128,
+    "num_layers": 2,
+    "epochs": 10,
+    "learning_rate": 0.002,
+    "min_surplus_energy": 0.3,
+    "propagation_gamma": 2.0
+  },
+  "history": {
+    "train_loss": [
+      2.7854557837758747,
+      2.2966295974595208,
+      2.013989782333374,
+      1.772135659626552,
+      1.5548740361418043,
+      1.3462726426976068,
+      1.178468241436141,
+      1.0319737579141344,
+      0.8956164892230715,
+      0.7817830511501858
+    ],
+    "val_loss": [
+      2.5051934719085693,
+      2.506752292315165,
+      2.5460426410039267,
+      2.616569717725118,
+      2.678808351357778,
+      2.7895075480143228,
+      2.922743539015452,
+      3.049260218938192,
+      3.158331116040548,
+      3.2695375879605613
+    ],
+    "t_score": [
+      0.07100256284077962,
+      0.08102905750274658,
+      0.08605519930521648,
+      0.09216419855753581,
+      0.10138169924418132,
+      0.12748316923777261,
+      0.1354108452796936,
+      0.14330961306889853,
+      0.1637414495150248,
+      0.18689048290252686
+    ],
+    "sleep_events": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ]
+  },
+  "final_metrics": {
+    "best_val_loss": 2.5051934719085693,
+    "final_t_score": 0.18689048290252686,
+    "total_sleep_events": 30,
+    "training_time_minutes": 3.498307422796885
+  },
+  "samples": [
+    "ROMEO:\nWortrer yome of tirnd tuns baela,\nAtind th hert wisuthing an Od of ovors ander sramers osetih ty thicore oron ton,\nMnmlus than\nAnd und turresat omre n",
+    "ROMEO:\nBEMT:\nAnd mood twomughal of orow rades thy wis of of the peares to rons dacy undile radeos yar reale rife,\nAnd dat the torbery to to to of tito thil h",
+    "ROMEO:\nunt lies,\nAnd onty the pare of to of to was tike and to till and with ont ourf thoon\nBENVNO:\nApny of rusemorr wat of to grrepcorn take to lose the of ",
+    "ROMEO:\nAll;\nAnd to dread to slume gile of orus to weal detray the norrt sorllel sleat,\nBuer bay al makes the dut to day deat tight und all as any to day corr",
+    "ROMEO:\nAly dice tomorrow, and tomorrow,\nAnd my takes of to of resolved Romeomorrow, and sirns to drearm,\nAnd to take\nNo surns tormrow, and owrorn would daet ",
+    "ROMEO:\nBENVOLIO:\nNot hut thought,\nAndisecow notientoritiser buerd, resolet in thy this retake all re paurnt of tiler thort of death thought,\nAnd ryestizens:\n",
+    "ROMEO:\nBLNVOLIO:\nO't of the wail shodkkns of tike,\nAnd, the pace thels is quiesterd releed there't\nAll\nAnd recoitient their wills cand ofrutry to slied momen",
+    "ROMEO:\nBENVOLIO:\nTo oreow,\nAnd takeler,\nAnd hat remember'd.\n\nROMEO:\nI take our ofliction\nIs sicklied of resould die country wen he of thought,\nAnd lome, of r",
+    "ROMEO:\nAll bear tho would miming this petty this petty this were us rather this petty pace from day to diet us recouturrises of resolge.\n\nROMEO:\nTo d, enter ",
+    "ROMEO:\nBENOLIO:\nI take to others that thy would bapre,\nBut that the question\nLy to makes thut of recorded tible',\nAnd lose the name of action.--Soft you now!"
+  ]
+}
