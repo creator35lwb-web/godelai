@@ -87,7 +87,7 @@ csp_logs/
 
 # Data
 data/
-datasets/
+# datasets/ # Removed - we need conflict datasets
 
 # Checkpoints
 checkpoints/
