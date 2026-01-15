@@ -2,6 +2,38 @@
 
 All notable changes to GodelAI are documented in this file.
 
+## [2.0.0] - 2026-01-16
+
+### Discovery
+- **Data Bottleneck Hypothesis Validated**: Through multi-AI collaboration (Gemini analysis + Manus validation), we confirmed that GodelAI's architecture is sound but requires complex data to activate its capabilities. Simple text (Shakespeare) doesn't trigger the C-S-P mechanisms.
+  - T-Score sensitivity: 0.12 (5KB) vs 0.95 (1.1MB)
+  - Sleep Protocol "overkill" on simple data: 860/860 batches triggered (100%)
+  - EWC only effective in sequential task scenarios
+
+### Added
+- **ROADMAP v3.0**: Strategic pivot from documentation to data engineering
+- **Conflict Data Specification**: `docs/CONFLICT_DATA_SPEC.md` defining data requirements for C-S-P activation
+- **Datasets Directory**: `datasets/conflict/` structure for four conflict types:
+  - Ethical dilemmas (no correct answer)
+  - Contradictory facts (uncertainty handling)
+  - Temporal conflicts (belief updates)
+  - Perspective conflicts (synthesis required)
+- **YSenseAI Integration Placeholder**: `datasets/wisdom/` for future integration
+
+### Changed
+- **README.md**: Added "Current Focus" section explaining data engineering sprint
+- **Roadmap**: Shifted Q1 focus from documentation to conflict data design
+- **Contributing Guidelines**: Updated priorities to emphasize conflict dataset creation
+
+### Multi-Agent Collaboration
+This release was produced through the GodelAI multi-agent workflow:
+- **Echo (Gemini 3 Pro)**: Data bottleneck hypothesis
+- **Godel (Manus AI)**: Validation and GitHub updates
+- **Claude Code**: Code implementation support
+- **Alton Lee**: Orchestration and approval
+
+---
+
 ## [1.1.0] - 2026-01-13
 
 ### Fixed

@@ -18,6 +18,22 @@
 
 ---
 
+## 🎯 Current Focus (January 2026)
+
+We're in a **Data Engineering Sprint**. Our recent discovery: GodelAI's architecture is sound, but we were testing it with the wrong data. Simple text doesn't activate our C-S-P capabilities.
+
+**The Data Bottleneck Discovery:**
+
+| Data Type | T-Score | Result |
+|-----------|---------|--------|
+| Mini Shakespeare (5KB) | 0.12 | Sleep Protocol triggers 100% — blocked learning |
+| Full Shakespeare (1.1MB) | 0.95 | Sleep Protocol never triggers — no benefit |
+| **Conflict Data (target)** | **0.3-0.5** | **Optimal C-S-P activation** |
+
+We need **conflict data** — information with contradictions, dilemmas, and complexity. See [ROADMAP_2026.md](ROADMAP_2026.md) and [docs/CONFLICT_DATA_SPEC.md](docs/CONFLICT_DATA_SPEC.md) for details.
+
+---
+
 ## 🎯 What GodelAI Actually Does
 
 GodelAI is a **research framework** that adds two capabilities to neural network training:
@@ -155,6 +171,9 @@ godelai/
 │   ├── core/             # GodelaiAgent implementation
 │   ├── models/           # Model architectures
 │   └── reg/              # EWC and regularization
+├── datasets/             # Training & test datasets
+│   ├── conflict/         # Conflict data for C-S-P activation
+│   └── wisdom/           # YSenseAI integration (future)
 ├── notebooks/            # Interactive demos
 │   └── GodelAI_EWC_Demo.ipynb  # Mnemosyne Colab
 ├── tests/                # Test suite
@@ -178,29 +197,41 @@ godelai/
 
 ---
 
-## 🗺️ Roadmap
+### 🗺️ Roadmap
 
-### Completed (v1.1.0)
+### Completed (v2.0.0)
 - ✅ T-Score gradient diversity monitoring
 - ✅ Sleep Protocol for training health
-- ✅ EWC integration for continual learning
+- ✅ EWC integration (21.6% forgetting reduction)
 - ✅ Cross-platform validation
+- ✅ Data bottleneck discovery & validation
 
-### In Progress
-- 🔄 Transformer architecture testing
-- 🔄 Documentation improvements
-- 🔄 MCP integration research
+### Q1 2026: Data Engineering Sprint
+- 🔄 Conflict data design & specification
+- 🔄 YSenseAI integration research
+- 🔄 Community engagement
 
-### Future
-- 📋 Benchmark vs. Qwen/Llama/Mistral
-- 📋 Research paper submission
-- 📋 Community tutorials
+### Q2-Q4 2026
+- 📋 Conflict data benchmarks
+- 📋 Research paper (focus: data requirements for C-S-P)
+- 📋 Multi-modal data experiments
+- 📋 YSenseAI production integration
+
+📖 Full roadmap: [ROADMAP_2026.md](ROADMAP_2026.md)
 
 ---
 
 ## 🤝 Contributing
 
 We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md).
+
+### Current Priorities
+
+1. **Conflict Dataset Creation** — Help us build datasets that activate C-S-P
+2. **Data Engineering** — Improve our data pipeline
+3. **Research Validation** — Test our findings on different data types
+
+📖 Dataset specification: [docs/CONFLICT_DATA_SPEC.md](docs/CONFLICT_DATA_SPEC.md)
 
 ### Key Principles
 
