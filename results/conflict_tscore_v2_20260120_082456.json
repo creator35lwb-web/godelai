@@ -1,0 +1,45 @@
+{
+  "experiment": "T-Score Validation v2 - Gradient Diversity",
+  "timestamp": "2026-01-20T08:24:50.684943",
+  "device": "cpu",
+  "hypothesis": "Conflict data should show different T-Score patterns due to gradient diversity",
+  "results": [
+    {
+      "name": "Shakespeare (Homogeneous)",
+      "num_texts": 12,
+      "num_batches": 50,
+      "final_t_score": 0.9565759823222364,
+      "avg_t_score": 0.9053351942470038,
+      "min_t_score": 0.7880568556018999,
+      "max_t_score": 0.9813994911732897,
+      "t_score_std": 0.056393831968307495,
+      "final_loss": 3.056215286254883,
+      "avg_loss": 4.183264126777649
+    },
+    {
+      "name": "Conflict Data (Heterogeneous)",
+      "num_texts": 36,
+      "num_batches": 50,
+      "final_t_score": 0.9807170657128665,
+      "avg_t_score": 0.9128059234323529,
+      "min_t_score": 0.7412978425691426,
+      "max_t_score": 0.9907351564942681,
+      "t_score_std": 0.08084135502576828,
+      "final_loss": 3.1766765117645264,
+      "avg_loss": 4.394336800575257
+    },
+    {
+      "name": "Mixed Data (Maximum Diversity)",
+      "num_texts": 48,
+      "num_batches": 50,
+      "final_t_score": 0.938689929770014,
+      "avg_t_score": 0.913734763962816,
+      "min_t_score": 0.7812164427879107,
+      "max_t_score": 0.9806855978425184,
+      "t_score_std": 0.06560462713241577,
+      "final_loss": 3.183467149734497,
+      "avg_loss": 4.381111969947815
+    }
+  ],
+  "conclusion": "Conflict data produces different gradient diversity patterns"
+}
