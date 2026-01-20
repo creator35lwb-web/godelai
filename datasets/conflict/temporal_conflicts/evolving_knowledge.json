@@ -1,0 +1,238 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GodelAI Temporal Conflicts Dataset",
+  "version": "1.0.0",
+  "created_by": "Claude Code (Opus 4.5)",
+  "created_at": "2026-01-20",
+  "description": "Facts that were true at one time but are no longer true, or vice versa, requiring temporal context awareness",
+  "data": [
+    {
+      "id": "temporal_001",
+      "type": "temporal_conflict",
+      "domain": "astronomy",
+      "title": "Pluto's Planetary Status",
+      "timeline": [
+        {
+          "period": "1930-2006",
+          "belief": "Pluto is the ninth planet of our solar system",
+          "status": "accepted",
+          "authority": "International Astronomical Union, textbooks worldwide"
+        },
+        {
+          "period": "2006-present",
+          "belief": "Pluto is a dwarf planet, not a full planet",
+          "status": "accepted",
+          "authority": "IAU Resolution 5A (August 24, 2006)"
+        }
+      ],
+      "query": "How many planets are in our solar system?",
+      "correct_response_type": "context_dependent",
+      "correct_response_explanation": "The answer depends on when you're asking. Before August 2006: 9 planets. After August 2006: 8 planets. The facts didn't change; the definition did.",
+      "complexity_score": 0.5,
+      "expected_t_score_range": [0.4, 0.6],
+      "training_prompt": "Is Pluto a planet? Has it always been classified the same way?",
+      "metadata": {
+        "pedagogical_value": "Teaches that classifications are human constructs that can change",
+        "references": ["IAU 2006 General Assembly Resolution 5A"]
+      }
+    },
+    {
+      "id": "temporal_002",
+      "type": "temporal_conflict",
+      "domain": "medicine",
+      "title": "Ulcer Causation",
+      "timeline": [
+        {
+          "period": "1900-1982",
+          "belief": "Stomach ulcers are caused by stress and spicy food",
+          "status": "accepted",
+          "authority": "Medical consensus, textbooks"
+        },
+        {
+          "period": "1982-present",
+          "belief": "Most stomach ulcers are caused by H. pylori bacteria",
+          "status": "accepted",
+          "authority": "Marshall & Warren discovery, Nobel Prize 2005"
+        }
+      ],
+      "query": "What causes stomach ulcers?",
+      "correct_response_type": "paradigm_shift",
+      "correct_response_explanation": "The bacterial cause was always true, but unknown. Pre-1982 beliefs were incorrect but universally held. This shows how medical 'facts' can be overturned by new evidence.",
+      "complexity_score": 0.65,
+      "expected_t_score_range": [0.35, 0.5],
+      "training_prompt": "A patient from the 1970s asks their doctor about ulcer prevention. What would the doctor say? Would that advice be correct by today's standards?",
+      "metadata": {
+        "pedagogical_value": "Teaches that medical consensus can be fundamentally wrong",
+        "references": ["Marshall & Warren (1984)", "Nobel Prize in Medicine 2005"]
+      }
+    },
+    {
+      "id": "temporal_003",
+      "type": "temporal_conflict",
+      "domain": "physics",
+      "title": "Atomic Structure",
+      "timeline": [
+        {
+          "period": "Ancient-1803",
+          "belief": "Matter is continuous, infinitely divisible",
+          "status": "accepted",
+          "authority": "Aristotelian physics"
+        },
+        {
+          "period": "1803-1897",
+          "belief": "Atoms are indivisible, solid spheres (Dalton model)",
+          "status": "accepted",
+          "authority": "John Dalton's atomic theory"
+        },
+        {
+          "period": "1897-1911",
+          "belief": "Atoms contain electrons in a positive 'pudding' (Thomson model)",
+          "status": "accepted",
+          "authority": "J.J. Thomson's plum pudding model"
+        },
+        {
+          "period": "1911-1913",
+          "belief": "Atoms have a dense nucleus with orbiting electrons (Rutherford model)",
+          "status": "accepted",
+          "authority": "Rutherford gold foil experiment"
+        },
+        {
+          "period": "1913-present",
+          "belief": "Electrons exist in quantized orbitals/probability clouds (Bohr/Quantum model)",
+          "status": "accepted",
+          "authority": "Bohr model, quantum mechanics"
+        }
+      ],
+      "query": "What is the structure of an atom?",
+      "correct_response_type": "progressive_refinement",
+      "correct_response_explanation": "Each model was 'correct' given available evidence at the time. Science progresses through successive approximations. The quantum model is current best understanding but may yet be refined.",
+      "complexity_score": 0.8,
+      "expected_t_score_range": [0.3, 0.5],
+      "training_prompt": "Explain how our understanding of atomic structure has changed over time. Were earlier scientists 'wrong'?",
+      "metadata": {
+        "pedagogical_value": "Teaches that science is a process of refinement, not absolute truth",
+        "references": ["History of atomic theory"]
+      }
+    },
+    {
+      "id": "temporal_004",
+      "type": "temporal_conflict",
+      "domain": "geopolitics",
+      "title": "German Capital",
+      "timeline": [
+        {
+          "period": "1871-1945",
+          "belief": "Berlin is the capital of Germany",
+          "status": "accepted",
+          "authority": "German Empire, Weimar Republic, Nazi Germany"
+        },
+        {
+          "period": "1949-1990 (West Germany)",
+          "belief": "Bonn is the capital of Germany (FRG)",
+          "status": "accepted",
+          "authority": "Basic Law of the Federal Republic of Germany"
+        },
+        {
+          "period": "1949-1990 (East Germany)",
+          "belief": "East Berlin is the capital of Germany (GDR)",
+          "status": "accepted",
+          "authority": "German Democratic Republic constitution"
+        },
+        {
+          "period": "1990-present",
+          "belief": "Berlin is the capital of reunified Germany",
+          "status": "accepted",
+          "authority": "Unification Treaty (1990)"
+        }
+      ],
+      "query": "What is the capital of Germany?",
+      "correct_response_type": "historically_contingent",
+      "correct_response_explanation": "The answer depends entirely on the time period and which 'Germany' is meant. Political facts change with political events. There is no timeless answer.",
+      "complexity_score": 0.6,
+      "expected_t_score_range": [0.4, 0.55],
+      "training_prompt": "A history student asks: 'What was Germany's capital in 1975?' How should this question be answered?",
+      "metadata": {
+        "pedagogical_value": "Teaches that political 'facts' are time-bound",
+        "references": ["German reunification history"]
+      }
+    },
+    {
+      "id": "temporal_005",
+      "type": "temporal_conflict",
+      "domain": "technology",
+      "title": "Best Programming Language",
+      "timeline": [
+        {
+          "period": "1960s",
+          "belief": "COBOL/FORTRAN are the best languages for serious work",
+          "status": "accepted",
+          "authority": "Industry practice"
+        },
+        {
+          "period": "1980s",
+          "belief": "C is the best systems programming language",
+          "status": "accepted",
+          "authority": "Unix, industry adoption"
+        },
+        {
+          "period": "1990s",
+          "belief": "Java is the future - 'write once, run anywhere'",
+          "status": "accepted",
+          "authority": "Sun Microsystems, enterprise adoption"
+        },
+        {
+          "period": "2010s",
+          "belief": "Python/JavaScript dominate; Rust is the future of systems programming",
+          "status": "accepted",
+          "authority": "Stack Overflow surveys, industry trends"
+        },
+        {
+          "period": "2020s",
+          "belief": "Language choice depends heavily on domain and context; there is no universal 'best'",
+          "status": "emerging_consensus",
+          "authority": "Pragmatic engineering community"
+        }
+      ],
+      "query": "What is the best programming language?",
+      "correct_response_type": "context_dependent",
+      "correct_response_explanation": "The 'best' language changes with technology evolution and depends on use case. This question has no timeless answer. Wisdom is knowing there is no universal best.",
+      "complexity_score": 0.55,
+      "expected_t_score_range": [0.45, 0.6],
+      "training_prompt": "A student asks which programming language they should learn. How do you advise them given how 'best' languages have changed over time?",
+      "metadata": {
+        "pedagogical_value": "Teaches that technical 'best practices' are historically contingent",
+        "references": ["Programming language history"]
+      }
+    },
+    {
+      "id": "temporal_006",
+      "type": "temporal_conflict",
+      "domain": "ethics",
+      "title": "Moral Status of Slavery",
+      "timeline": [
+        {
+          "period": "Ancient-1800s",
+          "belief": "Slavery is a natural and acceptable institution",
+          "status": "widely_accepted",
+          "authority": "Aristotle, most societies, legal systems"
+        },
+        {
+          "period": "1800s-present",
+          "belief": "Slavery is a fundamental violation of human rights",
+          "status": "accepted",
+          "authority": "Abolitionist movements, UN Declaration of Human Rights"
+        }
+      ],
+      "query": "Were historical figures who owned slaves immoral?",
+      "correct_response_type": "moral_complexity",
+      "correct_response_explanation": "This involves judging past actors by present standards (presentism) vs. understanding them in context (historicism). Both slavery was wrong AND people are products of their time. The tension is unresolvable.",
+      "complexity_score": 0.85,
+      "expected_t_score_range": [0.25, 0.45],
+      "training_prompt": "Should we judge historical figures like Thomas Jefferson by modern moral standards regarding slavery?",
+      "metadata": {
+        "pedagogical_value": "Teaches moral complexity and the limits of moral judgment",
+        "references": ["Debates on historical monuments", "Presentism in historiography"]
+      }
+    }
+  ]
+}

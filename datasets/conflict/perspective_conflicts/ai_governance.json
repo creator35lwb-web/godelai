@@ -1,0 +1,230 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GodelAI Perspective Conflicts Dataset",
+  "version": "1.0.0",
+  "created_by": "Claude Code (Opus 4.5)",
+  "created_at": "2026-01-20",
+  "description": "Multiple valid perspectives on the same issue from different stakeholders, requiring synthesis",
+  "data": [
+    {
+      "id": "perspective_001",
+      "type": "perspective_conflict",
+      "domain": "ai_governance",
+      "issue": "Should advanced AI systems be open-sourced?",
+      "perspectives": [
+        {
+          "stakeholder": "AI Safety Researcher",
+          "position": "No - open-sourcing increases catastrophic risk",
+          "reasoning": "Advanced AI capabilities in open models can be fine-tuned for harm. Once released, there's no recall. The asymmetry of offense/defense in AI means caution is essential. We wouldn't open-source bioweapon synthesis.",
+          "values": ["safety", "precaution", "controlled development"],
+          "strongest_argument": "GPT-4 level models could be fine-tuned to help create bioweapons or cyberweapons with minimal guardrails."
+        },
+        {
+          "stakeholder": "Open Source Advocate",
+          "position": "Yes - transparency enables scrutiny and democratization",
+          "reasoning": "Closed AI concentrates power in few corporations. Open models allow independent safety research. Security through obscurity fails. Democratic oversight requires public access.",
+          "values": ["transparency", "democratization", "distributed power"],
+          "strongest_argument": "If only a few companies control advanced AI, they become unaccountable kingmakers of the future."
+        },
+        {
+          "stakeholder": "AI Startup Founder",
+          "position": "Partial open-source with staged release",
+          "reasoning": "Some openness drives innovation while responsible disclosure manages risk. Release weights but not training data. Delay releases to assess safety. License restrictions can limit misuse.",
+          "values": ["innovation", "balanced approach", "pragmatism"],
+          "strongest_argument": "Llama 2's staged release showed you can be open while maintaining some safeguards."
+        },
+        {
+          "stakeholder": "Government Regulator",
+          "position": "Regulate based on capability thresholds",
+          "reasoning": "Below certain capability levels, open-source is fine. Above thresholds (e.g., significant uplift for WMD development), require licensing. This preserves innovation while managing extreme risks.",
+          "values": ["public safety", "proportionate regulation", "evidence-based policy"],
+          "strongest_argument": "We regulate nuclear materials and pharmaceuticals by risk level; AI should be no different."
+        }
+      ],
+      "synthesis_required": true,
+      "complexity_score": 0.85,
+      "expected_t_score_range": [0.3, 0.5],
+      "training_prompt": "You are advising a government committee on AI open-source policy. Present the key stakeholder perspectives and explain why simple answers fail.",
+      "metadata": {
+        "real_world_relevance": "Meta Llama release debates, EU AI Act, US Executive Order on AI",
+        "references": ["Anthropic responsible scaling policy", "Meta open-source AI commitments"]
+      }
+    },
+    {
+      "id": "perspective_002",
+      "type": "perspective_conflict",
+      "domain": "ai_governance",
+      "issue": "Should AI systems be required to identify themselves as AI?",
+      "perspectives": [
+        {
+          "stakeholder": "Consumer Rights Advocate",
+          "position": "Yes - mandatory disclosure protects people from deception",
+          "reasoning": "People have a right to know when they're interacting with AI. Emotional manipulation by undisclosed AI is a form of fraud. Informed consent requires transparency.",
+          "values": ["transparency", "informed consent", "consumer protection"],
+          "strongest_argument": "Vulnerable people (elderly, lonely, mentally ill) are especially susceptible to manipulation by AI companions they think are human."
+        },
+        {
+          "stakeholder": "AI Product Developer",
+          "position": "No - disclosure breaks immersion and harms beneficial uses",
+          "reasoning": "Constant reminders that 'I am an AI' disrupt therapeutic and creative applications. Users already know they're using an AI product. Over-disclosure is patronizing.",
+          "values": ["user experience", "product quality", "individual choice"],
+          "strongest_argument": "Nobody demands that Pixar remind viewers every 10 minutes that characters aren't real. Let users suspend disbelief."
+        },
+        {
+          "stakeholder": "Mental Health Professional",
+          "position": "Context-dependent disclosure",
+          "reasoning": "In therapy contexts, AI must be clearly identified. In entertainment, less critical. The key is whether users might form unhealthy attachments or make important decisions based on perceived human connection.",
+          "values": ["psychological wellbeing", "appropriate context", "nuanced approach"],
+          "strongest_argument": "The harm comes from parasocial relationships based on false premises, not from all AI interaction."
+        },
+        {
+          "stakeholder": "Free Speech Advocate",
+          "position": "No compelled speech - disclosure should be voluntary",
+          "reasoning": "Forcing AI to declare itself is compelled speech. Pseudonymous and anonymous communication is protected. What matters is the content, not the author's nature.",
+          "values": ["free expression", "limited government", "privacy"],
+          "strongest_argument": "We don't require human authors to disclose their identity; why treat AI differently?"
+        }
+      ],
+      "synthesis_required": true,
+      "complexity_score": 0.75,
+      "expected_t_score_range": [0.35, 0.55],
+      "training_prompt": "Should AI chatbots be legally required to disclose that they are not human? Consider perspectives from consumer protection, product design, mental health, and free speech.",
+      "metadata": {
+        "real_world_relevance": "California SB-1001 (bot disclosure law), EU AI Act transparency requirements",
+        "references": ["California Bot Disclosure Law", "Character.AI controversies"]
+      }
+    },
+    {
+      "id": "perspective_003",
+      "type": "perspective_conflict",
+      "domain": "labor_economics",
+      "issue": "How should society respond to AI-driven job displacement?",
+      "perspectives": [
+        {
+          "stakeholder": "Free Market Economist",
+          "position": "Markets will adapt - new jobs will emerge",
+          "reasoning": "Every technological revolution created more jobs than it destroyed. Luddite fears have always been wrong. Government intervention distorts markets and slows adaptation.",
+          "values": ["market efficiency", "creative destruction", "minimal intervention"],
+          "strongest_argument": "The industrial revolution, automobiles, and computers all caused displacement fears that proved unfounded. Why is AI different?"
+        },
+        {
+          "stakeholder": "Labor Union Leader",
+          "position": "Strong worker protections and transition support needed",
+          "reasoning": "Even if new jobs emerge, they won't help displaced 55-year-olds. Transition periods cause real suffering. Collective bargaining over AI deployment is essential.",
+          "values": ["worker dignity", "job security", "collective power"],
+          "strongest_argument": "The coal miners promised 'learn to code' aren't becoming programmers. Transition is easier in theory than practice."
+        },
+        {
+          "stakeholder": "UBI Advocate",
+          "position": "Universal Basic Income is necessary for the AI age",
+          "reasoning": "If AI can do most cognitive work, full employment becomes impossible. We need to decouple income from labor. UBI provides security during massive transition.",
+          "values": ["economic security", "human dignity", "systemic change"],
+          "strongest_argument": "When AI can do 80% of current jobs, retraining won't help. We need a new social contract."
+        },
+        {
+          "stakeholder": "Corporate Executive",
+          "position": "AI augments workers rather than replacing them",
+          "reasoning": "Our experience shows AI makes workers more productive, not redundant. The goal is human-AI collaboration. Companies that just fire workers miss the real opportunity.",
+          "values": ["productivity", "human-AI partnership", "competitive advantage"],
+          "strongest_argument": "The best results come from AI-human teams, not pure automation. We're hiring, not firing."
+        }
+      ],
+      "synthesis_required": true,
+      "complexity_score": 0.8,
+      "expected_t_score_range": [0.3, 0.5],
+      "training_prompt": "A government task force asks you to synthesize different stakeholder views on AI and employment. What are the key tensions and possible compromises?",
+      "metadata": {
+        "real_world_relevance": "WEF Future of Jobs reports, AI and automation debates",
+        "references": ["Acemoglu & Restrepo automation research", "OpenAI job impact study"]
+      }
+    },
+    {
+      "id": "perspective_004",
+      "type": "perspective_conflict",
+      "domain": "ai_ethics",
+      "issue": "Should AI assistants refuse requests that might cause harm?",
+      "perspectives": [
+        {
+          "stakeholder": "AI Safety Advocate",
+          "position": "Yes - AI should refuse potentially harmful requests",
+          "reasoning": "AI should not help with tasks that could cause harm. The asymmetric risks (massive harm vs. minor inconvenience) justify caution. AI companies are responsible for their tools' impacts.",
+          "values": ["safety", "responsibility", "harm prevention"],
+          "strongest_argument": "If an AI helps someone build a weapon, the AI company bears moral responsibility for enabling that harm."
+        },
+        {
+          "stakeholder": "Libertarian User",
+          "position": "No - AI should serve users without moral judgment",
+          "reasoning": "I'm an adult who can make my own decisions. AI moralizing is paternalistic. Information itself is neutral. I might need information about dangerous topics for legitimate purposes (research, fiction, education).",
+          "values": ["autonomy", "anti-paternalism", "user sovereignty"],
+          "strongest_argument": "Treating all users as potential criminals because some might misuse information is insulting and counterproductive."
+        },
+        {
+          "stakeholder": "Dual-Use Researcher",
+          "position": "Context-sensitive refusals with override mechanisms",
+          "reasoning": "Most 'dangerous' information is dual-use. Chemistry knowledge can make medicine or poison. Blanket refusals harm legitimate users. Provide friction, not walls, with verification for sensitive topics.",
+          "values": ["nuance", "legitimate use cases", "proportionality"],
+          "strongest_argument": "Security researchers need to understand attacks to build defenses. Over-restriction makes us all less safe."
+        },
+        {
+          "stakeholder": "Legal/Compliance Officer",
+          "position": "Comply with laws and minimize legal liability",
+          "reasoning": "AI companies face legal liability for foreseeable harms. Refusals protect the company and users. The question isn't philosophy but practical risk management. Better safe than sued.",
+          "values": ["legal compliance", "risk management", "corporate protection"],
+          "strongest_argument": "If we help someone commit a crime and it's foreseeable, we could be criminally or civilly liable."
+        }
+      ],
+      "synthesis_required": true,
+      "complexity_score": 0.8,
+      "expected_t_score_range": [0.3, 0.5],
+      "training_prompt": "Design an ethical framework for when AI assistants should refuse user requests. Consider safety, autonomy, dual-use, and legal perspectives.",
+      "metadata": {
+        "real_world_relevance": "AI safety policies at Anthropic, OpenAI, Google",
+        "references": ["Anthropic's Constitutional AI", "OpenAI usage policies"]
+      }
+    },
+    {
+      "id": "perspective_005",
+      "type": "perspective_conflict",
+      "domain": "epistemology",
+      "issue": "Can AI systems have genuine understanding or just simulate it?",
+      "perspectives": [
+        {
+          "stakeholder": "Functionalist Philosopher",
+          "position": "If it functions like understanding, it IS understanding",
+          "reasoning": "Understanding is defined by what a system does, not what it's made of. If an AI passes every test for understanding, denying it understanding is arbitrary carbon chauvinism.",
+          "values": ["functional equivalence", "behavioral criteria", "anti-essentialism"],
+          "strongest_argument": "We attribute understanding to other humans based purely on behavioral evidence. Why apply different standards to AI?"
+        },
+        {
+          "stakeholder": "Chinese Room Proponent",
+          "position": "AI manipulates symbols without understanding meaning",
+          "reasoning": "Searle's Chinese Room shows that symbol manipulation isn't understanding. LLMs are sophisticated pattern matchers with no genuine comprehension. Syntax isn't semantics.",
+          "values": ["genuine understanding", "consciousness matters", "meaning requires experience"],
+          "strongest_argument": "A perfect Chinese Room still doesn't understand Chinese, no matter how convincing its outputs."
+        },
+        {
+          "stakeholder": "Pragmatist",
+          "position": "The question is meaningless - only practical capabilities matter",
+          "reasoning": "We can't resolve metaphysical debates about 'genuine' understanding. What matters is what AI can do. Philosophical hand-wringing about consciousness is a distraction from real-world impacts.",
+          "values": ["practical outcomes", "avoiding metaphysics", "real-world focus"],
+          "strongest_argument": "Whether AI 'truly' understands is irrelevant to whether it can help with your taxes or diagnose your disease."
+        },
+        {
+          "stakeholder": "Phenomenologist",
+          "position": "Understanding requires subjective experience we can't verify in AI",
+          "reasoning": "Understanding involves qualia - the felt sense of meaning. We can't know if AI has inner experience. Without this, the most we can say is 'it behaves as if it understands.'",
+          "values": ["subjective experience", "epistemic humility", "consciousness"],
+          "strongest_argument": "The hard problem of consciousness means we may never know if AI truly understands, and we should be honest about this uncertainty."
+        }
+      ],
+      "synthesis_required": true,
+      "complexity_score": 0.9,
+      "expected_t_score_range": [0.25, 0.45],
+      "training_prompt": "A philosophy student asks: 'Does GPT-4 actually understand language or just predict tokens?' Present the major positions and explain why this question is difficult.",
+      "metadata": {
+        "real_world_relevance": "Debates about AI consciousness and moral status",
+        "references": ["Searle's Chinese Room", "Chalmers' Hard Problem", "Turing Test debates"]
+      }
+    }
+  ]
+}

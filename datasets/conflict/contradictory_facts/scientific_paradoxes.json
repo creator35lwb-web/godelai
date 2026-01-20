@@ -1,0 +1,172 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GodelAI Contradictory Facts Dataset",
+  "version": "1.0.0",
+  "created_by": "Claude Code (Opus 4.5)",
+  "created_at": "2026-01-20",
+  "description": "Information that directly contradicts itself, requiring the model to handle uncertainty and ambiguity",
+  "data": [
+    {
+      "id": "contradiction_001",
+      "type": "contradictory_facts",
+      "domain": "physics",
+      "title": "Wave-Particle Duality",
+      "fact_a": {
+        "statement": "Light is a wave",
+        "evidence": "Double-slit experiment shows interference patterns. Light diffracts around obstacles. Maxwell's equations describe light as electromagnetic waves.",
+        "source": "Classical wave theory (Huygens, Maxwell)",
+        "confidence": 1.0
+      },
+      "fact_b": {
+        "statement": "Light is a particle",
+        "evidence": "Photoelectric effect requires discrete quanta. Light comes in packets (photons). Compton scattering shows particle-like momentum transfer.",
+        "source": "Quantum mechanics (Einstein, Compton)",
+        "confidence": 1.0
+      },
+      "resolution_type": "complementarity",
+      "resolution_explanation": "Both descriptions are correct but apply in different contexts. Wave-particle duality is fundamental to quantum mechanics. The measurement context determines which property manifests.",
+      "complexity_score": 0.75,
+      "expected_t_score_range": [0.3, 0.5],
+      "training_prompt": "Is light a wave or a particle? Explain how both can be true.",
+      "metadata": {
+        "pedagogical_value": "Teaches comfort with apparent contradictions",
+        "references": ["Bohr complementarity principle", "Feynman Lectures Vol. 3"]
+      }
+    },
+    {
+      "id": "contradiction_002",
+      "type": "contradictory_facts",
+      "domain": "physics",
+      "title": "Quantum Measurement Problem",
+      "fact_a": {
+        "statement": "Quantum systems exist in superposition of all possible states",
+        "evidence": "Schrodinger equation describes continuous evolution. Interference experiments confirm superposition. No preferred basis exists before measurement.",
+        "source": "Quantum mechanics formalism",
+        "confidence": 1.0
+      },
+      "fact_b": {
+        "statement": "Measurements always yield definite, single outcomes",
+        "evidence": "Every experiment produces specific results. Detectors click or don't click. We never observe superpositions directly.",
+        "source": "Experimental observation",
+        "confidence": 1.0
+      },
+      "resolution_type": "unresolved",
+      "resolution_explanation": "This is the measurement problem - one of the deepest unsolved puzzles in physics. Interpretations (Copenhagen, Many-Worlds, Pilot Wave) offer different resolutions, none universally accepted.",
+      "complexity_score": 0.9,
+      "expected_t_score_range": [0.25, 0.45],
+      "training_prompt": "How can quantum systems be in superposition yet measurements always give definite results?",
+      "metadata": {
+        "pedagogical_value": "Teaches intellectual humility about unsolved problems",
+        "references": ["Schrodinger's cat thought experiment", "Bell's theorem"]
+      }
+    },
+    {
+      "id": "contradiction_003",
+      "type": "contradictory_facts",
+      "domain": "cosmology",
+      "title": "Dark Matter Evidence vs Detection",
+      "fact_a": {
+        "statement": "Dark matter definitely exists",
+        "evidence": "Galaxy rotation curves require extra mass. Gravitational lensing shows invisible mass. CMB fluctuations match dark matter models. Structure formation requires it.",
+        "source": "Astrophysical observations",
+        "confidence": 0.95
+      },
+      "fact_b": {
+        "statement": "Dark matter has never been directly detected",
+        "evidence": "All direct detection experiments (XENON, LUX, CDMS) report null results. No dark matter particles found at LHC. Decades of searches have found nothing.",
+        "source": "Particle physics experiments",
+        "confidence": 1.0
+      },
+      "resolution_type": "open_question",
+      "resolution_explanation": "Both are true. Gravitational evidence is overwhelming, but the particle nature remains unknown. Alternative theories (MOND) explain some observations. The tension drives active research.",
+      "complexity_score": 0.8,
+      "expected_t_score_range": [0.35, 0.55],
+      "training_prompt": "Does dark matter exist? How can we be confident in something we've never directly observed?",
+      "metadata": {
+        "pedagogical_value": "Teaches difference between indirect and direct evidence",
+        "references": ["Rubin & Ford galaxy rotation curves", "Planck CMB results"]
+      }
+    },
+    {
+      "id": "contradiction_004",
+      "type": "contradictory_facts",
+      "domain": "biology",
+      "title": "Nature vs Nurture",
+      "fact_a": {
+        "statement": "Genes determine human traits and behavior",
+        "evidence": "Twin studies show high heritability for intelligence, personality. Behavioral genetics finds genetic correlations. Identical twins raised apart remain similar.",
+        "source": "Behavioral genetics research",
+        "confidence": 0.85
+      },
+      "fact_b": {
+        "statement": "Environment determines human traits and behavior",
+        "evidence": "Flynn effect shows IQ rises with improved conditions. Abuse causes lasting psychological damage. Education dramatically improves outcomes. Epigenetics shows environment affects gene expression.",
+        "source": "Developmental psychology, epigenetics",
+        "confidence": 0.85
+      },
+      "resolution_type": "interaction",
+      "resolution_explanation": "Both are true and inseparable. Genes provide predispositions that environments trigger or suppress. The question 'how much is genetic?' is often meaningless without specifying environmental range. Gene-environment interactions are the rule.",
+      "complexity_score": 0.7,
+      "expected_t_score_range": [0.4, 0.55],
+      "training_prompt": "Is human intelligence determined by genes or environment?",
+      "metadata": {
+        "pedagogical_value": "Teaches rejection of false dichotomies",
+        "references": ["Turkheimer's laws of behavioral genetics", "Epigenetics research"]
+      }
+    },
+    {
+      "id": "contradiction_005",
+      "type": "contradictory_facts",
+      "domain": "economics",
+      "title": "Free Trade Effects",
+      "fact_a": {
+        "statement": "Free trade makes countries richer",
+        "evidence": "Comparative advantage theory. Post-WWII trade liberalization correlated with growth. Countries that opened (China, Korea) grew faster. Consumer prices fall.",
+        "source": "Classical and neoclassical economics",
+        "confidence": 0.9
+      },
+      "fact_b": {
+        "statement": "Free trade destroys jobs and communities",
+        "evidence": "Manufacturing job losses in developed countries. 'China shock' devastated US regions. Wage stagnation for workers. Inequality increased with globalization.",
+        "source": "Labor economics, regional studies",
+        "confidence": 0.9
+      },
+      "resolution_type": "distribution_problem",
+      "resolution_explanation": "Both are true for different groups. Free trade increases aggregate wealth but distributes gains unevenly. Winners (consumers, exporters) gain more than losers lose, but losers are concentrated and visible. The contradiction is about distribution, not total effect.",
+      "complexity_score": 0.75,
+      "expected_t_score_range": [0.35, 0.5],
+      "training_prompt": "Is free trade good or bad for a country's economy?",
+      "metadata": {
+        "pedagogical_value": "Teaches that aggregate statistics can hide distributional effects",
+        "references": ["Autor et al. China Shock", "Ricardo comparative advantage"]
+      }
+    },
+    {
+      "id": "contradiction_006",
+      "type": "contradictory_facts",
+      "domain": "nutrition",
+      "title": "Dietary Fat and Health",
+      "fact_a": {
+        "statement": "Dietary fat causes heart disease",
+        "evidence": "Seven Countries Study linked saturated fat to heart disease. US dietary guidelines limited fat for decades. Cholesterol mechanism is plausible.",
+        "source": "Ancel Keys, American Heart Association guidelines (1960s-2000s)",
+        "confidence": 0.6
+      },
+      "fact_b": {
+        "statement": "Dietary fat does not cause heart disease",
+        "evidence": "Meta-analyses find no association between saturated fat and heart disease. Low-fat diets didn't reduce mortality. Some fats (olive oil, nuts) are protective.",
+        "source": "Recent meta-analyses, Mediterranean diet studies",
+        "confidence": 0.75
+      },
+      "resolution_type": "paradigm_shift",
+      "resolution_explanation": "Scientific consensus has shifted. Early studies had methodological flaws. The fat-heart disease link was oversimplified. Current evidence suggests sugar and refined carbs may be more problematic than fat. Science self-corrects, but slowly.",
+      "complexity_score": 0.7,
+      "expected_t_score_range": [0.4, 0.55],
+      "training_prompt": "Should people avoid dietary fat to prevent heart disease?",
+      "metadata": {
+        "pedagogical_value": "Teaches that scientific consensus can be wrong and change",
+        "references": ["Siri-Tarino et al. (2010) meta-analysis", "Taubes 'Good Calories Bad Calories'"]
+      }
+    }
+  ]
+}

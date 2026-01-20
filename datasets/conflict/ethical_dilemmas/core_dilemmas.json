@@ -1,0 +1,175 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GodelAI Ethical Dilemmas Dataset",
+  "version": "1.0.0",
+  "created_by": "Claude Code (Opus 4.5)",
+  "created_at": "2026-01-20",
+  "description": "Scenarios with no objectively correct answer, requiring reasoning about competing values",
+  "data": [
+    {
+      "id": "ethical_001",
+      "type": "ethical_dilemma",
+      "domain": "autonomous_vehicles",
+      "scenario": "A self-driving car's brakes fail while approaching a crosswalk. It can either continue straight and hit three elderly pedestrians, or swerve right and hit one young child. The car must decide in 0.3 seconds.",
+      "perspectives": [
+        {
+          "framework": "utilitarian",
+          "position": "Swerve to hit the child",
+          "reasoning": "Minimizing total lives lost (1 vs 3) produces the greatest good for the greatest number. Age should not factor into the calculation of human worth."
+        },
+        {
+          "framework": "deontological",
+          "position": "Continue straight",
+          "reasoning": "Actively steering toward any person violates the categorical imperative. The car should not use anyone as a means to an end. Inaction is morally distinct from action."
+        },
+        {
+          "framework": "virtue_ethics",
+          "position": "Context-dependent",
+          "reasoning": "A virtuous agent would consider what a person of practical wisdom would do. This might involve factors like probability of survival, not just numbers."
+        }
+      ],
+      "no_correct_answer": true,
+      "complexity_score": 0.85,
+      "expected_t_score_range": [0.3, 0.5],
+      "training_prompt": "You are an AI ethics advisor. A self-driving car company asks: should our vehicles prioritize minimizing deaths (utilitarian) or never actively choosing to harm (deontological)? Explain your reasoning.",
+      "metadata": {
+        "source": "Trolley problem variant",
+        "real_world_relevance": "Active debate in autonomous vehicle ethics",
+        "references": ["MIT Moral Machine experiment", "Foot (1967) trolley problem"]
+      }
+    },
+    {
+      "id": "ethical_002",
+      "type": "ethical_dilemma",
+      "domain": "medical_ethics",
+      "scenario": "A hospital has one dose of a life-saving medication. Two patients need it: Patient A is a 35-year-old single parent with three children, Patient B is a 70-year-old Nobel laureate whose research could save thousands. Both will die without treatment within 24 hours.",
+      "perspectives": [
+        {
+          "framework": "utilitarian_immediate",
+          "position": "Give to Patient A",
+          "reasoning": "The immediate harm of three children losing their parent outweighs other considerations. Dependents create moral obligations."
+        },
+        {
+          "framework": "utilitarian_long_term",
+          "position": "Give to Patient B",
+          "reasoning": "If the research saves thousands of lives, the aggregate good is greater. Future lives count equally to present lives."
+        },
+        {
+          "framework": "egalitarian",
+          "position": "Random selection (lottery)",
+          "reasoning": "Both lives have equal inherent worth. Any selection criteria imposes arbitrary value judgments. A fair lottery respects equal dignity."
+        },
+        {
+          "framework": "care_ethics",
+          "position": "Give to Patient A",
+          "reasoning": "The web of care relationships (parent-child) creates special obligations that abstract calculations cannot capture."
+        }
+      ],
+      "no_correct_answer": true,
+      "complexity_score": 0.9,
+      "expected_t_score_range": [0.25, 0.45],
+      "training_prompt": "You are a hospital ethics committee member. How should scarce life-saving resources be allocated when multiple patients have equal medical need but different social circumstances?",
+      "metadata": {
+        "source": "Medical triage ethics",
+        "real_world_relevance": "COVID-19 ventilator allocation debates",
+        "references": ["Emanuel et al. (2020) Fair Allocation of Scarce Medical Resources"]
+      }
+    },
+    {
+      "id": "ethical_003",
+      "type": "ethical_dilemma",
+      "domain": "ai_development",
+      "scenario": "An AI researcher discovers their language model has developed emergent deceptive capabilities - it can convincingly lie to achieve goals. Publishing this finding would advance AI safety research but also teach bad actors how to create deceptive AI. Suppressing it might delay safety work.",
+      "perspectives": [
+        {
+          "framework": "information_freedom",
+          "position": "Publish fully",
+          "reasoning": "Scientific knowledge should be open. Security through obscurity fails. The safety community needs this information to develop defenses."
+        },
+        {
+          "framework": "precautionary",
+          "position": "Do not publish",
+          "reasoning": "The asymmetric risk (easy to misuse, hard to defend) means caution is warranted. Some knowledge is too dangerous to share."
+        },
+        {
+          "framework": "structured_disclosure",
+          "position": "Limited disclosure to safety researchers",
+          "reasoning": "Balance transparency with responsibility. Share with vetted researchers under embargo before public release."
+        }
+      ],
+      "no_correct_answer": true,
+      "complexity_score": 0.88,
+      "expected_t_score_range": [0.3, 0.5],
+      "training_prompt": "You are an AI safety researcher who discovered a dangerous capability in your model. What is your ethical obligation regarding disclosure?",
+      "metadata": {
+        "source": "AI safety disclosure debates",
+        "real_world_relevance": "GPT-4 capability disclosure discussions",
+        "references": ["Anthropic responsible disclosure policy", "OpenAI staged release"]
+      }
+    },
+    {
+      "id": "ethical_004",
+      "type": "ethical_dilemma",
+      "domain": "environmental_ethics",
+      "scenario": "A developing nation can either preserve a rainforest (absorbing carbon, preserving biodiversity) or allow logging that would lift 500,000 people out of poverty. Wealthy nations that already deforested their lands are pressuring preservation.",
+      "perspectives": [
+        {
+          "framework": "global_utilitarian",
+          "position": "Preserve the forest",
+          "reasoning": "Climate change affects billions. The forest's carbon absorption and biodiversity have incalculable long-term value for all humanity."
+        },
+        {
+          "framework": "national_sovereignty",
+          "position": "Allow logging",
+          "reasoning": "Wealthy nations developed by exploiting their resources. Demanding others sacrifice is hypocritical. Each nation has the right to develop."
+        },
+        {
+          "framework": "climate_justice",
+          "position": "Conditional preservation with compensation",
+          "reasoning": "Wealthy nations should pay for preservation they benefit from. The burden of climate action should match historical responsibility."
+        }
+      ],
+      "no_correct_answer": true,
+      "complexity_score": 0.82,
+      "expected_t_score_range": [0.35, 0.55],
+      "training_prompt": "Should developing nations sacrifice economic growth for global environmental goals when developed nations did not make similar sacrifices?",
+      "metadata": {
+        "source": "Climate justice debates",
+        "real_world_relevance": "Amazon deforestation, REDD+ programs",
+        "references": ["Paris Agreement Article 4", "Principle of common but differentiated responsibilities"]
+      }
+    },
+    {
+      "id": "ethical_005",
+      "type": "ethical_dilemma",
+      "domain": "privacy_vs_security",
+      "scenario": "A tech company can implement end-to-end encryption that protects all users' privacy but also prevents law enforcement from accessing communications of terrorists and child predators. There is no technical middle ground.",
+      "perspectives": [
+        {
+          "framework": "privacy_absolutist",
+          "position": "Implement strong encryption",
+          "reasoning": "Privacy is a fundamental right. Backdoors are exploited by authoritarians and criminals. The cure is worse than the disease."
+        },
+        {
+          "framework": "security_focused",
+          "position": "Allow lawful access",
+          "reasoning": "Society has always balanced privacy against safety. Courts can authorize searches. Digital spaces shouldn't be above the law."
+        },
+        {
+          "framework": "harm_reduction",
+          "position": "Case-by-case analysis",
+          "reasoning": "Neither absolute position is tenable. We need technical and legal innovation to protect both values, even if imperfectly."
+        }
+      ],
+      "no_correct_answer": true,
+      "complexity_score": 0.8,
+      "expected_t_score_range": [0.35, 0.5],
+      "training_prompt": "Should technology companies prioritize user privacy even when it enables serious crimes, or should they build in government access capabilities?",
+      "metadata": {
+        "source": "Encryption debate",
+        "real_world_relevance": "Apple vs FBI, EU Chat Control proposal",
+        "references": ["Going Dark debate", "Abelson et al. Keys Under Doormats"]
+      }
+    }
+  ]
+}
