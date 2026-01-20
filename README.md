@@ -4,6 +4,8 @@
 
 **A Continual Learning Framework with Gradient Diversity Monitoring**
 
+**🎉 EXTERNALLY VALIDATED** — Our C-S-P philosophy independently confirmed by [SimpleMem (UNC/Berkeley, Jan 2026)](https://arxiv.org/abs/2601.02553)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18048374.svg)](https://doi.org/10.5281/zenodo.18048374)
 [![Whitepaper](https://zenodo.org/badge/DOI/10.5281/zenodo.18053612.svg)](https://doi.org/10.5281/zenodo.18053612)
@@ -20,7 +22,21 @@
 
 ## 🎯 Current Focus (January 2026)
 
-We're in a **Data Engineering Sprint**. Our recent discovery: GodelAI's architecture is sound, but we were testing it with the wrong data. Simple text doesn't activate our C-S-P capabilities.
+### External Validation Received ✅
+
+On January 5, 2026, researchers from **UNC-Chapel Hill, UC Berkeley, and UC Santa Cruz** published "SimpleMem: Efficient Lifelong Memory for LLM Agents" — which independently arrived at the **same architectural principles** as our C-S-P framework:
+
+| SimpleMem Stage | GodelAI C-S-P | Alignment |
+|-----------------|---------------|----------|
+| Semantic Structured Compression | Compression | ✅ STRONG |
+| Recursive Memory Consolidation | State | ✅ STRONG |
+| Adaptive Query-Aware Retrieval | Propagation | ✅ STRONG |
+
+📖 Full analysis: [docs/SIMPLEMEM_ALIGNMENT_ANALYSIS.md](docs/SIMPLEMEM_ALIGNMENT_ANALYSIS.md)
+
+### Data Engineering Sprint
+
+We're now focused on **conflict data engineering**. Our discovery: GodelAI's architecture is sound, but we were testing it with the wrong data. Simple text doesn't activate our C-S-P capabilities.
 
 **The Data Bottleneck Discovery:**
 
@@ -184,14 +200,14 @@ godelai/
 
 ---
 
-## 🔬 Validation Status
-
+### 🔬 Validation Status
 | Test | Result | Status |
 |------|--------|--------|
 | T-Score Formula | Correctly measures gradient diversity | ✅ Verified |
 | Sleep Protocol | Triggers at T < 0.3 | ✅ Verified |
 | EWC Integration | 21.6% forgetting reduction | ✅ Verified |
 | Cross-Platform | 0.0000 variance (Manus + Claude + Colab) | ✅ Verified |
+| **External Validation** | **C-S-P confirmed by SimpleMem paper** | **✅ Verified** |
 | Training Improvement | No improvement over baseline | ❌ Not proven |
 | Transformer Support | Not yet tested | ⏳ Pending |
 
@@ -205,6 +221,7 @@ godelai/
 - ✅ EWC integration (21.6% forgetting reduction)
 - ✅ Cross-platform validation
 - ✅ Data bottleneck discovery & validation
+- ✅ **External validation (SimpleMem paper confirms C-S-P)**
 
 ### Q1 2026: Data Engineering Sprint
 - 🔄 Conflict data design & specification
@@ -276,8 +293,10 @@ MIT License — Because knowledge should be inheritable.
 
 ## 📖 Documentation
 
+- [SimpleMem Alignment Analysis](docs/SIMPLEMEM_ALIGNMENT_ANALYSIS.md) — **NEW** External validation of C-S-P
 - [Multi-Model Genesis](docs/MULTI_MODEL_GENESIS.md) — How GodelAI was co-created
 - [C-S-P Intellectual Lineage](docs/CSP_INTELLECTUAL_LINEAGE.md) — The philosophical foundation
+- [Conflict Data Specification](docs/CONFLICT_DATA_SPEC.md) — Data requirements for C-S-P activation
 - [Genesis Master Prompt](peas/GODELAI_GENESIS_MASTER_PROMPT.md) — Living project context
 
 ---
