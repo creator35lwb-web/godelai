@@ -9,12 +9,17 @@ Integrated by: Godel, CTO - GodelAI Project
 Date: December 25, 2025
 
 Origin: Conversation between Alton and Gemini 2.5 Pro, Part II
+
+Updates:
+- v3.1.1 (Jan 20, 2026): Added T-Score variance monitoring per Manus experiment analysis
+  Based on: TSCORE_EXPERIMENT_ANALYSIS.md - Conflict data shows +43% higher variance
 """
 
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import math
+from collections import deque
 
 
 class GodelAgent(nn.Module):
@@ -34,28 +39,37 @@ class GodelAgent(nn.Module):
        not wisdom.
     """
     
-    def __init__(self, base_model, propagation_gamma=2.0, min_surplus_energy=0.1):
+    def __init__(self, base_model, propagation_gamma=2.0, min_surplus_energy=0.1,
+                 t_score_window=50):
         """
         Initialize the GodelAgent.
-        
+
         Args:
             base_model: Any PyTorch model (e.g., Llama, Mistral, SimpleNet)
             propagation_gamma: Penalty severity for losing adaptability (default: 2.0)
             min_surplus_energy: The "Brain Fog" threshold (default: 0.1)
+            t_score_window: Size of sliding window for T-Score variance calculation (default: 50)
+                           Added in v3.1.1 based on Manus experiment analysis
         """
         super().__init__()
         self.compression_layer = base_model  # The Body (e.g., Llama/Mistral)
         self.gamma = propagation_gamma       # Penalty severity for losing adaptability
         self.epsilon = min_surplus_energy    # The "Brain Fog" threshold (Need Sleep)
         self.last_T_score = 1.0              # Initial Wisdom Score (Perfectly adaptable)
-        
+
         # Optimizer placeholder (will be set during training)
         self.optimizer = None
-        
+
+        # T-Score variance tracking (v3.1.1 - per Manus experiment analysis)
+        # Conflict data shows +43% higher variance, indicating gradient diversity
+        self.t_score_window = t_score_window
+        self.t_score_buffer = deque(maxlen=t_score_window)
+
         # Training history for analysis
         self.history = {
             'loss': [],
             'wisdom_score': [],
+            't_score_variance': [],  # NEW: Track variance over time
             'status': [],
             'sleep_count': 0
         }
@@ -218,6 +232,7 @@ class GodelAgent(nn.Module):
         2. Measures "Will this step make me dumber?" (gradient diversity)
         3. Applies penalty if losing wisdom
         4. Triggers sleep if wisdom is critically low
+        5. Tracks T-Score variance over sliding window (v3.1.1)
 
         Args:
             data: Input tensor
@@ -225,10 +240,11 @@ class GodelAgent(nn.Module):
             criterion: Loss function
 
         Returns:
-            tuple: (loss, wisdom_score, status)
+            tuple: (loss, wisdom_score, status, metrics)
                 - loss: The total loss value
                 - wisdom_score: Current T-score (0-1)
                 - status: "LEARN", "SLEEP", or "SKIP"
+                - metrics: dict with additional metrics including t_score_variance
         """
         # 1. Compute per-sample gradients (CRITICAL FIX)
         batch_grads, task_loss = self.compute_per_sample_gradients(data, target, criterion)
@@ -237,13 +253,20 @@ class GodelAgent(nn.Module):
             # Record history for skip
             self.history['loss'].append(task_loss)
             self.history['wisdom_score'].append(0.0)
+            self.history['t_score_variance'].append(0.0)
             self.history['status'].append("SKIP")
-            return task_loss, 0.0, "SKIP"
+            return task_loss, 0.0, "SKIP", {"t_score_variance": 0.0}
 
         # 2. Measure Wisdom (T) using per-sample gradients
         current_T = self.measure_gradient_diversity(batch_grads)
+        current_T_value = current_T.item()
 
-        # 3. Propagation Check
+        # 3. Update T-Score buffer and calculate variance (v3.1.1)
+        # Per Manus experiment: Conflict data shows +43% higher variance
+        self.t_score_buffer.append(current_T_value)
+        t_score_variance = self._calculate_t_score_variance()
+
+        # 4. Propagation Check
         # Did we lose wisdom compared to last step?
         if current_T < self.last_T_score:
             # PENALTY: You are getting rigid!
@@ -252,20 +275,21 @@ class GodelAgent(nn.Module):
             l_prop = 0.0
 
         # Update the benchmark history
-        self.last_T_score = current_T.item()
+        self.last_T_score = current_T_value
 
-        # 4. Fail-Safe: Sleep if too dumb
+        # 5. Fail-Safe: Sleep if too dumb
         if current_T < self.epsilon:
             self.rest_and_reflect()
 
             # Record history
             self.history['loss'].append(task_loss)
-            self.history['wisdom_score'].append(current_T.item())
+            self.history['wisdom_score'].append(current_T_value)
+            self.history['t_score_variance'].append(t_score_variance)
             self.history['status'].append("SLEEP")
 
-            return task_loss, current_T.item(), "SLEEP"
+            return task_loss, current_T_value, "SLEEP", {"t_score_variance": t_score_variance}
 
-        # 5. Apply the actual update using aggregated gradients
+        # 6. Apply the actual update using aggregated gradients
         # We measured diversity with per-sample grads, but we still optimize normally
         self.compression_layer.zero_grad()
         prediction = self.compression_layer(data)
@@ -283,21 +307,44 @@ class GodelAgent(nn.Module):
 
         # Record history
         self.history['loss'].append(total_loss.item())
-        self.history['wisdom_score'].append(current_T.item())
+        self.history['wisdom_score'].append(current_T_value)
+        self.history['t_score_variance'].append(t_score_variance)
         self.history['status'].append("LEARN")
 
-        return total_loss.item(), current_T.item(), "LEARN"
+        return total_loss.item(), current_T_value, "LEARN", {"t_score_variance": t_score_variance}
+
+    def _calculate_t_score_variance(self):
+        """
+        Calculate T-Score variance over the sliding window.
+
+        Added in v3.1.1 based on Manus experiment analysis:
+        - Conflict data produces +43% higher T-Score variance
+        - Higher variance indicates more diverse gradient patterns
+        - Monitor variance in addition to absolute T-Score values
+
+        Returns:
+            float: Standard deviation of T-Scores in the buffer (0.0 if insufficient data)
+        """
+        if len(self.t_score_buffer) < 2:
+            return 0.0
+
+        # Convert to tensor for efficient calculation
+        t_scores = torch.tensor(list(self.t_score_buffer))
+        return t_scores.std().item()
     
     def get_training_summary(self):
         """
         Get a summary of the training history.
-        
+
         Returns:
-            dict: Summary statistics
+            dict: Summary statistics including T-Score variance metrics (v3.1.1)
         """
         if len(self.history['loss']) == 0:
             return {"message": "No training history available"}
-        
+
+        # Calculate variance statistics (v3.1.1)
+        variance_stats = self.get_variance_stats()
+
         return {
             "total_steps": len(self.history['loss']),
             "sleep_count": self.history['sleep_count'],
@@ -307,5 +354,78 @@ class GodelAgent(nn.Module):
             "max_wisdom": max(self.history['wisdom_score']),
             "learn_steps": self.history['status'].count("LEARN"),
             "sleep_steps": self.history['status'].count("SLEEP"),
-            "skip_steps": self.history['status'].count("SKIP")
+            "skip_steps": self.history['status'].count("SKIP"),
+            # T-Score variance metrics (v3.1.1 - per Manus experiment analysis)
+            "t_score_std": variance_stats["t_score_std"],
+            "avg_t_score_variance": variance_stats["avg_variance"],
+            "max_t_score_variance": variance_stats["max_variance"],
+            "variance_trend": variance_stats["trend"]
         }
+
+    def get_variance_stats(self):
+        """
+        Get detailed T-Score variance statistics.
+
+        Added in v3.1.1 based on Manus experiment analysis:
+        - Conflict data shows +43% higher T-Score variance vs homogeneous data
+        - Higher variance indicates more diverse gradient patterns
+        - Use variance as additional signal for data quality assessment
+
+        Returns:
+            dict: Variance statistics
+                - t_score_std: Overall standard deviation of T-Scores
+                - avg_variance: Average of rolling variance values
+                - max_variance: Maximum rolling variance observed
+                - trend: "increasing", "decreasing", or "stable"
+                - buffer_size: Current size of the T-Score buffer
+        """
+        if len(self.history['wisdom_score']) == 0:
+            return {
+                "t_score_std": 0.0,
+                "avg_variance": 0.0,
+                "max_variance": 0.0,
+                "trend": "unknown",
+                "buffer_size": 0
+            }
+
+        # Calculate overall T-Score standard deviation
+        wisdom_scores = torch.tensor(self.history['wisdom_score'])
+        t_score_std = wisdom_scores.std().item() if len(wisdom_scores) > 1 else 0.0
+
+        # Calculate variance statistics from history
+        variance_history = self.history['t_score_variance']
+        if len(variance_history) > 0:
+            avg_variance = sum(variance_history) / len(variance_history)
+            max_variance = max(variance_history)
+        else:
+            avg_variance = 0.0
+            max_variance = 0.0
+
+        # Determine trend (compare first half to second half)
+        trend = "stable"
+        if len(variance_history) >= 10:
+            mid = len(variance_history) // 2
+            first_half_avg = sum(variance_history[:mid]) / mid
+            second_half_avg = sum(variance_history[mid:]) / (len(variance_history) - mid)
+            diff = second_half_avg - first_half_avg
+            if diff > 0.01:
+                trend = "increasing"
+            elif diff < -0.01:
+                trend = "decreasing"
+
+        return {
+            "t_score_std": t_score_std,
+            "avg_variance": avg_variance,
+            "max_variance": max_variance,
+            "trend": trend,
+            "buffer_size": len(self.t_score_buffer)
+        }
+
+    def reset_variance_tracking(self):
+        """
+        Reset the T-Score variance tracking buffer.
+
+        Useful when starting a new training phase or switching datasets.
+        """
+        self.t_score_buffer.clear()
+        self.history['t_score_variance'] = []
