@@ -9,9 +9,11 @@ Tests cover:
 - Sleep protocol triggering
 - Learning step execution
 - Training summary generation
+- T-Score variance tracking (v3.1.1)
 
 Updated to match the FIXED GodelAgent implementation with per-sample gradients.
 Date: January 4, 2026
+Updated: January 20, 2026 - Updated for 4-tuple return from learning_step()
 """
 
 import pytest
@@ -177,7 +179,7 @@ class TestLearningStep:
     """Tests for the learning step."""
 
     def test_learning_step_returns_tuple(self):
-        """Test that learning_step returns (loss, wisdom, status)."""
+        """Test that learning_step returns (loss, wisdom, status, metrics)."""
         from godelai.agent import GodelAgent
 
         model = SimpleTestNet(input_size=2, output_size=1)
@@ -192,11 +194,14 @@ class TestLearningStep:
         result = agent.learning_step(X, y, criterion)
 
         assert isinstance(result, tuple)
-        assert len(result) == 3
-        loss, wisdom, status = result
+        assert len(result) == 4  # Updated for v3.1.1: now returns 4 values
+        loss, wisdom, status, metrics = result
         assert isinstance(loss, float)
         assert isinstance(wisdom, float)
         assert status in ["LEARN", "SLEEP", "SKIP"]
+        # v3.1.1: Check metrics dict contains t_score_variance
+        assert isinstance(metrics, dict)
+        assert 't_score_variance' in metrics
 
     def test_learning_step_updates_history(self):
         """Test that learning_step updates history."""
@@ -318,8 +323,8 @@ class TestCSPFramework:
         y = torch.tensor([[0.], [1.], [1.], [0.]])
         criterion = nn.MSELoss()
 
-        # Do a learning step
-        loss, wisdom, status = agent.learning_step(X, y, criterion)
+        # Do a learning step (v3.1.1: now returns 4 values)
+        loss, wisdom, status, metrics = agent.learning_step(X, y, criterion)
 
         # Verify T-score is tracked
         assert wisdom > 0.0
@@ -339,7 +344,8 @@ class TestCSPFramework:
 
         wisdom_scores = []
         for _ in range(20):
-            _, wisdom, _ = agent.learning_step(X, y, criterion)
+            # v3.1.1: now returns 4 values
+            _, wisdom, _, _ = agent.learning_step(X, y, criterion)
             wisdom_scores.append(wisdom)
 
         # Verify wisdom metric is being calculated
