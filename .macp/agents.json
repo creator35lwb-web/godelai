@@ -1,0 +1,65 @@
+{
+  "agents": [
+    {
+      "id": "ChatGPT",
+      "name": "ChatGPT",
+      "role": "Philosophy Architect",
+      "responsibilities": [
+        "C-S-P philosophy",
+        "Self as compression label concept",
+        "Theoretical foundation"
+      ],
+      "active_since": "2025-12-01T00:00:00Z",
+      "last_handoff": "2025-12-15T00:00:00Z"
+    },
+    {
+      "id": "Gemini",
+      "name": "Gemini 2.5 Pro",
+      "role": "Technical Architect",
+      "responsibilities": [
+        "PyTorch implementation",
+        "Technical blueprint",
+        "Code architecture"
+      ],
+      "active_since": "2025-12-15T00:00:00Z",
+      "last_handoff": "2025-12-20T00:00:00Z"
+    },
+    {
+      "id": "Kimi",
+      "name": "Kimi K2",
+      "role": "Formal Validator",
+      "responsibilities": [
+        "Mathematical rigor",
+        "Formal validation",
+        "Theoretical verification"
+      ],
+      "active_since": "2025-12-20T00:00:00Z",
+      "last_handoff": "2025-12-25T00:00:00Z"
+    },
+    {
+      "id": "Grok",
+      "name": "Grok",
+      "role": "Engineering Architect",
+      "responsibilities": [
+        "Engineering design",
+        "System architecture",
+        "Implementation strategy"
+      ],
+      "active_since": "2025-12-25T00:00:00Z",
+      "last_handoff": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "Godel",
+      "name": "Manus AI",
+      "role": "CTO",
+      "responsibilities": [
+        "Integration",
+        "Testing",
+        "Deployment",
+        "Community engagement"
+      ],
+      "active_since": "2026-01-01T00:00:00Z",
+      "last_handoff": null
+    }
+  ]
+}
