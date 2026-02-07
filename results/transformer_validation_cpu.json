@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-02-07T09:44:57.784377",
+  "config": {
+    "epochs": 2,
+    "batch_size": 16,
+    "seq_length": 32,
+    "learning_rate": 0.001,
+    "seed": 1337,
+    "min_surplus_energy": 0.3,
+    "propagation_gamma": 2.0,
+    "tscore_sample_batches": 2,
+    "training_subset": 20000
+  },
+  "standard": {
+    "loss": [
+      3.1890479315698674,
+      2.751453100052555
+    ],
+    "t_score_shadow": [
+      0.2728387713432312,
+      0.2708304822444916
+    ]
+  },
+  "godelai": {
+    "loss": [
+      3.7367365840262017,
+      3.5805598771677607
+    ],
+    "t_score": [
+      0.24918867898198355,
+      0.2567340040628889
+    ],
+    "variance": [
+      0.0754962930768992,
+      0.072967413087598
+    ],
+    "sleep": 171
+  },
+  "variance_analysis": {
+    "standard_t_std": 0.001004144549369812,
+    "godelai_avg_variance": 0.072967413087598,
+    "ratio": 72.6655205948038
+  }
+}

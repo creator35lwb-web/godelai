@@ -1,0 +1,66 @@
+{
+  "config": {
+    "epochs": 3,
+    "batch_size": 64,
+    "seq_length": 100,
+    "embedding_dim": 128,
+    "hidden_dim": 256,
+    "num_layers": 2,
+    "learning_rate": 0.002,
+    "seed": 1337,
+    "min_surplus_energy": 0.3,
+    "propagation_gamma": 2.0,
+    "tscore_sample_batches": 3
+  },
+  "standard": {
+    "history": {
+      "train_loss": [
+        3.5174545560564314,
+        2.94377977507455,
+        2.635867084775652
+      ],
+      "val_loss": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "t_score_shadow": [
+        0.7201593319574991,
+        0.9008072018623352,
+        0.9235422809918722
+      ]
+    },
+    "best_val_loss": 0.0,
+    "training_time": 57.75287389755249,
+    "model_type": "STANDARD"
+  },
+  "godelai": {
+    "history": {
+      "train_loss": [
+        3.5174545560564314,
+        2.94377977507455,
+        2.635867084775652
+      ],
+      "val_loss": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "t_score": [
+        0.7201593319574991,
+        0.9008072018623352,
+        0.9235422809918722
+      ],
+      "sleep_events": [
+        0,
+        0,
+        0
+      ]
+    },
+    "best_val_loss": 0.0,
+    "training_time": 88.96533513069153,
+    "total_sleep_events": 0,
+    "model_type": "GODELAI"
+  },
+  "timestamp": "20260207_094208"
+}

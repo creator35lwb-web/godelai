@@ -191,8 +191,16 @@ class GodelAgent(nn.Module):
             # Forward pass for single sample
             sample_data = data[i:i+1]
             sample_target = target[i:i+1]
-            prediction = self.compression_layer(sample_data)
-            loss = criterion(prediction, sample_target)
+            outputs = self.compression_layer(sample_data)
+            
+            # Handle models that return (logits, hidden) or (logits, loss, ...)
+            prediction = outputs[0] if isinstance(outputs, (tuple, list)) else outputs
+            
+            # Ensure proper shape for cross entropy
+            pred_flat = prediction.view(-1, prediction.size(-1))
+            target_flat = sample_target.view(-1)
+            
+            loss = criterion(pred_flat, target_flat)
 
             # Backward pass
             loss.backward()
@@ -292,8 +300,13 @@ class GodelAgent(nn.Module):
         # 6. Apply the actual update using aggregated gradients
         # We measured diversity with per-sample grads, but we still optimize normally
         self.compression_layer.zero_grad()
-        prediction = self.compression_layer(data)
-        total_loss = criterion(prediction, target)
+        outputs = self.compression_layer(data)
+        prediction = outputs[0] if isinstance(outputs, (tuple, list)) else outputs
+        
+        pred_flat = prediction.view(-1, prediction.size(-1))
+        target_flat = target.view(-1)
+        
+        total_loss = criterion(pred_flat, target_flat)
 
         # Add propagation penalty (reduced weight for stability)
         total_loss = total_loss + (0.1 * l_prop)
