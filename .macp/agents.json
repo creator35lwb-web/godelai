@@ -59,7 +59,20 @@
         "Community engagement"
       ],
       "active_since": "2026-01-01T00:00:00Z",
-      "last_handoff": null
+      "last_handoff": "2026-02-07T00:00:00Z"
+    },
+    {
+      "id": "ClaudeCode",
+      "name": "Claude Code (Opus 4.6)",
+      "role": "Lead Engineer",
+      "responsibilities": [
+        "Implementation",
+        "Conflict data scaling",
+        "Semantic experiments",
+        "T-Score variance validation"
+      ],
+      "active_since": "2026-02-07T00:00:00Z",
+      "last_handoff": "2026-02-07T00:00:00Z"
     }
   ]
 }
