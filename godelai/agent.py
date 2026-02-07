@@ -196,11 +196,15 @@ class GodelAgent(nn.Module):
             # Handle models that return (logits, hidden) or (logits, loss, ...)
             prediction = outputs[0] if isinstance(outputs, (tuple, list)) else outputs
             
-            # Ensure proper shape for cross entropy
-            pred_flat = prediction.view(-1, prediction.size(-1))
-            target_flat = sample_target.view(-1)
-            
-            loss = criterion(pred_flat, target_flat)
+            # Compute loss - handle both CrossEntropyLoss and MSELoss correctly
+            if isinstance(criterion, nn.CrossEntropyLoss):
+                # CrossEntropyLoss expects: pred [N, C], target [N] (class indices)
+                pred_flat = prediction.view(-1, prediction.size(-1))
+                target_flat = sample_target.view(-1)
+                loss = criterion(pred_flat, target_flat)
+            else:
+                # MSELoss and other losses: keep original shapes
+                loss = criterion(prediction, sample_target)
 
             # Backward pass
             loss.backward()
@@ -303,10 +307,15 @@ class GodelAgent(nn.Module):
         outputs = self.compression_layer(data)
         prediction = outputs[0] if isinstance(outputs, (tuple, list)) else outputs
         
-        pred_flat = prediction.view(-1, prediction.size(-1))
-        target_flat = target.view(-1)
-        
-        total_loss = criterion(pred_flat, target_flat)
+        # Compute loss - handle both CrossEntropyLoss and MSELoss correctly
+        if isinstance(criterion, nn.CrossEntropyLoss):
+            # CrossEntropyLoss expects: pred [N, C], target [N] (class indices)
+            pred_flat = prediction.view(-1, prediction.size(-1))
+            target_flat = target.view(-1)
+            total_loss = criterion(pred_flat, target_flat)
+        else:
+            # MSELoss and other losses: keep original shapes
+            total_loss = criterion(prediction, target)
 
         # Add propagation penalty (reduced weight for stability)
         total_loss = total_loss + (0.1 * l_prop)
