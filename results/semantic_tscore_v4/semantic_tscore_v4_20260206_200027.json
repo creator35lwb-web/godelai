@@ -1,0 +1,175 @@
+{
+  "experiment": "Semantic T-Score v4 \u2014 Embedding-Space Diversity",
+  "timestamp": "2026-02-06T20:00:20.197869",
+  "model": "all-MiniLM-L6-v2 (384-dim)",
+  "author": "Godel (Manus AI) \u2014 CTO",
+  "hypothesis": "Conflict data should show LOWER semantic T-Score (more diverse) and HIGHER diversity index than homogeneous Shakespeare",
+  "experiments": [
+    {
+      "name": "Shakespeare (Homogeneous)",
+      "num_texts": 17,
+      "batched_metrics": {
+        "semantic_tscore": {
+          "average": 0.189473,
+          "std": 0.015925,
+          "variance": 0.00025359,
+          "min": 0.14475,
+          "max": 0.220857,
+          "range": 0.076107
+        },
+        "diversity_index": {
+          "average": 0.468502,
+          "std": 0.013132
+        }
+      },
+      "global_metrics": {
+        "semantic_tscore": 0.190511,
+        "diversity": {
+          "avg_distance": 0.809489,
+          "variance": 0.006026,
+          "spread": 0.414414,
+          "index": 0.489435
+        },
+        "embedding_variance": 0.001017
+      }
+    },
+    {
+      "name": "All Conflict (Heterogeneous)",
+      "num_texts": 253,
+      "batched_metrics": {
+        "semantic_tscore": {
+          "average": 0.20834,
+          "std": 0.050918,
+          "variance": 0.00259265,
+          "min": 0.116454,
+          "max": 0.359765,
+          "range": 0.243311
+        },
+        "diversity_index": {
+          "average": 0.52683,
+          "std": 0.034511
+        }
+      },
+      "global_metrics": {
+        "semantic_tscore": 0.204835,
+        "diversity": {
+          "avg_distance": 0.795165,
+          "variance": 0.029413,
+          "spread": 1.160141,
+          "index": 0.638435
+        },
+        "embedding_variance": 0.006923
+      }
+    },
+    {
+      "name": "Category: ethical_dilemmas",
+      "num_texts": 181,
+      "batched_metrics": {
+        "semantic_tscore": {
+          "average": 0.249001,
+          "std": 0.079987,
+          "variance": 0.00639785,
+          "min": 0.114557,
+          "max": 0.436488,
+          "range": 0.321931
+        },
+        "diversity_index": {
+          "average": 0.523637,
+          "std": 0.036739
+        }
+      },
+      "global_metrics": {
+        "semantic_tscore": 0.253586,
+        "diversity": {
+          "avg_distance": 0.746414,
+          "variance": 0.040586,
+          "spread": 1.110973,
+          "index": 0.607578
+        },
+        "embedding_variance": 0.01339
+      }
+    },
+    {
+      "name": "Category: perspective_conflicts",
+      "num_texts": 72,
+      "batched_metrics": {
+        "semantic_tscore": {
+          "average": 0.179365,
+          "std": 0.033455,
+          "variance": 0.00111925,
+          "min": 0.082179,
+          "max": 0.245711,
+          "range": 0.163532
+        },
+        "diversity_index": {
+          "average": 0.526969,
+          "std": 0.030938
+        }
+      },
+      "global_metrics": {
+        "semantic_tscore": 0.178627,
+        "diversity": {
+          "avg_distance": 0.821373,
+          "variance": 0.018045,
+          "spread": 0.866107,
+          "index": 0.589322
+        },
+        "embedding_variance": 0.002159
+      }
+    },
+    {
+      "name": "Mixed (Shakespeare + Conflict)",
+      "num_texts": 270,
+      "batched_metrics": {
+        "semantic_tscore": {
+          "average": 0.19571,
+          "std": 0.055046,
+          "variance": 0.00303004,
+          "min": 0.104242,
+          "max": 0.379192,
+          "range": 0.27495
+        },
+        "diversity_index": {
+          "average": 0.528788,
+          "std": 0.02947
+        }
+      },
+      "global_metrics": {
+        "semantic_tscore": 0.187162,
+        "diversity": {
+          "avg_distance": 0.812838,
+          "variance": 0.028908,
+          "spread": 1.164667,
+          "index": 0.648025
+        },
+        "embedding_variance": 0.007201
+      }
+    }
+  ],
+  "perspective_conflict_analysis": {
+    "total_pairs": 246,
+    "overall_avg": 0.507295,
+    "overall_std": 0.133689,
+    "per_category": {
+      "ethical_dilemmas": {
+        "avg_conflict_score": 0.529709,
+        "std": 0.126084,
+        "count": 138
+      },
+      "perspective_conflicts": {
+        "avg_conflict_score": 0.478653,
+        "std": 0.137604,
+        "count": 108
+      }
+    }
+  },
+  "analysis": {
+    "tscore_diff": 0.018867,
+    "diversity_diff": 0.149,
+    "variance_diff": 0.005906,
+    "tscore_ratio": 1.099576,
+    "diversity_ratio": 1.304433,
+    "confirmed_metrics": 2,
+    "conclusion": "CONFIRMED: Semantic-level analysis reveals conflict data IS more diverse than Shakespeare"
+  }
+}
