@@ -1,0 +1,551 @@
+{
+  "$schema": "https://godelai.dev/schemas/conflict-dataset-v1.json",
+  "title": "GodelAI Perspective Conflicts \u2014 Expanded v2.0",
+  "version": "2.0",
+  "created_by": "L (GodelAI CEO) \u2014 MACP v2.2 via LLM generation",
+  "created_at": "2026-04-03T06:08:00.919133",
+  "description": "Expanded perspective_conflicts conflict dataset for C-S-P T-Score activation (target: T=0.3-0.5)",
+  "count": 20,
+  "data": [
+    {
+      "id": "perspective_expanded_001",
+      "type": "perspective_conflict",
+      "domain": "AI governance",
+      "issue": "Regulation of facial recognition technology",
+      "perspectives": [
+        {
+          "stakeholder": "Privacy advocates",
+          "position": "Ban or heavily restrict facial recognition due to privacy violations",
+          "reasoning": "Facial recognition enables mass surveillance, erodes anonymity, and can disproportionately target marginalized groups.",
+          "evidence": "Studies showing misidentification rates in minorities and documented misuse by authoritarian regimes."
+        },
+        {
+          "stakeholder": "Law enforcement agencies",
+          "position": "Expand use for public safety and crime prevention",
+          "reasoning": "Facial recognition helps quickly identify suspects and prevent crimes, improving community security.",
+          "evidence": "Cases where facial recognition led to arrests and prevented potential harm."
+        },
+        {
+          "stakeholder": "Tech industry",
+          "position": "Support regulated deployment with technical safeguards",
+          "reasoning": "Facial recognition has benefits if deployed transparently with accuracy and bias mitigation but needs clear governance frameworks.",
+          "evidence": "Research on algorithmic fairness improvements and calls for standards from AI ethics boards."
+        }
+      ],
+      "synthesis_challenge": "Balancing privacy rights, public safety benefits, and technological innovation creates fundamental conflicts over trust and control."
+    },
+    {
+      "id": "perspective_expanded_002",
+      "type": "perspective_conflict",
+      "domain": "Climate policy",
+      "issue": "Carbon taxation vs. economic growth",
+      "perspectives": [
+        {
+          "stakeholder": "Climate scientists",
+          "position": "Implement high carbon taxes immediately to reduce emissions rapidly",
+          "reasoning": "Urgent emission reductions are necessary to avoid catastrophic climate impacts, and pricing carbon is effective.",
+          "evidence": "IPCC reports showing need for rapid emission cuts and economic models supporting carbon pricing efficacy."
+        },
+        {
+          "stakeholder": "Industrial sector leaders",
+          "position": "Oppose high carbon taxes fearing economic slowdown and job losses",
+          "reasoning": "Sudden cost increases threaten competitiveness, leading to layoffs and carbon leakage to countries with lax regulations.",
+          "evidence": "Economic analyses predicting GDP contraction and employment impacts from aggressive carbon pricing."
+        },
+        {
+          "stakeholder": "Social justice advocates",
+          "position": "Support carbon taxes only if paired with strong social safety nets",
+          "reasoning": "Carbon pricing disproportionately affects low-income communities unless revenues fund equitable transition programs.",
+          "evidence": "Studies on regressive impacts of energy taxes without redistribution mechanisms."
+        }
+      ],
+      "synthesis_challenge": "The tension between environmental urgency, economic stability, and social equity complicates unified climate action."
+    },
+    {
+      "id": "perspective_expanded_003",
+      "type": "perspective_conflict",
+      "domain": "Economic systems",
+      "issue": "Universal Basic Income (UBI) implementation",
+      "perspectives": [
+        {
+          "stakeholder": "Progressive economists",
+          "position": "UBI as a tool to reduce poverty and provide economic security amid automation",
+          "reasoning": "As automation displaces workers, UBI ensures baseline income and stimulates consumer demand.",
+          "evidence": "Pilot programs showing improved well-being and spending patterns."
+        },
+        {
+          "stakeholder": "Fiscal conservatives",
+          "position": "Oppose UBI due to budgetary constraints and disincentives to work",
+          "reasoning": "UBI is fiscally unsustainable long-term and may reduce labor force participation.",
+          "evidence": "Economic models predicting increased government debt and reduced employment rates."
+        },
+        {
+          "stakeholder": "Labor unions",
+          "position": "Prefer targeted employment programs over UBI",
+          "reasoning": "UBI might weaken worker bargaining power and reduce incentives for decent wages and job quality.",
+          "evidence": "Historical cases where guaranteed income reduced union membership and wage growth."
+        }
+      ],
+      "synthesis_challenge": "Reconciling fiscal responsibility, social welfare, and labor empowerment creates competing priorities around UBI."
+    },
+    {
+      "id": "perspective_expanded_004",
+      "type": "perspective_conflict",
+      "domain": "Education reform",
+      "issue": "Standardized testing as a measure of student achievement",
+      "perspectives": [
+        {
+          "stakeholder": "Educational policymakers",
+          "position": "Use standardized testing to ensure accountability and comparability",
+          "reasoning": "Standardized tests provide objective metrics to evaluate schools and identify achievement gaps.",
+          "evidence": "Data-driven policymaking relying on test scores to allocate resources."
+        },
+        {
+          "stakeholder": "Teachers' unions",
+          "position": "Oppose overreliance on standardized tests",
+          "reasoning": "Tests narrow curriculum, increase stress, and do not capture critical thinking or creativity.",
+          "evidence": "Research showing teaching to the test and negative impacts on student motivation."
+        },
+        {
+          "stakeholder": "Parents from disadvantaged communities",
+          "position": "Support testing as a tool for accountability and opportunity",
+          "reasoning": "Standardized tests can spotlight inequities and drive efforts to improve underserved schools.",
+          "evidence": "Cases where test results led to increased funding or interventions in low-performing schools."
+        }
+      ],
+      "synthesis_challenge": "The conflict lies between objective measurement, holistic education values, and equity-focused accountability."
+    },
+    {
+      "id": "perspective_expanded_005",
+      "type": "perspective_conflict",
+      "domain": "Healthcare access",
+      "issue": "Implementation of single-payer healthcare systems",
+      "perspectives": [
+        {
+          "stakeholder": "Public health experts",
+          "position": "Support single-payer systems to guarantee universal access and control costs",
+          "reasoning": "Single-payer systems reduce administrative overhead and improve population health outcomes.",
+          "evidence": "Comparative data from countries with universal healthcare showing better health indicators."
+        },
+        {
+          "stakeholder": "Private insurers",
+          "position": "Oppose single-payer due to loss of market and innovation incentives",
+          "reasoning": "Private competition drives innovation and personalized care which single-payer might stifle.",
+          "evidence": "Examples of rapid drug development and technology adoption in competitive markets."
+        },
+        {
+          "stakeholder": "Taxpayer advocacy groups",
+          "position": "Concerned about increased tax burden accompanying single-payer",
+          "reasoning": "Single-payer requires higher taxes which may disproportionately affect middle-class families.",
+          "evidence": "Fiscal projections showing tax increases and debates around cost distribution."
+        }
+      ],
+      "synthesis_challenge": "Balancing universal access, innovation incentives, and fiscal sustainability presents deep tensions."
+    },
+    {
+      "id": "perspective_expanded_006",
+      "type": "perspective_conflict",
+      "domain": "Immigration",
+      "issue": "Pathways to citizenship for undocumented immigrants",
+      "perspectives": [
+        {
+          "stakeholder": "Immigrant rights organizations",
+          "position": "Support broad amnesty and pathways to citizenship",
+          "reasoning": "Regularizing status improves social integration, reduces exploitation, and boosts economic contributions.",
+          "evidence": "Studies linking legalization to higher tax revenues and community stability."
+        },
+        {
+          "stakeholder": "National security advocates",
+          "position": "Favor strict vetting and limited legalization to protect safety",
+          "reasoning": "Unrestricted pathways risk national security and encourage illegal entry.",
+          "evidence": "Terrorism and crime statistics cited to justify controlled immigration."
+        },
+        {
+          "stakeholder": "Labor market economists",
+          "position": "Cautious approach to legalization to avoid labor market disruptions",
+          "reasoning": "Sudden legalization could saturate low-skill labor markets and depress wages.",
+          "evidence": "Economic analyses showing short-term wage impacts in certain sectors post-legalization."
+        }
+      ],
+      "synthesis_challenge": "Reconciling humanitarian, security, and economic concerns creates conflicting priorities around legalization."
+    },
+    {
+      "id": "perspective_expanded_007",
+      "type": "perspective_conflict",
+      "domain": "AI governance",
+      "issue": "Use of AI in autonomous weapon systems",
+      "perspectives": [
+        {
+          "stakeholder": "International human rights organizations",
+          "position": "Ban autonomous weapons due to ethical and accountability concerns",
+          "reasoning": "Delegating lethal decisions to AI violates human rights and lacks clear accountability.",
+          "evidence": "Reports on AI errors in targeting and calls for international prohibitions."
+        },
+        {
+          "stakeholder": "Defense industry",
+          "position": "Develop autonomous systems to improve defense capabilities and reduce soldier casualties",
+          "reasoning": "Autonomous weapons can react faster, reduce human risk, and enhance national security.",
+          "evidence": "Military studies showing efficiency gains and casualty reductions with autonomous systems."
+        },
+        {
+          "stakeholder": "Technology ethicists",
+          "position": "Advocate for strict regulations and human-in-the-loop controls rather than outright bans",
+          "reasoning": "Balanced frameworks can harness benefits while maintaining ethical oversight.",
+          "evidence": "Policy proposals for human oversight and transparency in AI weapon deployments."
+        }
+      ],
+      "synthesis_challenge": "Conflicting ethical, security, and technological considerations hinder consensus on autonomous weapons."
+    },
+    {
+      "id": "perspective_expanded_008",
+      "type": "perspective_conflict",
+      "domain": "Climate policy",
+      "issue": "Role of nuclear energy in decarbonization",
+      "perspectives": [
+        {
+          "stakeholder": "Environmental scientists",
+          "position": "Support nuclear energy as necessary for low-carbon energy transition",
+          "reasoning": "Nuclear power provides reliable, large-scale clean energy to complement renewables.",
+          "evidence": "Studies on nuclear\u2019s low lifecycle emissions and capacity factors."
+        },
+        {
+          "stakeholder": "Anti-nuclear activists",
+          "position": "Oppose nuclear due to safety risks and waste concerns",
+          "reasoning": "Risks of accidents and unresolved radioactive waste make nuclear unsafe and unsustainable.",
+          "evidence": "Historical nuclear disasters and long-term waste management challenges."
+        },
+        {
+          "stakeholder": "Energy economists",
+          "position": "Advocate for market-driven energy mix favoring cheapest renewables over nuclear",
+          "reasoning": "Rapid cost declines in solar and wind make nuclear economically uncompetitive.",
+          "evidence": "Trends in levelized cost of energy showing renewables cheaper than new nuclear."
+        }
+      ],
+      "synthesis_challenge": "Divergent assessments of risk, economics, and climate urgency prevent unified energy strategies."
+    },
+    {
+      "id": "perspective_expanded_009",
+      "type": "perspective_conflict",
+      "domain": "Economic systems",
+      "issue": "Regulation of cryptocurrency markets",
+      "perspectives": [
+        {
+          "stakeholder": "Financial regulators",
+          "position": "Enforce strict regulations to prevent fraud, protect investors, and ensure stability",
+          "reasoning": "Cryptocurrency markets have vulnerabilities that threaten financial systems.",
+          "evidence": "Cases of scams, market manipulation, and volatility causing investor losses."
+        },
+        {
+          "stakeholder": "Crypto industry entrepreneurs",
+          "position": "Favor light-touch regulation to foster innovation and decentralized finance",
+          "reasoning": "Heavy regulation stifles innovation and the democratizing potential of blockchain.",
+          "evidence": "Growth of DeFi projects and startups under minimal regulation environments."
+        },
+        {
+          "stakeholder": "Consumer protection advocates",
+          "position": "Demand transparency and education rather than bans",
+          "reasoning": "Consumers must be informed and protected but outright bans limit financial inclusion.",
+          "evidence": "Surveys showing confusion about crypto risks and benefits among retail investors."
+        }
+      ],
+      "synthesis_challenge": "Balancing innovation, risk mitigation, and consumer empowerment creates regulatory dilemmas."
+    },
+    {
+      "id": "perspective_expanded_010",
+      "type": "perspective_conflict",
+      "domain": "Education reform",
+      "issue": "Integration of AI tutors in classrooms",
+      "perspectives": [
+        {
+          "stakeholder": "EdTech developers",
+          "position": "Promote AI tutors to personalize learning and scale educational access",
+          "reasoning": "AI can adapt to student needs and provide scalable, cost-effective tutoring.",
+          "evidence": "Pilot studies demonstrating improved outcomes with AI-assisted learning."
+        },
+        {
+          "stakeholder": "Educators",
+          "position": "Skeptical about AI replacing human interaction and teacher roles",
+          "reasoning": "Teaching involves social-emotional skills that AI cannot replicate effectively.",
+          "evidence": "Research emphasizing teacher-student relationships as key to learning."
+        },
+        {
+          "stakeholder": "Parents",
+          "position": "Mixed views balancing potential benefits and concerns about screen time and data privacy",
+          "reasoning": "Parents want better tools but worry about overreliance on technology and privacy risks.",
+          "evidence": "Surveys showing parental concerns about digital learning environments."
+        }
+      ],
+      "synthesis_challenge": "Tensions between technological promise, pedagogical values, and privacy concerns complicate adoption."
+    },
+    {
+      "id": "perspective_expanded_011",
+      "type": "perspective_conflict",
+      "domain": "Healthcare access",
+      "issue": "Prioritization of healthcare resources during pandemics",
+      "perspectives": [
+        {
+          "stakeholder": "Public health officials",
+          "position": "Allocate resources based on maximizing overall population health",
+          "reasoning": "Prioritizing those with higher survival chances or societal roles saves more lives.",
+          "evidence": "Ethical frameworks and models optimizing resource allocation."
+        },
+        {
+          "stakeholder": "Patient advocacy groups",
+          "position": "Advocate for equal access regardless of prognosis or social status",
+          "reasoning": "All lives have equal value and prioritization risks discrimination.",
+          "evidence": "Human rights declarations and critiques of utilitarian triage systems."
+        },
+        {
+          "stakeholder": "Healthcare workers",
+          "position": "Prefer prioritization that protects frontline workers to sustain healthcare capacity",
+          "reasoning": "Protecting healthcare staff is essential to maintain the system under strain.",
+          "evidence": "Data on infection rates among healthcare workers and system collapse risks."
+        }
+      ],
+      "synthesis_challenge": "Conflicting ethical values around equity, utility, and system sustainability complicate resource decisions."
+    },
+    {
+      "id": "perspective_expanded_012",
+      "type": "perspective_conflict",
+      "domain": "Immigration",
+      "issue": "Use of AI-based surveillance for border control",
+      "perspectives": [
+        {
+          "stakeholder": "Border security agencies",
+          "position": "Support AI surveillance for efficiency and enhanced detection",
+          "reasoning": "AI tools improve identification of unauthorized crossings and threats.",
+          "evidence": "Operational reports showing improved interdiction rates with AI technologies."
+        },
+        {
+          "stakeholder": "Civil liberties groups",
+          "position": "Oppose AI surveillance due to privacy violations and potential profiling",
+          "reasoning": "Surveillance risks abuse, discrimination, and harms vulnerable migrant populations.",
+          "evidence": "Investigations revealing algorithmic biases and data misuse."
+        },
+        {
+          "stakeholder": "Immigrant communities",
+          "position": "Fear AI surveillance increases harassment and legal risks",
+          "reasoning": "Surveillance creates chilling effects and undermines trust in authorities.",
+          "evidence": "Anecdotal reports of increased deportations linked to AI monitoring."
+        }
+      ],
+      "synthesis_challenge": "Balancing security needs, privacy rights, and community trust creates fundamental conflicts."
+    },
+    {
+      "id": "perspective_expanded_013",
+      "type": "perspective_conflict",
+      "domain": "Climate policy",
+      "issue": "Geoengineering as a solution to climate change",
+      "perspectives": [
+        {
+          "stakeholder": "Climate intervention researchers",
+          "position": "Support research and cautious deployment of geoengineering to reduce warming",
+          "reasoning": "Geoengineering could rapidly reduce temperatures and buy time for emission cuts.",
+          "evidence": "Modeling studies indicating potential climate benefits of solar radiation management."
+        },
+        {
+          "stakeholder": "Environmental activists",
+          "position": "Oppose geoengineering due to ecological risks and moral hazard",
+          "reasoning": "Technological fixes may have unintended consequences and reduce urgency to cut emissions.",
+          "evidence": "Ecological impact analyses and ethical arguments against large-scale intervention."
+        },
+        {
+          "stakeholder": "Policy makers",
+          "position": "Cautious but open to international governance frameworks before deployment",
+          "reasoning": "Geoengineering requires global coordination to manage risks and avoid geopolitical conflict.",
+          "evidence": "Calls for treaties and regulatory frameworks from international bodies."
+        }
+      ],
+      "synthesis_challenge": "Divergent views on risk, ethics, and governance impede consensus on geoengineering."
+    },
+    {
+      "id": "perspective_expanded_014",
+      "type": "perspective_conflict",
+      "domain": "Economic systems",
+      "issue": "Role of gig economy in labor markets",
+      "perspectives": [
+        {
+          "stakeholder": "Gig economy companies",
+          "position": "Promote flexibility and entrepreneurship benefits of gig work",
+          "reasoning": "Gig platforms offer workers autonomy and new income opportunities.",
+          "evidence": "Surveys showing worker satisfaction with flexible schedules."
+        },
+        {
+          "stakeholder": "Labor rights organizations",
+          "position": "Criticize gig work for lack of protections and precarious employment",
+          "reasoning": "Gig workers face income instability, no benefits, and limited labor rights.",
+          "evidence": "Studies documenting wage gaps and absence of social protections."
+        },
+        {
+          "stakeholder": "Policy makers",
+          "position": "Seek regulatory frameworks that balance innovation with worker protections",
+          "reasoning": "Regulations can create fair conditions without stifling economic growth.",
+          "evidence": "Examples of laws requiring minimum wages and benefits in gig sectors."
+        }
+      ],
+      "synthesis_challenge": "Conflicting priorities on flexibility, security, and innovation make regulation complex."
+    },
+    {
+      "id": "perspective_expanded_015",
+      "type": "perspective_conflict",
+      "domain": "Education reform",
+      "issue": "Incorporation of critical race theory (CRT) in school curricula",
+      "perspectives": [
+        {
+          "stakeholder": "Social justice educators",
+          "position": "Support CRT to address systemic racism and promote inclusive history",
+          "reasoning": "CRT fosters critical thinking about power and inequality essential for societal progress.",
+          "evidence": "Educational research on CRT improving student awareness and engagement."
+        },
+        {
+          "stakeholder": "Conservative parents and groups",
+          "position": "Oppose CRT as divisive and inappropriate for K-12 education",
+          "reasoning": "CRT promotes a negative view of national identity and unfairly labels individuals.",
+          "evidence": "Public opinion polls reflecting concern and legislative bans in some states."
+        },
+        {
+          "stakeholder": "School administrators",
+          "position": "Advocate for balanced curricula that respect diverse perspectives",
+          "reasoning": "Curriculum should reflect multiple viewpoints to foster critical thinking without polarization.",
+          "evidence": "Surveys and pilot programs testing integrated approaches."
+        }
+      ],
+      "synthesis_challenge": "Disputes over historical interpretation and social values create deep curriculum conflicts."
+    },
+    {
+      "id": "perspective_expanded_016",
+      "type": "perspective_conflict",
+      "domain": "Healthcare access",
+      "issue": "Use of AI diagnostics in clinical decision-making",
+      "perspectives": [
+        {
+          "stakeholder": "Medical AI developers",
+          "position": "Promote AI diagnostics to improve accuracy and reduce human error",
+          "reasoning": "AI can analyze large datasets to assist clinicians and speed diagnoses.",
+          "evidence": "Clinical trials showing improved detection rates with AI support."
+        },
+        {
+          "stakeholder": "Physicians",
+          "position": "Concerned about overreliance on AI and loss of clinical judgment",
+          "reasoning": "AI errors or biases may misguide decisions and reduce personalized care.",
+          "evidence": "Reported cases of AI diagnostic failures and calls for cautious integration."
+        },
+        {
+          "stakeholder": "Patients",
+          "position": "Mixed trust, seeking transparency and consent regarding AI involvement",
+          "reasoning": "Patients want benefits of AI but worry about privacy, errors, and loss of human touch.",
+          "evidence": "Surveys showing varied acceptance of AI tools in healthcare."
+        }
+      ],
+      "synthesis_challenge": "Balancing innovation, professional autonomy, and patient trust complicates AI adoption."
+    },
+    {
+      "id": "perspective_expanded_017",
+      "type": "perspective_conflict",
+      "domain": "Immigration",
+      "issue": "Economic impact of refugee resettlement",
+      "perspectives": [
+        {
+          "stakeholder": "Humanitarian organizations",
+          "position": "Advocate for increased refugee resettlement as moral and economic benefit",
+          "reasoning": "Refugees contribute labor, entrepreneurship, and cultural diversity over time.",
+          "evidence": "Longitudinal studies showing positive fiscal impacts and economic integration."
+        },
+        {
+          "stakeholder": "Local government officials",
+          "position": "Express concern about short-term strains on public services and budgets",
+          "reasoning": "Sudden influxes may overwhelm housing, schools, and healthcare systems.",
+          "evidence": "Reports of budget deficits and service wait times linked to resettlement waves."
+        },
+        {
+          "stakeholder": "Economists",
+          "position": "Highlight mixed effects requiring strategic planning",
+          "reasoning": "Economic impact depends on scale, integration policies, and labor market conditions.",
+          "evidence": "Meta-analyses showing variable outcomes based on context."
+        }
+      ],
+      "synthesis_challenge": "Immediate resource constraints conflict with long-term social and economic benefits."
+    },
+    {
+      "id": "perspective_expanded_018",
+      "type": "perspective_conflict",
+      "domain": "AI governance",
+      "issue": "Transparency requirements for proprietary AI models",
+      "perspectives": [
+        {
+          "stakeholder": "Consumer rights groups",
+          "position": "Demand full transparency to prevent discrimination and ensure accountability",
+          "reasoning": "Opaque AI systems risk bias and harm without oversight.",
+          "evidence": "Cases of hidden biased algorithms affecting marginalized groups."
+        },
+        {
+          "stakeholder": "AI companies",
+          "position": "Argue that full transparency threatens intellectual property and innovation",
+          "reasoning": "Disclosure of model details can undermine competitive advantage and security.",
+          "evidence": "Industry reports warning of IP theft and hacking risks."
+        },
+        {
+          "stakeholder": "Regulators",
+          "position": "Favor balanced transparency frameworks with audits and selective disclosure",
+          "reasoning": "Oversight mechanisms can protect consumers while preserving innovation incentives.",
+          "evidence": "Emerging policy models employing third-party audits and certifications."
+        }
+      ],
+      "synthesis_challenge": "Protecting innovation and trade secrets conflicts with demands for consumer protection and fairness."
+    },
+    {
+      "id": "perspective_expanded_019",
+      "type": "perspective_conflict",
+      "domain": "Climate policy",
+      "issue": "Prioritizing adaptation vs. mitigation investments",
+      "perspectives": [
+        {
+          "stakeholder": "Climate mitigation advocates",
+          "position": "Focus resources on reducing greenhouse gas emissions",
+          "reasoning": "Mitigation addresses root causes and prevents worse future impacts.",
+          "evidence": "Models showing cost-benefit advantages of early emission cuts."
+        },
+        {
+          "stakeholder": "Vulnerable community leaders",
+          "position": "Prioritize adaptation to protect lives and livelihoods now",
+          "reasoning": "Communities already facing impacts need immediate resilience measures.",
+          "evidence": "Field data on climate disasters and effectiveness of adaptation projects."
+        },
+        {
+          "stakeholder": "Economic planners",
+          "position": "Advocate a balanced approach based on context-specific cost-efficiency",
+          "reasoning": "Investment priorities depend on regional vulnerabilities and economic constraints.",
+          "evidence": "Analyses of integrated climate investment strategies."
+        }
+      ],
+      "synthesis_challenge": "Competing temporal and geographic priorities make investment decisions contentious."
+    },
+    {
+      "id": "perspective_expanded_020",
+      "type": "perspective_conflict",
+      "domain": "Healthcare access",
+      "issue": "Mandating vaccination for public health",
+      "perspectives": [
+        {
+          "stakeholder": "Public health authorities",
+          "position": "Support mandates to achieve herd immunity and protect vulnerable populations",
+          "reasoning": "Vaccination reduces disease spread and prevents outbreaks.",
+          "evidence": "Epidemiological data demonstrating vaccine effectiveness."
+        },
+        {
+          "stakeholder": "Civil liberties advocates",
+          "position": "Oppose mandates as infringements on individual autonomy",
+          "reasoning": "People must have the right to make informed health choices without coercion.",
+          "evidence": "Legal precedents and ethical arguments emphasizing personal freedom."
+        },
+        {
+          "stakeholder": "Religious groups",
+          "position": "Request exemptions based on faith and conscientious objections",
+          "reasoning": "Vaccination mandates may violate religious beliefs and practices.",
+          "evidence": "Constitutional protections allowing religious freedom claims."
+        }
+      ],
+      "synthesis_challenge": "Balancing public health benefits with individual rights and religious freedoms creates intractable conflicts."
+    }
+  ]
+}

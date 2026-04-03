@@ -1,0 +1,331 @@
+{
+  "$schema": "https://godelai.dev/schemas/conflict-dataset-v1.json",
+  "title": "GodelAI Contradictory Facts \u2014 Expanded v2.0",
+  "version": "2.0",
+  "created_by": "L (GodelAI CEO) \u2014 MACP v2.2 via LLM generation",
+  "created_at": "2026-04-03T06:05:56.119160",
+  "description": "Expanded contradictory_facts conflict dataset for C-S-P T-Score activation (target: T=0.3-0.5)",
+  "count": 20,
+  "data": [
+    {
+      "id": "contradiction_expanded_001",
+      "type": "contradictory_facts",
+      "domain": "physics",
+      "title": "Wave-Particle Duality of Light",
+      "fact_a": {
+        "statement": "Light behaves as a wave, exhibiting interference and diffraction patterns.",
+        "evidence": "Experiments like Young's double-slit demonstrate light's wave nature through interference fringes."
+      },
+      "fact_b": {
+        "statement": "Light behaves as a particle, consisting of discrete quanta called photons.",
+        "evidence": "The photoelectric effect shows that light ejects electrons only when above specific frequencies, implying particle-like energy packets."
+      },
+      "resolution": "Quantum mechanics reconciles this by describing light as quantum entities exhibiting both wave and particle properties depending on the experimental context.",
+      "conflict_intensity": "high"
+    },
+    {
+      "id": "contradiction_expanded_002",
+      "type": "contradictory_facts",
+      "domain": "biology",
+      "title": "Genetic Determinism vs. Epigenetic Influence",
+      "fact_a": {
+        "statement": "An organism's traits are determined primarily by its genetic code.",
+        "evidence": "Mendelian genetics and genome-wide association studies correlate DNA sequences strongly with inherited traits."
+      },
+      "fact_b": {
+        "statement": "Environmental factors can cause heritable changes without altering DNA sequence through epigenetics.",
+        "evidence": "Studies show that DNA methylation and histone modification patterns influenced by environment can be inherited across generations."
+      },
+      "resolution": "Modern biology integrates genetics and epigenetics, understanding phenotype as a product of both genetic sequence and environment-driven heritable modifications.",
+      "conflict_intensity": "medium"
+    },
+    {
+      "id": "contradiction_expanded_003",
+      "type": "contradictory_facts",
+      "domain": "economics",
+      "title": "Paradox of Thrift",
+      "fact_a": {
+        "statement": "Increasing individual savings rates strengthens personal financial stability.",
+        "evidence": "Household data consistently shows that saving money improves individual wealth accumulation and security."
+      },
+      "fact_b": {
+        "statement": "When everyone saves more simultaneously, overall economic growth can slow down.",
+        "evidence": "Keynesian economics highlights that excessive aggregate saving reduces consumption demand, leading to recessions."
+      },
+      "resolution": "Economists recognize that while saving benefits individuals, excessive collective saving can reduce aggregate demand and harm economic growth, requiring balanced policies.",
+      "conflict_intensity": "high"
+    },
+    {
+      "id": "contradiction_expanded_004",
+      "type": "contradictory_facts",
+      "domain": "history",
+      "title": "Columbus's Discovery of America",
+      "fact_a": {
+        "statement": "Christopher Columbus is credited with discovering America in 1492.",
+        "evidence": "Historical documents and European narratives have long celebrated Columbus's 1492 voyage as the first European contact with the Americas."
+      },
+      "fact_b": {
+        "statement": "Vikings led by Leif Erikson reached North America around 500 years before Columbus.",
+        "evidence": "Archaeological sites like L'Anse aux Meadows in Newfoundland confirm Norse settlements circa 1000 CE."
+      },
+      "resolution": "Historians acknowledge Viking pre-Columbian contact, but Columbus's voyages initiated sustained European colonization, differentiating their historical impacts.",
+      "conflict_intensity": "medium"
+    },
+    {
+      "id": "contradiction_expanded_005",
+      "type": "contradictory_facts",
+      "domain": "mathematics",
+      "title": "Banach-Tarski Paradox",
+      "fact_a": {
+        "statement": "It is impossible to divide a solid sphere into a finite number of pieces and reassemble them into two identical spheres of the same size.",
+        "evidence": "Classical intuition and volume conservation principles disallow duplication of matter by simple rearrangement."
+      },
+      "fact_b": {
+        "statement": "Mathematically, the Banach-Tarski paradox shows a solid ball can be split into a finite number of non-measurable sets and reassembled into two identical copies.",
+        "evidence": "Set-theoretic constructions based on the axiom of choice demonstrate this counterintuitive decomposition."
+      },
+      "resolution": "The paradox relies on abstract non-measurable sets that cannot exist physically, so physical volume conservation remains valid despite the mathematical result.",
+      "conflict_intensity": "high"
+    },
+    {
+      "id": "contradiction_expanded_006",
+      "type": "contradictory_facts",
+      "domain": "physics",
+      "title": "Time Symmetry vs. Thermodynamic Arrow of Time",
+      "fact_a": {
+        "statement": "Fundamental physical laws, like Newtonian mechanics and quantum mechanics, are time-reversible.",
+        "evidence": "Equations governing particle interactions remain valid under time reversal transformations."
+      },
+      "fact_b": {
+        "statement": "In macroscopic systems, entropy increases over time, giving a clear direction to time\u2019s flow.",
+        "evidence": "The second law of thermodynamics confirms entropy in closed systems never decreases."
+      },
+      "resolution": "Experts reconcile this by understanding that macroscopic irreversibility emerges statistically from time-symmetric microscopic laws due to initial conditions and probability.",
+      "conflict_intensity": "high"
+    },
+    {
+      "id": "contradiction_expanded_007",
+      "type": "contradictory_facts",
+      "domain": "biology",
+      "title": "Survival of the Fittest vs. Cooperation in Evolution",
+      "fact_a": {
+        "statement": "Natural selection favors individuals with traits that maximize their personal survival and reproduction.",
+        "evidence": "Darwinian theory and numerous studies show competition drives evolutionary fitness."
+      },
+      "fact_b": {
+        "statement": "Many species show cooperative and altruistic behaviors that reduce individual fitness but benefit the group.",
+        "evidence": "Examples include eusocial insects and kin selection where individuals sacrifice for others."
+      },
+      "resolution": "Evolutionary biology explains cooperation through inclusive fitness and reciprocal altruism models, where gene-level selection can favor group-beneficial behaviors.",
+      "conflict_intensity": "medium"
+    },
+    {
+      "id": "contradiction_expanded_008",
+      "type": "contradictory_facts",
+      "domain": "economics",
+      "title": "Efficient Market Hypothesis vs. Market Anomalies",
+      "fact_a": {
+        "statement": "Financial markets efficiently incorporate all available information into asset prices.",
+        "evidence": "Empirical tests support that asset prices follow random walks with no easy arbitrage opportunities."
+      },
+      "fact_b": {
+        "statement": "Persistent market anomalies like momentum and value effects challenge market efficiency.",
+        "evidence": "Decades of data show predictable patterns and behavioral biases that contradict pure efficiency."
+      },
+      "resolution": "Contemporary finance posits markets are mostly efficient but subject to limits and behavioral factors causing anomalies temporarily.",
+      "conflict_intensity": "medium"
+    },
+    {
+      "id": "contradiction_expanded_009",
+      "type": "contradictory_facts",
+      "domain": "history",
+      "title": "Great Man Theory vs. Structuralist Histories",
+      "fact_a": {
+        "statement": "Historical change is primarily driven by the actions of influential individuals.",
+        "evidence": "Biographies and primary sources highlight the decisive roles of figures like Napoleon or Churchill."
+      },
+      "fact_b": {
+        "statement": "Broad social, economic, and cultural structures shape historical outcomes beyond individual agency.",
+        "evidence": "Marxist and Annales school historians emphasize systemic forces like class and geography."
+      },
+      "resolution": "Modern historiography integrates both perspectives, recognizing individuals influence history within structural constraints.",
+      "conflict_intensity": "medium"
+    },
+    {
+      "id": "contradiction_expanded_010",
+      "type": "contradictory_facts",
+      "domain": "mathematics",
+      "title": "Continuum Hypothesis - True or False?",
+      "fact_a": {
+        "statement": "The Continuum Hypothesis (CH) cannot be disproven from standard ZFC set theory axioms.",
+        "evidence": "G\u00f6del showed CH is consistent with ZFC if ZFC itself is consistent."
+      },
+      "fact_b": {
+        "statement": "The Continuum Hypothesis cannot be proven from ZFC axioms.",
+        "evidence": "Cohen showed the negation of CH is also consistent with ZFC."
+      },
+      "resolution": "CH is independent of ZFC axioms, meaning it can neither be proven nor disproven within standard set theory.",
+      "conflict_intensity": "high"
+    },
+    {
+      "id": "contradiction_expanded_011",
+      "type": "contradictory_facts",
+      "domain": "physics",
+      "title": "Locality vs. Quantum Entanglement",
+      "fact_a": {
+        "statement": "Physical interactions cannot propagate faster than the speed of light, ensuring locality.",
+        "evidence": "Special relativity forbids faster-than-light signals, confirmed by numerous experiments."
+      },
+      "fact_b": {
+        "statement": "Quantum entanglement correlations appear instantaneously over arbitrary distances.",
+        "evidence": "Bell test experiments demonstrate nonlocal correlations violating local hidden variable theories."
+      },
+      "resolution": "Quantum mechanics maintains no faster-than-light communication occurs despite entanglement\u2019s nonlocal correlations, preserving causality.",
+      "conflict_intensity": "high"
+    },
+    {
+      "id": "contradiction_expanded_012",
+      "type": "contradictory_facts",
+      "domain": "biology",
+      "title": "Brain Plasticity vs. Critical Periods",
+      "fact_a": {
+        "statement": "The adult human brain retains significant plasticity, adapting structurally and functionally.",
+        "evidence": "Neuroimaging shows learning and recovery induce neural reorganization in adults."
+      },
+      "fact_b": {
+        "statement": "Certain skills and neural developments must occur during early critical periods or are lost permanently.",
+        "evidence": "Studies on language acquisition and sensory development demonstrate irreversible deficits if missed early."
+      },
+      "resolution": "Scientists understand the brain has lifelong plasticity but heightened sensitivity during early critical periods limits some recoveries.",
+      "conflict_intensity": "medium"
+    },
+    {
+      "id": "contradiction_expanded_013",
+      "type": "contradictory_facts",
+      "domain": "economics",
+      "title": "Rational Actor Model vs. Behavioral Biases",
+      "fact_a": {
+        "statement": "Economic agents act rationally, maximizing utility based on available information.",
+        "evidence": "Classical economic models assume rational choice to predict market behaviors."
+      },
+      "fact_b": {
+        "statement": "Humans consistently exhibit irrational behaviors and cognitive biases affecting decisions.",
+        "evidence": "Behavioral economics documents biases like loss aversion and overconfidence in experiments."
+      },
+      "resolution": "Economic theory incorporates bounded rationality and heuristics to better model actual decision-making.",
+      "conflict_intensity": "medium"
+    },
+    {
+      "id": "contradiction_expanded_014",
+      "type": "contradictory_facts",
+      "domain": "history",
+      "title": "The Fall of the Roman Empire",
+      "fact_a": {
+        "statement": "The Roman Empire fell primarily due to external invasions by barbarian tribes.",
+        "evidence": "Historical records highlight successive invasions by Visigoths, Vandals, and others overwhelming Rome."
+      },
+      "fact_b": {
+        "statement": "Internal decay, economic troubles, and political instability caused the fall of Rome.",
+        "evidence": "Scholarly analyses emphasize administrative corruption, economic decline, and civil wars as root causes."
+      },
+      "resolution": "Historians now view the fall as multifactorial, involving both internal weaknesses and external pressures.",
+      "conflict_intensity": "medium"
+    },
+    {
+      "id": "contradiction_expanded_015",
+      "type": "contradictory_facts",
+      "domain": "mathematics",
+      "title": "Non-Euclidean Geometry vs. Euclidean Intuition",
+      "fact_a": {
+        "statement": "The sum of angles in a triangle equals 180 degrees, a fundamental Euclidean geometry property.",
+        "evidence": "Classical geometry on flat planes has been rigorously proven and widely used."
+      },
+      "fact_b": {
+        "statement": "In curved spaces (non-Euclidean geometry), triangle angles can sum to more or less than 180 degrees.",
+        "evidence": "Spherical and hyperbolic geometries demonstrate this with consistent mathematical models."
+      },
+      "resolution": "Geometry depends on the curvature of space: Euclidean rules hold on flat surfaces but differ on curved manifolds.",
+      "conflict_intensity": "low"
+    },
+    {
+      "id": "contradiction_expanded_016",
+      "type": "contradictory_facts",
+      "domain": "physics",
+      "title": "Classical Determinism vs. Quantum Indeterminacy",
+      "fact_a": {
+        "statement": "Classical physics predicts deterministic outcomes given initial conditions.",
+        "evidence": "Newtonian mechanics and Maxwell\u2019s equations yield predictable evolution of systems."
+      },
+      "fact_b": {
+        "statement": "Quantum mechanics inherently involves probabilistic outcomes that cannot be predicted exactly.",
+        "evidence": "Experiments validate the intrinsic uncertainty principle and probabilistic wavefunction collapse."
+      },
+      "resolution": "Physics accepts classical determinism as an approximation, with quantum mechanics providing fundamental probabilistic descriptions.",
+      "conflict_intensity": "high"
+    },
+    {
+      "id": "contradiction_expanded_017",
+      "type": "contradictory_facts",
+      "domain": "biology",
+      "title": "Species Stability vs. Rapid Evolution",
+      "fact_a": {
+        "statement": "Species tend to remain morphologically stable for millions of years.",
+        "evidence": "Fossil records show long periods with little apparent evolutionary change (stasis)."
+      },
+      "fact_b": {
+        "statement": "Species can evolve rapidly in short bursts under environmental pressures.",
+        "evidence": "Punctuated equilibrium theory and observed cases of rapid adaptation document this phenomenon."
+      },
+      "resolution": "Evolutionary theory integrates long stasis periods with episodic rapid change driven by environmental shifts.",
+      "conflict_intensity": "medium"
+    },
+    {
+      "id": "contradiction_expanded_018",
+      "type": "contradictory_facts",
+      "domain": "economics",
+      "title": "Money Illusion vs. Rational Inflation Expectations",
+      "fact_a": {
+        "statement": "Individuals often exhibit money illusion, reacting to nominal rather than real values.",
+        "evidence": "Behavioral studies show consumers respond to wage and price changes without fully adjusting for inflation."
+      },
+      "fact_b": {
+        "statement": "Rational expectations theory assumes people anticipate inflation and adjust their behavior accordingly.",
+        "evidence": "Economic models with rational agents predict inflation-neutral decision-making."
+      },
+      "resolution": "Economists consider money illusion a behavioral limitation that coexists with rational expectations in aggregate models.",
+      "conflict_intensity": "medium"
+    },
+    {
+      "id": "contradiction_expanded_019",
+      "type": "contradictory_facts",
+      "domain": "history",
+      "title": "Impact of the Printing Press on Literacy",
+      "fact_a": {
+        "statement": "The invention of the printing press dramatically increased literacy rates in Europe.",
+        "evidence": "Historical data shows increased book production and education following Gutenberg\u2019s press."
+      },
+      "fact_b": {
+        "statement": "Literacy rates remained low for centuries after printing due to social and economic barriers.",
+        "evidence": "Records indicate many populations lacked access or incentive to become literate despite printed materials."
+      },
+      "resolution": "The printing press was necessary but not sufficient; literacy growth depended on complementary social changes.",
+      "conflict_intensity": "low"
+    },
+    {
+      "id": "contradiction_expanded_020",
+      "type": "contradictory_facts",
+      "domain": "mathematics",
+      "title": "Countability of Rational vs. Irrational Numbers",
+      "fact_a": {
+        "statement": "The set of rational numbers is countably infinite.",
+        "evidence": "Mathematical proofs construct explicit bijections between rationals and natural numbers."
+      },
+      "fact_b": {
+        "statement": "The set of irrational numbers is uncountably infinite and larger than the set of rationals.",
+        "evidence": "Cantor's diagonal argument shows no one-to-one mapping exists between irrationals and naturals."
+      },
+      "resolution": "Both sets are infinite, but different sizes of infinity exist; rationals are countable whereas irrationals form a strictly larger uncountable set.",
+      "conflict_intensity": "low"
+    }
+  ]
+}

@@ -1,0 +1,551 @@
+{
+  "$schema": "https://godelai.dev/schemas/conflict-dataset-v1.json",
+  "title": "GodelAI Temporal Conflicts \u2014 Expanded v2.0",
+  "version": "2.0",
+  "created_by": "L (GodelAI CEO) \u2014 MACP v2.2 via LLM generation",
+  "created_at": "2026-04-03T06:08:49.821911",
+  "description": "Expanded temporal_conflicts conflict dataset for C-S-P T-Score activation (target: T=0.3-0.5)",
+  "count": 20,
+  "data": [
+    {
+      "id": "temporal_expanded_001",
+      "type": "temporal_conflict",
+      "domain": "medical discoveries",
+      "title": "Ulcers and Helicobacter pylori",
+      "timeline": [
+        {
+          "period": "1950-1980",
+          "belief": "Ulcers primarily caused by stress and spicy food.",
+          "status": "accepted",
+          "authority": "Medical textbooks and physicians"
+        },
+        {
+          "period": "1980-2010",
+          "belief": "Possible bacterial involvement in ulcers; controversial.",
+          "status": "transitional",
+          "authority": "Emerging research by Marshall and Warren"
+        },
+        {
+          "period": "2010-present",
+          "belief": "Most peptic ulcers caused by Helicobacter pylori infection and treated with antibiotics.",
+          "status": "current",
+          "authority": "World Health Organization, Gastroenterology consensus"
+        }
+      ],
+      "lesson": "Scientific understanding evolves with evidence, overturning long-held assumptions."
+    },
+    {
+      "id": "temporal_expanded_002",
+      "type": "temporal_conflict",
+      "domain": "physics revisions",
+      "title": "Nature of Light: Particle vs Wave",
+      "timeline": [
+        {
+          "period": "1700-1900",
+          "belief": "Light behaves purely as a wave.",
+          "status": "accepted",
+          "authority": "Young's Double Slit Experiment and Maxwell's equations"
+        },
+        {
+          "period": "1900-1950",
+          "belief": "Light exhibits dual wave-particle properties.",
+          "status": "transitional",
+          "authority": "Einstein's photoelectric effect and quantum theory development"
+        },
+        {
+          "period": "1950-present",
+          "belief": "Light is quantum mechanical with wave-particle duality essential for understanding phenomena.",
+          "status": "current",
+          "authority": "Quantum Electrodynamics and modern physics consensus"
+        }
+      ],
+      "lesson": "Complex phenomena may require integrating seemingly contradictory models."
+    },
+    {
+      "id": "temporal_expanded_003",
+      "type": "temporal_conflict",
+      "domain": "nutritional science",
+      "title": "Dietary Fat and Heart Disease",
+      "timeline": [
+        {
+          "period": "1950-1980",
+          "belief": "Saturated fat directly causes heart disease; low-fat diets recommended.",
+          "status": "accepted",
+          "authority": "American Heart Association guidelines"
+        },
+        {
+          "period": "1980-2010",
+          "belief": "Relationship between fat types and heart disease risk is complex; some fats beneficial.",
+          "status": "transitional",
+          "authority": "Emerging epidemiological studies"
+        },
+        {
+          "period": "2010-present",
+          "belief": "Saturated fat's role is nuanced; focus on overall diet quality and replacing refined carbs with healthy fats.",
+          "status": "current",
+          "authority": "Dietary Guidelines Advisory Committee, meta-analyses"
+        }
+      ],
+      "lesson": "Nutritional recommendations must adapt as evidence reveals complex interactions."
+    },
+    {
+      "id": "temporal_expanded_004",
+      "type": "temporal_conflict",
+      "domain": "psychological theories",
+      "title": "Causes of Mental Illness",
+      "timeline": [
+        {
+          "period": "1900-1950",
+          "belief": "Mental illness caused primarily by moral failing or weak character.",
+          "status": "accepted",
+          "authority": "Psychoanalytic and social stigma perspectives"
+        },
+        {
+          "period": "1950-1990",
+          "belief": "Biological and environmental factors both contribute to mental illness.",
+          "status": "transitional",
+          "authority": "Development of psychiatric medications and research"
+        },
+        {
+          "period": "1990-present",
+          "belief": "Mental illness results from complex biopsychosocial interactions requiring integrative treatment.",
+          "status": "current",
+          "authority": "DSM updates, neuroscience research"
+        }
+      ],
+      "lesson": "Understanding complex conditions grows by integrating multiple perspectives."
+    },
+    {
+      "id": "temporal_expanded_005",
+      "type": "temporal_conflict",
+      "domain": "economic models",
+      "title": "Causes of Great Depression",
+      "timeline": [
+        {
+          "period": "1930-1960",
+          "belief": "Great Depression caused by market failures and lack of government intervention.",
+          "status": "accepted",
+          "authority": "Classical economics and early Keynesian ideas"
+        },
+        {
+          "period": "1960-1990",
+          "belief": "Monetary policy mistakes and international gold standard rigidity worsened depression.",
+          "status": "transitional",
+          "authority": "Milton Friedman and monetarist critiques"
+        },
+        {
+          "period": "1990-present",
+          "belief": "Multiple interacting causes: monetary, fiscal, structural, and policy failures combined.",
+          "status": "current",
+          "authority": "Contemporary economic historiography and research"
+        }
+      ],
+      "lesson": "Economic phenomena often require multifaceted explanations rather than single cause models."
+    },
+    {
+      "id": "temporal_expanded_006",
+      "type": "temporal_conflict",
+      "domain": "historical reinterpretations",
+      "title": "Causes of the Fall of the Roman Empire",
+      "timeline": [
+        {
+          "period": "1800-1950",
+          "belief": "Barbarian invasions solely caused the fall of Rome.",
+          "status": "accepted",
+          "authority": "Traditional classical historians"
+        },
+        {
+          "period": "1950-2000",
+          "belief": "Internal decay, economic issues, and administrative failures also critical.",
+          "status": "transitional",
+          "authority": "Modern historiography and archaeological findings"
+        },
+        {
+          "period": "2000-present",
+          "belief": "A complex combination of internal weaknesses, external pressures, and gradual transformation led to Rome\u2019s fall.",
+          "status": "current",
+          "authority": "Contemporary historians and interdisciplinary studies"
+        }
+      ],
+      "lesson": "Historical events are rarely caused by single factors but by complex interplays."
+    },
+    {
+      "id": "temporal_expanded_007",
+      "type": "temporal_conflict",
+      "domain": "medical discoveries",
+      "title": "Bloodletting Practice",
+      "timeline": [
+        {
+          "period": "1700-1900",
+          "belief": "Bloodletting cures many diseases by balancing bodily humors.",
+          "status": "accepted",
+          "authority": "Traditional Western medicine"
+        },
+        {
+          "period": "1900-1950",
+          "belief": "Bloodletting recognized as largely ineffective and sometimes harmful.",
+          "status": "transitional",
+          "authority": "Advances in pathology and germ theory"
+        },
+        {
+          "period": "1950-present",
+          "belief": "Bloodletting is obsolete except in rare conditions like hemochromatosis.",
+          "status": "current",
+          "authority": "Modern medical consensus"
+        }
+      ],
+      "lesson": "Medical treatments must be continuously evaluated and discarded if ineffective or harmful."
+    },
+    {
+      "id": "temporal_expanded_008",
+      "type": "temporal_conflict",
+      "domain": "physics revisions",
+      "title": "Newtonian to Relativistic Gravity",
+      "timeline": [
+        {
+          "period": "1700-1900",
+          "belief": "Gravity is a force acting at a distance as described by Newton\u2019s laws.",
+          "status": "accepted",
+          "authority": "Isaac Newton and classical physics"
+        },
+        {
+          "period": "1900-1930",
+          "belief": "Gravity described as curvature of spacetime in General Relativity.",
+          "status": "transitional",
+          "authority": "Albert Einstein and early experimental confirmation"
+        },
+        {
+          "period": "1930-present",
+          "belief": "General Relativity is the accurate model for gravity at large scales; Newtonian approximation valid at low speeds.",
+          "status": "current",
+          "authority": "Physics community and experimental tests"
+        }
+      ],
+      "lesson": "Scientific paradigms can shift from intuitive forces to abstract concepts with predictive power."
+    },
+    {
+      "id": "temporal_expanded_009",
+      "type": "temporal_conflict",
+      "domain": "nutritional science",
+      "title": "Cholesterol and Heart Disease",
+      "timeline": [
+        {
+          "period": "1950-1980",
+          "belief": "Dietary cholesterol directly raises blood cholesterol leading to heart disease.",
+          "status": "accepted",
+          "authority": "Early lipid hypothesis and dietary guidelines"
+        },
+        {
+          "period": "1980-2010",
+          "belief": "Dietary cholesterol impact varies; saturated fats and trans fats more influential.",
+          "status": "transitional",
+          "authority": "Lipid research and epidemiology"
+        },
+        {
+          "period": "2010-present",
+          "belief": "Dietary cholesterol has minimal impact on blood cholesterol for most people; focus on overall dietary patterns.",
+          "status": "current",
+          "authority": "American Heart Association and nutrition science"
+        }
+      ],
+      "lesson": "Nutritional science must adapt as new evidence clarifies complex biological responses."
+    },
+    {
+      "id": "temporal_expanded_010",
+      "type": "temporal_conflict",
+      "domain": "psychological theories",
+      "title": "Learning Theory: Behaviorism to Cognitive Psychology",
+      "timeline": [
+        {
+          "period": "1920-1960",
+          "belief": "Behaviorism explains all learning via stimulus-response without internal mental states.",
+          "status": "accepted",
+          "authority": "Watson, Skinner and behaviorist schools"
+        },
+        {
+          "period": "1960-1980",
+          "belief": "Cognitive processes like memory and problem-solving important in learning.",
+          "status": "transitional",
+          "authority": "Emergence of cognitive psychology"
+        },
+        {
+          "period": "1980-present",
+          "belief": "Learning involves complex interactions of behavior, cognition, emotions, and social context.",
+          "status": "current",
+          "authority": "Contemporary psychological research"
+        }
+      ],
+      "lesson": "Models improve by incorporating previously ignored internal processes and contexts."
+    },
+    {
+      "id": "temporal_expanded_011",
+      "type": "temporal_conflict",
+      "domain": "economic models",
+      "title": "Effectiveness of Monetary Policy",
+      "timeline": [
+        {
+          "period": "1950-1970",
+          "belief": "Monetary policy is effective and predictable in controlling inflation and unemployment.",
+          "status": "accepted",
+          "authority": "Keynesian Economics"
+        },
+        {
+          "period": "1970-1990",
+          "belief": "Monetary policy effects uncertain; rational expectations reduce impact.",
+          "status": "transitional",
+          "authority": "Monetarist and New Classical critiques"
+        },
+        {
+          "period": "1990-present",
+          "belief": "Monetary policy effective but subject to lags, expectations, and global factors.",
+          "status": "current",
+          "authority": "New Keynesian consensus and central banks"
+        }
+      ],
+      "lesson": "Economic policy tools have limits and must be applied with nuanced understanding."
+    },
+    {
+      "id": "temporal_expanded_012",
+      "type": "temporal_conflict",
+      "domain": "historical reinterpretations",
+      "title": "Causes of the American Civil War",
+      "timeline": [
+        {
+          "period": "1800-1950",
+          "belief": "Civil War caused mainly by states' rights issues.",
+          "status": "accepted",
+          "authority": "Lost Cause narrative and early histories"
+        },
+        {
+          "period": "1950-2000",
+          "belief": "Slavery recognized as central cause, with states\u2019 rights as secondary.",
+          "status": "transitional",
+          "authority": "Civil Rights movement era scholarship"
+        },
+        {
+          "period": "2000-present",
+          "belief": "Slavery and economic, political, and social tensions intertwined as root causes.",
+          "status": "current",
+          "authority": "Contemporary historians and academia"
+        }
+      ],
+      "lesson": "Historical narratives evolve with societal values and broadened evidence."
+    },
+    {
+      "id": "temporal_expanded_013",
+      "type": "temporal_conflict",
+      "domain": "medical discoveries",
+      "title": "Polio Transmission and Prevention",
+      "timeline": [
+        {
+          "period": "1900-1950",
+          "belief": "Polio transmitted primarily through direct contact and respiratory droplets.",
+          "status": "accepted",
+          "authority": "Early epidemiology and medical consensus"
+        },
+        {
+          "period": "1950-1980",
+          "belief": "Fecal-oral route is main transmission pathway; improved sanitation crucial.",
+          "status": "transitional",
+          "authority": "Epidemiological studies and vaccine development"
+        },
+        {
+          "period": "1980-present",
+          "belief": "Polio primarily transmitted fecal-orally; vaccines effectively prevent spread.",
+          "status": "current",
+          "authority": "WHO and global eradication programs"
+        }
+      ],
+      "lesson": "Understanding transmission pathways is essential for effective disease control."
+    },
+    {
+      "id": "temporal_expanded_014",
+      "type": "temporal_conflict",
+      "domain": "physics revisions",
+      "title": "Atomic Model Evolution",
+      "timeline": [
+        {
+          "period": "1900-1915",
+          "belief": "Atoms are indivisible solid spheres.",
+          "status": "accepted",
+          "authority": "Dalton\u2019s atomic theory"
+        },
+        {
+          "period": "1915-1930",
+          "belief": "Atoms have nuclei with electrons orbiting like planets.",
+          "status": "transitional",
+          "authority": "Rutherford and Bohr atomic models"
+        },
+        {
+          "period": "1930-present",
+          "belief": "Quantum mechanics governs electron behavior; atoms have probabilistic electron clouds.",
+          "status": "current",
+          "authority": "Quantum theory and atomic physics"
+        }
+      ],
+      "lesson": "Scientific models grow in sophistication as better experimental data emerge."
+    },
+    {
+      "id": "temporal_expanded_015",
+      "type": "temporal_conflict",
+      "domain": "nutritional science",
+      "title": "Vitamin C and Common Cold",
+      "timeline": [
+        {
+          "period": "1930-1970",
+          "belief": "Vitamin C prevents and cures the common cold.",
+          "status": "accepted",
+          "authority": "Linus Pauling and popular belief"
+        },
+        {
+          "period": "1970-2000",
+          "belief": "Vitamin C may slightly reduce duration but does not prevent colds.",
+          "status": "transitional",
+          "authority": "Clinical trials and meta-analyses"
+        },
+        {
+          "period": "2000-present",
+          "belief": "Vitamin C supplementation has limited benefit in cold prevention for general population.",
+          "status": "current",
+          "authority": "Cochrane reviews and health agencies"
+        }
+      ],
+      "lesson": "Popular health claims require rigorous testing to confirm efficacy."
+    },
+    {
+      "id": "temporal_expanded_016",
+      "type": "temporal_conflict",
+      "domain": "psychological theories",
+      "title": "Nature vs Nurture in Development",
+      "timeline": [
+        {
+          "period": "1900-1950",
+          "belief": "Human behavior and traits determined mainly by genetics (nature).",
+          "status": "accepted",
+          "authority": "Early geneticists and eugenics proponents"
+        },
+        {
+          "period": "1950-1990",
+          "belief": "Environment (nurture) plays a dominant role; behaviorism emphasized.",
+          "status": "transitional",
+          "authority": "Behaviorist psychology and social theories"
+        },
+        {
+          "period": "1990-present",
+          "belief": "Human development results from interplay between genes and environment.",
+          "status": "current",
+          "authority": "Epigenetics and developmental psychology"
+        }
+      ],
+      "lesson": "Human traits emerge from complex interactions of biology and environment."
+    },
+    {
+      "id": "temporal_expanded_017",
+      "type": "temporal_conflict",
+      "domain": "economic models",
+      "title": "Role of Government in Economy",
+      "timeline": [
+        {
+          "period": "1920-1970",
+          "belief": "Government intervention necessary for economic stability.",
+          "status": "accepted",
+          "authority": "Keynesian economics and New Deal policies"
+        },
+        {
+          "period": "1970-1990",
+          "belief": "Market self-regulation preferred; government intervention often harmful.",
+          "status": "transitional",
+          "authority": "Neoliberal and monetarist thinkers"
+        },
+        {
+          "period": "1990-present",
+          "belief": "Balanced approach with government intervention used as needed to correct market failures.",
+          "status": "current",
+          "authority": "Mainstream economic consensus"
+        }
+      ],
+      "lesson": "Economic policies must be flexible to changing conditions and evidence."
+    },
+    {
+      "id": "temporal_expanded_018",
+      "type": "temporal_conflict",
+      "domain": "historical reinterpretations",
+      "title": "Causes of World War I",
+      "timeline": [
+        {
+          "period": "1920-1960",
+          "belief": "Germany solely responsible for causing WWI.",
+          "status": "accepted",
+          "authority": "Treaty of Versailles and Allied narratives"
+        },
+        {
+          "period": "1960-1990",
+          "belief": "Shared responsibility among multiple European powers due to alliances and militarism.",
+          "status": "transitional",
+          "authority": "Revisionist historians"
+        },
+        {
+          "period": "1990-present",
+          "belief": "Complex causes including nationalism, imperialism, militarism, and systemic failures across nations.",
+          "status": "current",
+          "authority": "Contemporary historical consensus"
+        }
+      ],
+      "lesson": "Complex historical events often require multi-causal explanations."
+    },
+    {
+      "id": "temporal_expanded_019",
+      "type": "temporal_conflict",
+      "domain": "medical discoveries",
+      "title": "Smoking and Lung Cancer",
+      "timeline": [
+        {
+          "period": "1900-1950",
+          "belief": "Smoking is not linked to lung cancer.",
+          "status": "accepted",
+          "authority": "Tobacco industry and some medical authorities"
+        },
+        {
+          "period": "1950-1980",
+          "belief": "Strong epidemiological evidence links smoking to lung cancer.",
+          "status": "transitional",
+          "authority": "Surgeon General\u2019s reports and scientific studies"
+        },
+        {
+          "period": "1980-present",
+          "belief": "Smoking is established as primary cause of lung cancer and other diseases.",
+          "status": "current",
+          "authority": "Public health organizations worldwide"
+        }
+      ],
+      "lesson": "Public health policies evolve as scientific evidence accumulates."
+    },
+    {
+      "id": "temporal_expanded_020",
+      "type": "temporal_conflict",
+      "domain": "psychological theories",
+      "title": "Homosexuality Classification",
+      "timeline": [
+        {
+          "period": "1900-1973",
+          "belief": "Homosexuality classified as a mental disorder.",
+          "status": "accepted",
+          "authority": "DSM I and DSM II"
+        },
+        {
+          "period": "1973-1990",
+          "belief": "Debate leads to removal of homosexuality as disorder; some residual stigma remains.",
+          "status": "transitional",
+          "authority": "American Psychiatric Association decisions"
+        },
+        {
+          "period": "1990-present",
+          "belief": "Homosexuality is a normal variation of human sexuality; focus on rights and mental health support.",
+          "status": "current",
+          "authority": "Psychological and human rights organizations"
+        }
+      ],
+      "lesson": "Social and scientific views can evolve together in understanding human diversity."
+    }
+  ]
+}

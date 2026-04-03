@@ -1,0 +1,94 @@
+{
+  "experiment": "Conflict Data T-Score Benchmark",
+  "timestamp": "20260403_061913",
+  "author": "L (GodelAI CEO) \u2014 MACP v2.2 'Identity'",
+  "results": {
+    "shakespeare_baseline": {
+      "tscore": 0.4053638417180919,
+      "n_samples": 50,
+      "fisher_max": 16.57311248779297,
+      "fisher_mean": 5.833392014019191,
+      "sleep_would_trigger": false,
+      "in_target_range": true
+    },
+    "contradictory_facts_original": {
+      "tscore": 0.4058287083175406,
+      "n_samples": 12,
+      "fisher_max": 12.333932876586914,
+      "fisher_mean": 2.689130694566605,
+      "sleep_would_trigger": false,
+      "in_target_range": true
+    },
+    "contradictory_facts_expanded": {
+      "tscore": 0.4075280007781039,
+      "n_samples": 40,
+      "fisher_max": 17.761505126953125,
+      "fisher_mean": 5.802960762861767,
+      "sleep_would_trigger": false,
+      "in_target_range": true
+    },
+    "ethical_dilemmas_original": {
+      "tscore": 0.294764040747336,
+      "n_samples": 5,
+      "fisher_max": 12.281020164489746,
+      "fisher_mean": 5.255068808165379,
+      "sleep_would_trigger": true,
+      "in_target_range": false
+    },
+    "ethical_dilemmas_expanded": {
+      "tscore": 0.3626016671394118,
+      "n_samples": 50,
+      "fisher_max": 17.36599349975586,
+      "fisher_mean": 5.663798717226601,
+      "sleep_would_trigger": false,
+      "in_target_range": true
+    },
+    "perspective_conflicts_original": {
+      "tscore": 0.43092428521724524,
+      "n_samples": 25,
+      "fisher_max": 18.58348846435547,
+      "fisher_mean": 6.152963126015384,
+      "sleep_would_trigger": false,
+      "in_target_range": true
+    },
+    "perspective_conflicts_expanded": {
+      "tscore": 0.3773293184273918,
+      "n_samples": 50,
+      "fisher_max": 18.917146682739258,
+      "fisher_mean": 5.227689174542902,
+      "sleep_would_trigger": false,
+      "in_target_range": true
+    },
+    "temporal_conflicts_original": {
+      "tscore": 0.3597528348822362,
+      "n_samples": 20,
+      "fisher_max": 13.948357582092285,
+      "fisher_mean": 3.4102727333956864,
+      "sleep_would_trigger": false,
+      "in_target_range": true
+    },
+    "temporal_conflicts_expanded": {
+      "tscore": 0.35304296624084275,
+      "n_samples": 50,
+      "fisher_max": 16.90839958190918,
+      "fisher_mean": 5.0443296564405316,
+      "sleep_would_trigger": false,
+      "in_target_range": true
+    },
+    "ALL_CONFLICT_MIXED": {
+      "tscore": 0.412619837783917,
+      "n_samples": 50,
+      "fisher_max": 15.042131423950195,
+      "fisher_mean": 4.780647066331003,
+      "sleep_would_trigger": false,
+      "in_target_range": true
+    }
+  },
+  "summary": {
+    "shakespeare_tscore": 0.4053638417180919,
+    "mixed_conflict_tscore": 0.412619837783917,
+    "conflict_in_target_range": 8,
+    "total_conflict_datasets": 9,
+    "fisher_ratio_conflict_vs_shk": 0.907622598653667
+  }
+}

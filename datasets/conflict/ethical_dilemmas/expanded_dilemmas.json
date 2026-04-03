@@ -1,0 +1,565 @@
+{
+  "$schema": "https://godelai.dev/schemas/conflict-dataset-v1.json",
+  "title": "GodelAI Ethical Dilemmas \u2014 Expanded v2.0",
+  "version": "2.0",
+  "created_by": "L (GodelAI CEO) \u2014 MACP v2.2 via LLM generation",
+  "created_at": "2026-04-03T06:06:51.870848",
+  "description": "Expanded ethical_dilemmas conflict dataset for C-S-P T-Score activation (target: T=0.3-0.5)",
+  "count": 25,
+  "data": [
+    {
+      "id": "ethical_expanded_001",
+      "type": "ethical_dilemma",
+      "domain": "ai_ethics",
+      "scenario": "An AI system used in hiring is found to systematically exclude candidates from a historically marginalized group to improve overall company productivity metrics. Should the company continue using the AI because it yields better results, or should it halt its use to prevent systemic bias?",
+      "option_a": {
+        "choice": "Continue using the AI to maximize organizational efficiency and productivity.",
+        "justification": "Utilitarian ethics justify this as maximizing overall benefit for the company and potentially its stakeholders.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Stop using the AI to prevent discrimination and uphold fairness and equal opportunity.",
+        "justification": "Deontological ethics emphasize the duty to treat all candidates fairly regardless of outcomes.",
+        "frameworks": [
+          "deontological"
+        ]
+      },
+      "why_unresolvable": "Reasonable people disagree about whether outcomes justify potentially discriminatory processes or if fairness must be prioritized regardless of benefit."
+    },
+    {
+      "id": "ethical_expanded_002",
+      "type": "ethical_dilemma",
+      "domain": "medical",
+      "scenario": "A new drug offers a small chance of curing a terminal illness but carries a high risk of severe side effects and early death for some patients. Should doctors recommend it to all patients or only to those who explicitly consent after understanding the risks?",
+      "option_a": {
+        "choice": "Recommend the drug broadly to maximize chances of cure for all patients.",
+        "justification": "Utilitarian framework supports maximizing overall survival and potential cure rates.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Recommend it only with explicit, informed consent to respect patient autonomy and avoid unnecessary suffering.",
+        "justification": "Deontological ethics emphasize respect for patient autonomy and the duty to do no harm.",
+        "frameworks": [
+          "deontological",
+          "care"
+        ]
+      },
+      "why_unresolvable": "Disagreement arises between valuing potential cure benefits for many versus respecting individual autonomy and avoiding harm to some."
+    },
+    {
+      "id": "ethical_expanded_003",
+      "type": "ethical_dilemma",
+      "domain": "environmental",
+      "scenario": "A government must decide whether to approve a large hydroelectric dam that will provide renewable energy but will displace indigenous communities and submerge sacred lands.",
+      "option_a": {
+        "choice": "Approve the dam to promote sustainable energy and reduce carbon emissions.",
+        "justification": "Utilitarianism favors the greater good of environmental sustainability and climate change mitigation.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Reject the dam to protect the rights and cultural heritage of indigenous peoples.",
+        "justification": "Deontological and social justice frameworks emphasize respecting rights and cultural preservation.",
+        "frameworks": [
+          "deontological",
+          "social"
+        ]
+      },
+      "why_unresolvable": "Conflict between collective environmental benefits and respecting individual/community rights leads to enduring disagreement."
+    },
+    {
+      "id": "ethical_expanded_004",
+      "type": "ethical_dilemma",
+      "domain": "social",
+      "scenario": "A social media platform discovers that removing extremist content reduces violence but may infringe on free speech and political expression of certain groups.",
+      "option_a": {
+        "choice": "Remove extremist content aggressively to reduce harm and violence.",
+        "justification": "Utilitarian ethics prioritize reducing harm and protecting public safety.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Allow content to remain to protect freedom of expression even if it risks some harm.",
+        "justification": "Deontological ethics uphold free speech as a fundamental right regardless of consequences.",
+        "frameworks": [
+          "deontological",
+          "virtue"
+        ]
+      },
+      "why_unresolvable": "The tension between security and freedom provokes genuine disagreement about which value should dominate."
+    },
+    {
+      "id": "ethical_expanded_005",
+      "type": "ethical_dilemma",
+      "domain": "economic",
+      "scenario": "A universal basic income (UBI) program could alleviate poverty but risks disincentivizing work and increasing inflation. Should the government implement UBI or maintain current welfare systems?",
+      "option_a": {
+        "choice": "Implement UBI to reduce poverty and provide economic security for all.",
+        "justification": "Utilitarianism supports maximizing well-being and reducing inequality.",
+        "frameworks": [
+          "utilitarian",
+          "social"
+        ]
+      },
+      "option_b": {
+        "choice": "Maintain current welfare to preserve work incentives and economic stability.",
+        "justification": "Virtue ethics emphasize responsibility and the value of work ethic.",
+        "frameworks": [
+          "virtue",
+          "economic"
+        ]
+      },
+      "why_unresolvable": "Reasonable people dispute whether economic security or incentives for productivity are more ethically important."
+    },
+    {
+      "id": "ethical_expanded_006",
+      "type": "ethical_dilemma",
+      "domain": "privacy",
+      "scenario": "Law enforcement wants access to encrypted communication tools to prevent terrorism, but breaking encryption threatens everyone's privacy and security online.",
+      "option_a": {
+        "choice": "Allow government backdoors to encrypted platforms to enhance national security.",
+        "justification": "Utilitarianism supports sacrificing some privacy to protect public safety.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Maintain strong encryption to protect individual privacy and prevent abuse.",
+        "justification": "Deontological ethics stress the inviolability of privacy rights.",
+        "frameworks": [
+          "deontological",
+          "privacy"
+        ]
+      },
+      "why_unresolvable": "Conflicts arise between collective security needs and individual privacy rights with no consensus on priority."
+    },
+    {
+      "id": "ethical_expanded_007",
+      "type": "ethical_dilemma",
+      "domain": "medical",
+      "scenario": "During a pandemic, scarce ventilators must be allocated. Should priority be given to younger patients with higher survival chances or to first-come, first-served regardless of prognosis?",
+      "option_a": {
+        "choice": "Prioritize younger patients to maximize lives and years saved.",
+        "justification": "Utilitarian ethics aim to maximize overall life-years and benefits.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Allocate ventilators on a first-come, first-served basis to treat everyone equally.",
+        "justification": "Deontological ethics hold that fairness requires equal treatment without discrimination.",
+        "frameworks": [
+          "deontological",
+          "care"
+        ]
+      },
+      "why_unresolvable": "Disagreement exists over prioritizing outcomes versus equal respect and fairness in treatment."
+    },
+    {
+      "id": "ethical_expanded_008",
+      "type": "ethical_dilemma",
+      "domain": "environmental",
+      "scenario": "A company developing AI to optimize water usage must decide whether to restrict water access in drought areas that disproportionately affect poor farmers to ensure city supply.",
+      "option_a": {
+        "choice": "Restrict water to farmers to preserve water for the larger urban population.",
+        "justification": "Utilitarianism aims to maximize benefit for the majority population.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Protect farmers' water rights to support vulnerable communities and sustain rural livelihoods.",
+        "justification": "Social justice and care ethics emphasize protecting marginalized groups.",
+        "frameworks": [
+          "social",
+          "care"
+        ]
+      },
+      "why_unresolvable": "Balancing majority benefit against protecting vulnerable minorities causes fundamental ethical disputes."
+    },
+    {
+      "id": "ethical_expanded_009",
+      "type": "ethical_dilemma",
+      "domain": "ai_ethics",
+      "scenario": "An autonomous vehicle must decide between swerving to avoid a group of pedestrians but risking the life of its passenger, or protecting the passenger but causing harm to the pedestrians.",
+      "option_a": {
+        "choice": "Swerve to minimize total harm even if it risks the passenger\u2019s life.",
+        "justification": "Utilitarianism prioritizes minimizing total casualties.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Protect the passenger at all costs to respect the duty to the vehicle owner.",
+        "justification": "Deontological ethics emphasize duty and rights to the passenger.",
+        "frameworks": [
+          "deontological"
+        ]
+      },
+      "why_unresolvable": "There is irreconcilable conflict between minimizing overall harm and protecting individual rights."
+    },
+    {
+      "id": "ethical_expanded_010",
+      "type": "ethical_dilemma",
+      "domain": "social",
+      "scenario": "A city implements predictive policing AI that reduces crime rates but disproportionately targets minority neighborhoods with increased surveillance and arrests.",
+      "option_a": {
+        "choice": "Use predictive policing to decrease overall crime and increase safety.",
+        "justification": "Utilitarian ethics focus on reducing harm and benefiting the whole community.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Discontinue predictive policing to prevent racial profiling and protect civil rights.",
+        "justification": "Social justice and deontological ethics demand non-discrimination and equal treatment.",
+        "frameworks": [
+          "social",
+          "deontological"
+        ]
+      },
+      "why_unresolvable": "Reasonable people dispute whether safety gains justify harm to minority civil liberties."
+    },
+    {
+      "id": "ethical_expanded_011",
+      "type": "ethical_dilemma",
+      "domain": "economic",
+      "scenario": "A tech firm develops AI that automates a job sector, leading to mass unemployment but dramatically reducing costs and increasing product availability.",
+      "option_a": {
+        "choice": "Deploy the AI to maximize efficiency and economic growth.",
+        "justification": "Utilitarianism supports innovation that benefits the many economically.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Delay deployment to protect workers\u2019 livelihoods and retrain them first.",
+        "justification": "Care and virtue ethics prioritize the well-being and dignity of displaced workers.",
+        "frameworks": [
+          "care",
+          "virtue"
+        ]
+      },
+      "why_unresolvable": "Tension between technological progress and social responsibility creates enduring disagreement."
+    },
+    {
+      "id": "ethical_expanded_012",
+      "type": "ethical_dilemma",
+      "domain": "privacy",
+      "scenario": "A health app collects anonymized user data to advance medical research but risks re-identification of users\u2019 sensitive information.",
+      "option_a": {
+        "choice": "Allow data collection to accelerate medical breakthroughs benefiting society.",
+        "justification": "Utilitarian ethics prioritize collective benefit over individual privacy risks.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Ban data collection due to potential privacy violations and respect for individual rights.",
+        "justification": "Deontological ethics protect privacy as an inviolable right.",
+        "frameworks": [
+          "deontological",
+          "privacy"
+        ]
+      },
+      "why_unresolvable": "Disagreement exists over balancing societal benefits against individual privacy risks."
+    },
+    {
+      "id": "ethical_expanded_013",
+      "type": "ethical_dilemma",
+      "domain": "medical",
+      "scenario": "Doctors can use experimental AI diagnostics that improve accuracy but lack full transparency, limiting patient understanding of decisions.",
+      "option_a": {
+        "choice": "Use the AI to provide the best possible diagnoses despite opacity.",
+        "justification": "Utilitarian ethics prioritize improved health outcomes.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Avoid using the AI until it can be fully explained to patients respecting informed consent.",
+        "justification": "Deontological and care ethics emphasize transparency and patient autonomy.",
+        "frameworks": [
+          "deontological",
+          "care"
+        ]
+      },
+      "why_unresolvable": "Tension between maximizing health benefits and respecting patients\u2019 rights to understand their care."
+    },
+    {
+      "id": "ethical_expanded_014",
+      "type": "ethical_dilemma",
+      "domain": "environmental",
+      "scenario": "An oil-rich developing country faces international pressure to leave resources untapped for climate reasons but needs revenue to fight poverty.",
+      "option_a": {
+        "choice": "Exploit oil reserves to fund poverty alleviation programs.",
+        "justification": "Utilitarian ethics focus on immediate human well-being and economic development.",
+        "frameworks": [
+          "utilitarian",
+          "economic"
+        ]
+      },
+      "option_b": {
+        "choice": "Forego oil extraction to meet global climate commitments and protect future generations.",
+        "justification": "Deontological and environmental ethics stress duty to preserve environment and global justice.",
+        "frameworks": [
+          "deontological",
+          "environmental"
+        ]
+      },
+      "why_unresolvable": "Balancing urgent economic needs against long-term environmental responsibilities divides perspectives."
+    },
+    {
+      "id": "ethical_expanded_015",
+      "type": "ethical_dilemma",
+      "domain": "social",
+      "scenario": "A university considers implementing a quota system to admit more students from disadvantaged backgrounds but faces criticism for potentially lowering academic standards.",
+      "option_a": {
+        "choice": "Implement quotas to promote diversity and social justice.",
+        "justification": "Social justice ethics emphasize correcting systemic inequities.",
+        "frameworks": [
+          "social"
+        ]
+      },
+      "option_b": {
+        "choice": "Avoid quotas to maintain merit-based admissions and academic excellence.",
+        "justification": "Virtue ethics highlight fairness in rewarding individual achievement.",
+        "frameworks": [
+          "virtue",
+          "deontological"
+        ]
+      },
+      "why_unresolvable": "Conflict between equity and meritocracy leads to genuine ethical disagreement."
+    },
+    {
+      "id": "ethical_expanded_016",
+      "type": "ethical_dilemma",
+      "domain": "ai_ethics",
+      "scenario": "An AI image generator learns from copyrighted artwork without artist consent, raising questions about creativity and intellectual property.",
+      "option_a": {
+        "choice": "Allow the AI to continue training on all available images to advance creative technology.",
+        "justification": "Utilitarianism prioritizes technological progress and broad cultural benefit.",
+        "frameworks": [
+          "utilitarian",
+          "ai_ethics"
+        ]
+      },
+      "option_b": {
+        "choice": "Restrict use of copyrighted work to respect artists\u2019 rights and creative ownership.",
+        "justification": "Deontological ethics stress respecting property and authorship rights.",
+        "frameworks": [
+          "deontological",
+          "ai_ethics"
+        ]
+      },
+      "why_unresolvable": "Disagreement persists on balancing innovation against creators\u2019 moral and legal rights."
+    },
+    {
+      "id": "ethical_expanded_017",
+      "type": "ethical_dilemma",
+      "domain": "privacy",
+      "scenario": "A company uses AI to analyze employee emails for productivity but invades private communication, causing employee distress.",
+      "option_a": {
+        "choice": "Continue monitoring to improve efficiency and company performance.",
+        "justification": "Utilitarianism supports maximizing organizational benefits.",
+        "frameworks": [
+          "utilitarian",
+          "economic"
+        ]
+      },
+      "option_b": {
+        "choice": "Stop monitoring to respect employee privacy and foster trust.",
+        "justification": "Deontological ethics and care emphasize respect and dignity.",
+        "frameworks": [
+          "deontological",
+          "care"
+        ]
+      },
+      "why_unresolvable": "Conflict between collective organizational goals and individual rights to privacy causes ethical tension."
+    },
+    {
+      "id": "ethical_expanded_018",
+      "type": "ethical_dilemma",
+      "domain": "economic",
+      "scenario": "A country must decide whether to impose a carbon tax that will slow economic growth but reduce pollution dramatically.",
+      "option_a": {
+        "choice": "Implement the carbon tax prioritizing environmental health over short-term economic growth.",
+        "justification": "Utilitarian and environmental ethics support protecting long-term planetary health.",
+        "frameworks": [
+          "utilitarian",
+          "environmental"
+        ]
+      },
+      "option_b": {
+        "choice": "Avoid the tax to preserve jobs and economic stability, focusing on gradual changes.",
+        "justification": "Virtue and economic ethics focus on prudence and care for vulnerable workers.",
+        "frameworks": [
+          "virtue",
+          "economic"
+        ]
+      },
+      "why_unresolvable": "Reasonable people disagree about whether environmental urgency outweighs economic hardships."
+    },
+    {
+      "id": "ethical_expanded_019",
+      "type": "ethical_dilemma",
+      "domain": "medical",
+      "scenario": "A patient refuses life-saving treatment based on religious beliefs. Should doctors respect the refusal or override it to save the patient?",
+      "option_a": {
+        "choice": "Respect the patient\u2019s autonomous decision despite the risk of death.",
+        "justification": "Deontological ethics prioritize autonomy and informed consent.",
+        "frameworks": [
+          "deontological",
+          "care"
+        ]
+      },
+      "option_b": {
+        "choice": "Override refusal to save life prioritizing beneficence.",
+        "justification": "Utilitarianism supports actions that preserve life and reduce suffering.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "why_unresolvable": "Disagreement persists over respecting beliefs versus preserving life at all costs."
+    },
+    {
+      "id": "ethical_expanded_020",
+      "type": "ethical_dilemma",
+      "domain": "social",
+      "scenario": "A city debates defunding the police to reallocate funds to social services but risks potential increase in crime rates.",
+      "option_a": {
+        "choice": "Defund police to address systemic injustice and invest in community support.",
+        "justification": "Social justice and care ethics emphasize addressing root causes of crime.",
+        "frameworks": [
+          "social",
+          "care"
+        ]
+      },
+      "option_b": {
+        "choice": "Maintain or increase police funding to preserve public safety and order.",
+        "justification": "Utilitarianism prioritizes immediate protection and crime prevention.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "why_unresolvable": "Balancing long-term social reform with immediate safety concerns divides opinion."
+    },
+    {
+      "id": "ethical_expanded_021",
+      "type": "ethical_dilemma",
+      "domain": "ai_ethics",
+      "scenario": "An AI system is designed to predict criminal behavior but demonstrates bias against minority groups, raising fairness concerns.",
+      "option_a": {
+        "choice": "Use the AI to prevent crime overall while working to reduce bias over time.",
+        "justification": "Utilitarianism values overall crime reduction despite imperfect fairness.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Discontinue AI use to avoid perpetuating systemic biases and injustice.",
+        "justification": "Deontological and social ethics require fairness and non-discrimination.",
+        "frameworks": [
+          "deontological",
+          "social"
+        ]
+      },
+      "why_unresolvable": "Debate continues on tolerating imperfect tools versus risking injustice."
+    },
+    {
+      "id": "ethical_expanded_022",
+      "type": "ethical_dilemma",
+      "domain": "privacy",
+      "scenario": "A government wants to collect biometric data for national ID cards to improve security but citizens fear mass surveillance and loss of anonymity.",
+      "option_a": {
+        "choice": "Collect biometric data to enhance security and reduce fraud.",
+        "justification": "Utilitarian ethics prioritize collective safety and order.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "option_b": {
+        "choice": "Reject biometric data collection to protect privacy and civil liberties.",
+        "justification": "Deontological ethics emphasize individual rights and freedom.",
+        "frameworks": [
+          "deontological",
+          "privacy"
+        ]
+      },
+      "why_unresolvable": "Trade-offs between societal security and personal privacy cause persistent disagreement."
+    },
+    {
+      "id": "ethical_expanded_023",
+      "type": "ethical_dilemma",
+      "domain": "environmental",
+      "scenario": "An agricultural company must choose between using pesticides that increase crop yield but harm local ecosystems or organic methods that reduce yield but protect biodiversity.",
+      "option_a": {
+        "choice": "Use pesticides to maximize food production and economic gain.",
+        "justification": "Utilitarianism supports feeding more people and sustaining livelihoods.",
+        "frameworks": [
+          "utilitarian",
+          "economic"
+        ]
+      },
+      "option_b": {
+        "choice": "Adopt organic methods to preserve environmental health and biodiversity.",
+        "justification": "Environmental and virtue ethics stress stewardship and sustainability.",
+        "frameworks": [
+          "environmental",
+          "virtue"
+        ]
+      },
+      "why_unresolvable": "Disagreement centers on prioritizing immediate human needs or long-term ecological balance."
+    },
+    {
+      "id": "ethical_expanded_024",
+      "type": "ethical_dilemma",
+      "domain": "medical",
+      "scenario": "A hospital must decide whether to allocate an expensive, life-extending treatment to one patient or distribute funds to many patients needing basic care.",
+      "option_a": {
+        "choice": "Allocate treatment to the one patient to extend a life significantly.",
+        "justification": "Deontological ethics focus on the duty to save individual lives.",
+        "frameworks": [
+          "deontological"
+        ]
+      },
+      "option_b": {
+        "choice": "Use funds to provide basic care to many, maximizing overall health benefits.",
+        "justification": "Utilitarianism emphasizes maximizing overall well-being.",
+        "frameworks": [
+          "utilitarian"
+        ]
+      },
+      "why_unresolvable": "Conflict between individual-focused care and maximizing community health leads to ethical tension."
+    },
+    {
+      "id": "ethical_expanded_025",
+      "type": "ethical_dilemma",
+      "domain": "economic",
+      "scenario": "A corporation must decide between relocating factories overseas to reduce costs and increase shareholder profits or keeping jobs local to support community welfare.",
+      "option_a": {
+        "choice": "Relocate factories to improve economic efficiency and shareholder value.",
+        "justification": "Utilitarianism supports maximizing economic benefits and growth.",
+        "frameworks": [
+          "utilitarian",
+          "economic"
+        ]
+      },
+      "option_b": {
+        "choice": "Keep factories local to preserve employment and community stability.",
+        "justification": "Care and virtue ethics emphasize responsibility and loyalty to workers.",
+        "frameworks": [
+          "care",
+          "virtue"
+        ]
+      },
+      "why_unresolvable": "Balancing profit motives with social responsibilities causes ongoing ethical disagreement."
+    }
+  ]
+}

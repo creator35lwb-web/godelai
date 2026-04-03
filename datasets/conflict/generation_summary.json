@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-04-03T06:08:49.823052",
+  "total_items": 85,
+  "previous_total": 22,
+  "results": {
+    "contradictory_facts": {
+      "count": 20,
+      "file": "/home/ubuntu/godelai/datasets/conflict/contradictory_facts/expanded_paradoxes.json"
+    },
+    "ethical_dilemmas": {
+      "count": 25,
+      "file": "/home/ubuntu/godelai/datasets/conflict/ethical_dilemmas/expanded_dilemmas.json"
+    },
+    "perspective_conflicts": {
+      "count": 20,
+      "file": "/home/ubuntu/godelai/datasets/conflict/perspective_conflicts/expanded_perspectives.json"
+    },
+    "temporal_conflicts": {
+      "count": 20,
+      "file": "/home/ubuntu/godelai/datasets/conflict/temporal_conflicts/expanded_temporal.json"
+    }
+  }
+}

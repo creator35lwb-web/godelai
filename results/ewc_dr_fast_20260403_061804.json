@@ -1,0 +1,52 @@
+{
+  "experiment": "EWC-DR Fast Benchmark",
+  "timestamp": "20260403_061804",
+  "author": "L (GodelAI CEO) \u2014 MACP v2.2 'Identity'",
+  "config": {
+    "seq_len": 50,
+    "batch_size": 32,
+    "hidden": 128,
+    "layers": 2,
+    "epochs_a": 10,
+    "epochs_b": 10,
+    "lr": 0.001,
+    "ewc_lambda": 0.4,
+    "dead_threshold": 0.001,
+    "reversal_strength": 0.05,
+    "fisher_samples": 100
+  },
+  "results": [
+    {
+      "name": "Standard (No EWC)",
+      "mode": "standard",
+      "loss_a1": 1.5679317353263733,
+      "loss_a2": 1.5868406693140666,
+      "loss_b": 1.4217510090933905,
+      "forgetting": 0.018908933987693333
+    },
+    {
+      "name": "Vanilla EWC",
+      "mode": "ewc",
+      "loss_a1": 1.5679317353263733,
+      "loss_a2": 1.586833671917991,
+      "loss_b": 1.4217830782844907,
+      "forgetting": 0.018901936591617652
+    },
+    {
+      "name": "EWC-DR (Logits Reversal)",
+      "mode": "ewcdr",
+      "loss_a1": 1.5679317353263733,
+      "loss_a2": 1.5868406693140666,
+      "loss_b": 1.4217510090933905,
+      "forgetting": 0.018908933987693333
+    }
+  ],
+  "summary": {
+    "baseline_forgetting": 0.018908933987693333,
+    "vanilla_ewc_forgetting": 0.018901936591617652,
+    "ewc_dr_forgetting": 0.018908933987693333,
+    "vanilla_ewc_improvement_pct": 0.037005767116406546,
+    "ewc_dr_improvement_pct": 0.0,
+    "ewc_dr_beats_vanilla": false
+  }
+}

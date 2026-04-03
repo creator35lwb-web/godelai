@@ -1,0 +1,10 @@
+{
+  "total_parameters": 198144,
+  "alive_parameters": 0,
+  "dead_parameters": 198144,
+  "dead_fraction": 1.0,
+  "alive_fraction": 0.0,
+  "fisher_mean": 0.0,
+  "fisher_max": 0.0,
+  "samples_used": 0
+}

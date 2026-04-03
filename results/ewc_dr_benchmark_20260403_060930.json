@@ -1,0 +1,52 @@
+{
+  "experiment": "EWC-DR vs Vanilla EWC Benchmark",
+  "timestamp": "20260403_060930",
+  "author": "L (GodelAI CEO) \u2014 MACP v2.2 'Identity'",
+  "config": {
+    "seed": 1337,
+    "seq_length": 50,
+    "batch_size": 32,
+    "hidden_size": 128,
+    "num_layers": 2,
+    "task_a_epochs": 10,
+    "task_b_epochs": 10,
+    "learning_rate": 0.001,
+    "ewc_lambda": 0.4,
+    "ewc_dr_lambda": 0.4,
+    "ewc_dr_dead_threshold": 0.0001,
+    "ewc_dr_reversal_strength": 0.05,
+    "fisher_samples": 200,
+    "device": "cpu"
+  },
+  "results": [
+    {
+      "name": "Standard (No EWC)",
+      "task_a_loss_phase1": 0.0,
+      "task_a_loss_phase2": 0.0,
+      "task_b_loss_final": 0.0,
+      "forgetting": 0.0
+    },
+    {
+      "name": "Vanilla EWC",
+      "task_a_loss_phase1": 0.0,
+      "task_a_loss_phase2": 0.0,
+      "task_b_loss_final": 0.0,
+      "forgetting": 0.0
+    },
+    {
+      "name": "EWC-DR (Logits Reversal)",
+      "task_a_loss_phase1": 0.0,
+      "task_a_loss_phase2": 0.0,
+      "task_b_loss_final": 0.0,
+      "forgetting": 0.0
+    }
+  ],
+  "summary": {
+    "baseline_forgetting": 0.0,
+    "vanilla_ewc_forgetting": 0.0,
+    "ewc_dr_forgetting": 0.0,
+    "vanilla_ewc_improvement_pct": 0.0,
+    "ewc_dr_improvement_pct": 0.0,
+    "ewc_dr_beats_vanilla": false
+  }
+}
