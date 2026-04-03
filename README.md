@@ -12,12 +12,33 @@
 [![MACP & LEP](https://zenodo.org/badge/DOI/10.5281/zenodo.18504478.svg)](https://doi.org/10.5281/zenodo.18504478)
 [![GitHub Discussions](https://img.shields.io/github/discussions/creator35lwb-web/godelai)](https://github.com/creator35lwb-web/godelai/discussions)
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Model-blue)](https://huggingface.co/YSenseAI/godelai-manifesto-v1)
+[![Dataset](https://img.shields.io/badge/🤗%20Dataset-Conflict%20Data-orange)](https://huggingface.co/datasets/YSenseAI/godelai-conflict-data)
 
 > **"The first step toward wisdom is acknowledging what we do not know."**
 
 [🎯 Try the Demo](#-interactive-demo) • [📖 Documentation](#-documentation) • [🚀 Quick Start](#-quick-start) • [💬 Discussions](https://github.com/creator35lwb-web/godelai/discussions)
 
 </div>
+
+---
+
+## 🔥 Latest Result (April 2026)
+
+### Conflict Data Proof — VERDICT: GO
+
+**82.8% forgetting reduction** on our own conflict dataset (domain-incremental learning):
+
+| Method | Avg Forgetting | vs Naive |
+|--------|:-:|:-:|
+| Naive (No Protection) | +1.8364 | baseline |
+| Standard EWC (raw Fisher) | +1.8017 | +1.9% |
+| **GodelAI-EWC (Full C-S-P)** | **+0.3163** | **+82.8%** |
+
+Standard EWC is broken at small scale (+1.9%). GodelAI's Fisher Scaling fixes it — a **43x improvement**.
+
+**Reproduce:** `python3 run_godelai_conflict_proof_v2.py` (deterministic, seed=42)
+
+**Dataset:** [godelai-conflict-data on HuggingFace](https://huggingface.co/datasets/YSenseAI/godelai-conflict-data) — 107 conflict scenarios, 4 categories, open-source (Apache 2.0).
 
 ---
 
@@ -207,6 +228,7 @@ godelai/
 | T-Score Formula | Correctly measures gradient diversity | ✅ Verified |
 | Sleep Protocol | Triggers at T < 0.3 | ✅ Verified |
 | EWC Integration | 21.6% forgetting reduction | ✅ Verified |
+| **Fisher Scaling + EWC** | **82.8% forgetting reduction on conflict data** | **✅ NEW RECORD** |
 | Cross-Platform | 0.0000 variance (Manus + Claude + Colab) | ✅ Verified |
 | **External Validation** | **C-S-P confirmed by SimpleMem paper** | **✅ Verified** |
 | Training Improvement | No improvement over baseline | ❌ Not proven |
@@ -225,7 +247,12 @@ godelai/
 - ✅ **External validation (SimpleMem paper confirms C-S-P)**
 
 ### Q1 2026: Data Engineering Sprint
-- 🔄 Conflict data design & specification
+- ✅ Conflict data design & specification
+- ✅ Conflict dataset expanded (22 → 107 items)
+- ✅ **Fisher Scaling module** — solves the Fisher Scale Problem
+- ✅ **EWC-DR (Logits Reversal)** — dead parameter plasticity
+- ✅ **82.8% forgetting reduction** — proven on our own data
+- ✅ **Dataset released** on [HuggingFace](https://huggingface.co/datasets/YSenseAI/godelai-conflict-data)
 - 🔄 YSenseAI integration research
 - 🔄 Community engagement
 
