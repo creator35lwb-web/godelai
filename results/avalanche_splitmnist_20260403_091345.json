@@ -1,0 +1,76 @@
+{
+  "experiment": "GodelAI vs Avalanche \u2014 SplitMNIST",
+  "timestamp": "20260403_091345",
+  "author": "L (GodelAI CEO) \u2014 MACP v2.2 'Identity'",
+  "recommended_by": "Grok (xAI) external analysis",
+  "config": {
+    "n_experiences": 5,
+    "epochs": 2,
+    "batch_size": 64,
+    "lr": 0.01,
+    "ewc_lambda": 0.4,
+    "model": "SimpleMLP (Avalanche)"
+  },
+  "results": {
+    "naive": {
+      "avg_accuracy": 0.19735,
+      "avg_forgetting": 0.99502,
+      "per_exp_forgetting": {
+        "0": 0.99397,
+        "1": 0.993836,
+        "2": 0.996798,
+        "3": 0.995475
+      }
+    },
+    "avalanche_ewc": {
+      "avg_accuracy": 0.197448,
+      "avg_forgetting": 0.996116,
+      "per_exp_forgetting": {
+        "0": 0.99397,
+        "1": 0.997155,
+        "2": 0.997866,
+        "3": 0.995475
+      },
+      "vs_naive_pct": -0.11
+    },
+    "godelai_ewc": {
+      "avg_accuracy": 0.197492,
+      "avg_forgetting": 0.992393,
+      "per_exp_forgetting": {
+        "0": 0.99196,
+        "1": 0.990991,
+        "2": 0.994664,
+        "3": 0.991956
+      },
+      "vs_naive_pct": 0.26,
+      "sleep_count": 0,
+      "t_score_history": [
+        {
+          "exp": 0,
+          "avg_tscore": 0.9254,
+          "n_steps": 372
+        },
+        {
+          "exp": 1,
+          "avg_tscore": 0.9072,
+          "n_steps": 394
+        },
+        {
+          "exp": 2,
+          "avg_tscore": 0.9182,
+          "n_steps": 352
+        },
+        {
+          "exp": 3,
+          "avg_tscore": 0.9129,
+          "n_steps": 372
+        },
+        {
+          "exp": 4,
+          "avg_tscore": 0.9069,
+          "n_steps": 388
+        }
+      ]
+    }
+  }
+}

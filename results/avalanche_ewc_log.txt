@@ -1,0 +1,25 @@
+-- >> Start of training phase << --
+-- Starting training on experience 0 (Task 0) from train stream --
+Epoch 0 ended.
+Epoch 1 ended.
+-- >> End of training phase << --
+-- >> Start of training phase << --
+-- Starting training on experience 1 (Task 0) from train stream --
+Epoch 0 ended.
+Epoch 1 ended.
+-- >> End of training phase << --
+-- >> Start of training phase << --
+-- Starting training on experience 2 (Task 0) from train stream --
+Epoch 0 ended.
+Epoch 1 ended.
+-- >> End of training phase << --
+-- >> Start of training phase << --
+-- Starting training on experience 3 (Task 0) from train stream --
+Epoch 0 ended.
+Epoch 1 ended.
+-- >> End of training phase << --
+-- >> Start of training phase << --
+-- Starting training on experience 4 (Task 0) from train stream --
+Epoch 0 ended.
+Epoch 1 ended.
+-- >> End of training phase << --
