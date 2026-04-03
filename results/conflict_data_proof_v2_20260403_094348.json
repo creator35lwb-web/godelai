@@ -1,0 +1,105 @@
+{
+  "experiment": "GodelAI Conflict Data Proof v2",
+  "timestamp": "20260403_094348",
+  "author": "L (GodelAI CEO) \u2014 MACP v2.2",
+  "verdict": "GO",
+  "config": {
+    "epochs": 15,
+    "lr": 0.003,
+    "ewc_lambda": 2.0,
+    "model": "ConflictGRU(128,2)"
+  },
+  "results": {
+    "naive": {
+      "condition": "Naive (No Protection)",
+      "forgetting": {
+        "Contradictory Facts": 1.831747,
+        "Ethical Dilemmas": 2.027343,
+        "Perspective Conflicts": 1.649964
+      },
+      "avg_forgetting": 1.836351,
+      "losses_after_training": {
+        "Contradictory Facts": 0.667036,
+        "Ethical Dilemmas": 0.445884,
+        "Perspective Conflicts": 0.537891,
+        "Temporal Conflicts": 0.314546
+      },
+      "final_losses": {
+        "Contradictory Facts": 2.498782,
+        "Ethical Dilemmas": 2.473227,
+        "Perspective Conflicts": 2.187855
+      },
+      "t_scores": {
+        "Contradictory Facts": 0.8689,
+        "Ethical Dilemmas": 0.8645,
+        "Perspective Conflicts": 0.8656,
+        "Temporal Conflicts": 0.8772
+      },
+      "sleep_count": 0,
+      "param_count": 218447
+    },
+    "standard_ewc": {
+      "condition": "Standard EWC (Raw Fisher)",
+      "forgetting": {
+        "Contradictory Facts": 1.828128,
+        "Ethical Dilemmas": 1.983267,
+        "Perspective Conflicts": 1.59367
+      },
+      "avg_forgetting": 1.801688,
+      "losses_after_training": {
+        "Contradictory Facts": 0.667036,
+        "Ethical Dilemmas": 0.437682,
+        "Perspective Conflicts": 0.532398,
+        "Temporal Conflicts": 0.318071
+      },
+      "final_losses": {
+        "Contradictory Facts": 2.495163,
+        "Ethical Dilemmas": 2.42095,
+        "Perspective Conflicts": 2.126068
+      },
+      "t_scores": {
+        "Contradictory Facts": 0.8689,
+        "Ethical Dilemmas": 0.8671,
+        "Perspective Conflicts": 0.8681,
+        "Temporal Conflicts": 0.8763
+      },
+      "sleep_count": 0,
+      "param_count": 218447
+    },
+    "godelai": {
+      "condition": "GodelAI-EWC (Full C-S-P Stack)",
+      "forgetting": {
+        "Contradictory Facts": 0.616692,
+        "Ethical Dilemmas": 0.265659,
+        "Perspective Conflicts": 0.06649
+      },
+      "avg_forgetting": 0.31628,
+      "losses_after_training": {
+        "Contradictory Facts": 0.667036,
+        "Ethical Dilemmas": 1.056667,
+        "Perspective Conflicts": 1.66027,
+        "Temporal Conflicts": 1.727285
+      },
+      "final_losses": {
+        "Contradictory Facts": 1.283728,
+        "Ethical Dilemmas": 1.322325,
+        "Perspective Conflicts": 1.72676
+      },
+      "t_scores": {
+        "Contradictory Facts": 0.8689,
+        "Ethical Dilemmas": 0.8683,
+        "Perspective Conflicts": 0.8581,
+        "Temporal Conflicts": 0.87
+      },
+      "sleep_count": 0,
+      "param_count": 218447
+    }
+  },
+  "summary": {
+    "naive_avg_forgetting": 1.836351,
+    "standard_ewc_avg_forgetting": 1.801688,
+    "godelai_avg_forgetting": 0.31628,
+    "godelai_vs_naive_pct": 82.78,
+    "godelai_vs_ewc_pct": 82.45
+  }
+}
