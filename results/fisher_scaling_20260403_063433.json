@@ -1,0 +1,36 @@
+{
+  "experiment": "Fisher Scaling Validation",
+  "timestamp": "20260403_063433",
+  "author": "L (GodelAI CEO) \u2014 MACP v2.2 'Identity'",
+  "results": [
+    {
+      "name": "No EWC (baseline)",
+      "la1": 2.1323035425610013,
+      "la2": 2.3643798828125,
+      "lb": 1.5620523309707641,
+      "forget": 0.2320763402514987
+    },
+    {
+      "name": "EWC (raw Fisher, \u03bb=0.4)",
+      "la1": 2.1323035425610013,
+      "la2": 2.364328768518236,
+      "lb": 1.5620853185653687,
+      "forget": 0.23202522595723485
+    },
+    {
+      "name": "EWC + Fisher Scaling (\u03bb=2.0)",
+      "la1": 2.1323035425610013,
+      "la2": 2.2913154628541736,
+      "lb": 1.885015082359314,
+      "forget": 0.15901192029317235
+    }
+  ],
+  "summary": {
+    "baseline_forget": 0.2320763402514987,
+    "raw_ewc_forget": 0.23202522595723485,
+    "scaled_ewc_forget": 0.15901192029317235,
+    "raw_ewc_improvement_pct": 0.0220247760751752,
+    "scaled_ewc_improvement_pct": 31.482924919941084,
+    "fisher_scaling_additional_improvement": 31.46090014386591
+  }
+}
