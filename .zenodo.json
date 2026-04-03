@@ -1,9 +1,10 @@
 {
     "title": "GodelAI: A C-S-P Framework for Wisdom-Preserving Language Models",
-    "description": "GodelAI is an open-source small language model framework built on the C-S-P (Compression → State → Propagation) philosophy. This is a defensive publication establishing prior art for the C-S-P framework, including: (1) Gradient Diversity as a wisdom metric, (2) Sleep Protocol for model reflection, (3) Attribution-Aware Loss for ethical traceability, and (4) Propagation Layer Conservation for AI alignment.",
+    "description": "GodelAI is an open-source small language model framework built on the C-S-P (Compression-State-Propagation) philosophy. v3.0.0 establishes prior art for: (1) Fisher Scaling - solved the Fisher Scale Problem (31.5% forgetting reduction), (2) EWC-DR (Logits Reversal) for dead parameters, (3) 82.8% forgetting reduction on conflict data (43x improvement over Standard EWC), (4) FLYWHEEL Self-Recursive Proof (54.6% identity preservation), (5) Semantic T-Score as novel gradient diversity metric, (6) Conflict dataset (107 items) released on HuggingFace.",
     "upload_type": "software",
     "publication_type": "workingpaper",
-    "publication_date": "2025-12-25",
+    "publication_date": "2026-04-04",
+    "version": "v3.0.0",
     "creators": [
         {
             "name": "Lee, Alton",
@@ -22,10 +23,15 @@
         "ethical AI",
         "open source",
         "C-S-P framework",
-        "wisdom preservation",
+        "continual learning",
+        "catastrophic forgetting",
+        "Fisher scaling",
+        "EWC",
+        "identity preservation",
+        "FLYWHEEL",
+        "conflict data",
         "gradient diversity",
-        "sleep protocol",
-        "attribution-aware loss"
+        "semantic T-score"
     ],
     "license": "MIT",
     "access_right": "open",
@@ -34,6 +40,16 @@
             "identifier": "https://github.com/creator35lwb-web/godelai",
             "relation": "isSupplementTo",
             "resource_type": "software"
+        },
+        {
+            "identifier": "https://huggingface.co/YSenseAI/godelai-manifesto-v1",
+            "relation": "isSupplementTo",
+            "resource_type": "other"
+        },
+        {
+            "identifier": "https://huggingface.co/datasets/YSenseAI/godelai-conflict-data",
+            "relation": "isSupplementTo",
+            "resource_type": "dataset"
         },
         {
             "identifier": "https://github.com/creator35lwb-web/YSense-AI-Attribution-Infrastructure",
@@ -51,5 +67,5 @@
             "identifier": "zenodo"
         }
     ],
-    "notes": "This is a defensive publication to establish prior art for the C-S-P (Compression-State-Propagation) framework and its technical implementations. The framework was developed through multi-model collaboration between ChatGPT, Gemini 2.5 Pro, Kimi K2, Grok, and Manus AI, orchestrated by Alton Lee."
+    "notes": "Defensive publication for C-S-P framework v3.0.0 (April 2026): Fisher Scaling (31.5% forgetting reduction), EWC-DR (Logits Reversal), 82.8% forgetting reduction on conflict data, FLYWHEEL Self-Recursive Proof (54.6% identity preservation). Developed through multi-model collaboration (Manus AI, Claude Code, Gemini, Grok, Perplexity) orchestrated by Alton Lee under MACP v2.2 Identity protocol. Zenodo DOIs: Framework (10.5281/zenodo.19411545), Whitepaper (10.5281/zenodo.19411548), MACP (10.5281/zenodo.19411550)."
 }
