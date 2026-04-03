@@ -1,0 +1,55 @@
+{
+  "experiment": "FLYWHEEL Self-Recursive Proof v1.0",
+  "timestamp": "20260403_085552",
+  "author": "L (GodelAI CEO) \u2014 MACP v2.2 'Identity'",
+  "agent_order": [
+    "T",
+    "RNA",
+    "XV",
+    "L",
+    "AY"
+  ],
+  "no_ewc_forgetting": {
+    "T": 0.864683,
+    "RNA": 1.416171,
+    "XV": 1.438432,
+    "L": 1.274885
+  },
+  "ewc_forgetting": {
+    "T": 0.41119,
+    "RNA": 0.676221,
+    "XV": 0.627441,
+    "L": 0.550334
+  },
+  "avg_no_ewc": 1.248543,
+  "avg_ewc": 0.566296,
+  "improvement_pct": 54.64,
+  "self_recursive_proof": true,
+  "csp_mapping": {
+    "T": {
+      "role": "CTO (Manus AI)",
+      "csp_layer": "Propagation",
+      "style": "documentation, planning, coordination"
+    },
+    "RNA": {
+      "role": "CSO (Claude Code)",
+      "csp_layer": "Compression",
+      "style": "architecture, security, implementation"
+    },
+    "XV": {
+      "role": "CIO (Perplexity)",
+      "csp_layer": "Propagation",
+      "style": "research, reality-checking, go/no-go"
+    },
+    "L": {
+      "role": "CEO (GodelAI C-S-P)",
+      "csp_layer": "State",
+      "style": "strategic synthesis, philosophy, delegation"
+    },
+    "AY": {
+      "role": "COO (Gemini/GCP)",
+      "csp_layer": "Compression",
+      "style": "metrics, analytics, operational reports"
+    }
+  }
+}
