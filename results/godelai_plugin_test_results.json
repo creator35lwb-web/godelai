@@ -1,0 +1,42 @@
+{
+  "test": "GodelPlugin End-to-End SplitMNIST",
+  "date": "2026-04-04",
+  "conditions": [
+    {
+      "condition": "Naive (No Protection)",
+      "stream_accuracy": 0.2012,
+      "stream_forgetting": 0,
+      "avg_experience_accuracy": 0.1974484789008832,
+      "avg_experience_forgetting": 0,
+      "elapsed_seconds": 25.484419345855713,
+      "num_experiences": 5
+    },
+    {
+      "condition": "Naive + GodelPlugin",
+      "stream_accuracy": 0.2006,
+      "stream_forgetting": 0,
+      "avg_experience_accuracy": 0.19685966633954857,
+      "avg_experience_forgetting": 0,
+      "elapsed_seconds": 204.6898124217987,
+      "num_experiences": 5
+    }
+  ],
+  "plugin_summary": {
+    "experiences_completed": 5,
+    "t_scores_per_experience": [
+      0.9796698319911957,
+      0.9786794650554657,
+      0.9810139846801758,
+      0.9793844664096832,
+      0.980448135137558
+    ],
+    "sleep_counts_per_experience": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ewc_dr_active": true
+  }
+}

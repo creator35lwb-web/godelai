@@ -443,6 +443,20 @@ class GodelAgent(nn.Module):
             "buffer_size": len(self.t_score_buffer)
         }
 
+    def get_recent_t_score(self):
+        """
+        Get the average T-Score from the recent sliding window.
+        
+        Added in v3.2.0 for Avalanche plugin integration.
+        Read-only convenience method — does not modify state.
+        
+        Returns:
+            float: Average T-Score in the buffer, or 1.0 if no data
+        """
+        if len(self.t_score_buffer) == 0:
+            return 1.0
+        return sum(self.t_score_buffer) / len(self.t_score_buffer)
+
     def reset_variance_tracking(self):
         """
         Reset the T-Score variance tracking buffer.
