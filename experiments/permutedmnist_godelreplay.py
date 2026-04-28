@@ -61,6 +61,18 @@ class GodelMLP(nn.Module):
 
 # ── Config ───────────────────────────────────────────────────────────────────
 
+def _resolve_device() -> str:
+    """P100 is sm_60 — PyTorch ≥2.0 requires sm_70+. Fall back to CPU."""
+    if not torch.cuda.is_available():
+        return "cpu"
+    major, minor = torch.cuda.get_device_capability(0)
+    if major >= 7:
+        return "cuda"
+    print(f"[Warning] GPU sm_{major}{minor} < sm_70 ({torch.cuda.get_device_name(0)}) "
+          f"— falling back to CPU (P100 known incompatibility with current PyTorch).")
+    return "cpu"
+
+
 CONFIG = {
     "n_experiences": 10,
     "seed": 42,
@@ -68,7 +80,7 @@ CONFIG = {
     "train_mb_size": 128,
     "eval_mb_size": 256,
     "lr": 0.001,
-    "device": "cuda" if torch.cuda.is_available() else "cpu",
+    "device": _resolve_device(),
     "ewc_lambda": 400.0,
     "fisher_scaling": "global_max",
     "propagation_gamma": 2.0,
