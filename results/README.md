@@ -11,6 +11,12 @@ results/
 └── colab_runs/       # Google Colab execution logs and screenshots
 ```
 
+## 🔁 GodelReplay — Continual Learning Benchmarks
+
+| File | Date | Benchmark | Key Result |
+|------|------|-----------|------------|
+| `GODELREPLAY_PermutedMNIST_v1.md` | 2026-04-29 | PermutedMNIST 10-task | GodelReplay forgetting=0.1487 vs Replay-only=0.1500 — CONFIRMED |
+
 ## 🪞 Mirror Tests
 
 Tests where the GodelAgent processes excerpts from its own whitepaper, measuring wisdom engagement.
