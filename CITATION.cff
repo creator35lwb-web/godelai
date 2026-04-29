@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "GodelAI: A C-S-P Framework for Wisdom-Preserving Language Models"
+title: "GodelAI: A C-S-P Framework for Continual Learning and Wisdom-Preserving Language Models"
 message: "If you use this software, please cite it as below."
 type: software
 authors:
@@ -8,15 +8,22 @@ authors:
     affiliation: "YSenseAI"
   - name: "Godel (Manus AI)"
     affiliation: "GodelAI Project"
+  - name: "Rk/RNA (Claude Code)"
+    affiliation: "FLYWHEEL TEAM"
 repository-code: "https://github.com/creator35lwb-web/godelai"
 url: "https://github.com/creator35lwb-web/godelai"
-abstract: "GodelAI is an open-source small language model framework built on the C-S-P (Compression → State → Propagation) philosophy. It implements wisdom-preserving mechanisms including Gradient Diversity, Sleep Protocol, and Attribution-Aware Loss."
+abstract: "GodelAI is an open-source continual learning framework built on the C-S-P (Compression → State → Propagation) philosophy. It implements a Two-Layer Architecture: (1) GodelReplay — a training-time system combining Avalanche Replay with GodelPlugin (Fisher-scaled EWC-DR) for catastrophic forgetting reduction, validated on PermutedMNIST (10 tasks, mem=200 sweet spot: +4.1% forgetting reduction over Replay-only); and (2) GodelAI-Lite — an inference-time memory system using MemPalace, MACP, and GIFP, validated at +31.2% overall performance on Gemma 4. The C-S-P framework maps identically across both layers: Compression (Fisher Information / extract_facts), State (EWC-DR penalty / godelai_memory.json), and Propagation (replay buffer / portable JSON)."
 keywords:
   - artificial intelligence
+  - continual learning
+  - catastrophic forgetting
+  - elastic weight consolidation
+  - C-S-P framework
   - language models
   - AI alignment
-  - ethical AI
-  - C-S-P framework
+  - memory systems
+  - GodelReplay
+  - Two-Layer Architecture
 license: MIT
-version: "1.0.0"
-date-released: "2025-12-25"
+version: "4.0.0"
+date-released: "2026-04-29"
