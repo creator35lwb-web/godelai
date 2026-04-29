@@ -16,6 +16,7 @@ results/
 | File | Date | Benchmark | Key Result |
 |------|------|-----------|------------|
 | `GODELREPLAY_PermutedMNIST_v1.md` | 2026-04-29 | PermutedMNIST 10-task | GodelReplay forgetting=0.1487 vs Replay-only=0.1500 — CONFIRMED |
+| `GODELREPLAY_MemSweep_v1.md` | 2026-04-29 | PermutedMNIST mem sweep [50,200,500] | Sweet spot at mem=200: +4.1% delta. Boundary at mem=50: −3.5%. |
 
 ## 🪞 Mirror Tests
 
