@@ -62,3 +62,17 @@ pdflatex main.tex
 | GodelAI-Lite on Gemma 4 | +31.2% overall, 3/3 memory retention |
 | FLYWHEEL Self-Recursive Proof | 54.6% identity preservation |
 
+
+## v2 — arXiv-Standard Upgrade (May 1, 2026)
+
+`GodelAI_TwoLayer_Preprint_v2.pdf` — Rebuilt to full arXiv/NeurIPS-standard readability.
+
+**Fixes vs v1:**
+- Ragged-right body text (no full justification)
+- Abstract properly indented
+- References heading plain black (not teal)
+- All hyperlinks intact and unbroken
+- Cleaner margins and line measure
+- Rebuild script: `python build_pdf_v2.py`
+
+**Upload this file to Zenodo** as a new version of `10.5281/zenodo.19925692`.
