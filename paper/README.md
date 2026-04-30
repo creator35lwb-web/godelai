@@ -1,9 +1,10 @@
-# GodelAI — arXiv Paper
+# GodelAI — Research Paper
 
 **Title:** A Two-Layer Architecture for Continual Learning Identity Preservation:
 Fisher Scaling, Gradient Diversity Monitoring, and Portable Inference-Time Memory
 
-**Status:** Ready for arXiv submission (v1.0)
+**Preprint DOI:** [10.5281/zenodo.19925692](https://doi.org/10.5281/zenodo.19925692)  
+**Status:** Published on Zenodo (2026-05-01) — Ready for arXiv submission (v1.0)
 
 ## Files
 
