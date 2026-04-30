@@ -3,7 +3,7 @@
 **Title:** A Two-Layer Architecture for Continual Learning Identity Preservation:
 Fisher Scaling, Gradient Diversity Monitoring, and Portable Inference-Time Memory
 
-**Preprint DOI:** [10.5281/zenodo.19927649](https://doi.org/10.5281/zenodo.19927649)  
+**Preprint DOI:** [10.5281/zenodo.19928385](https://doi.org/10.5281/zenodo.19928385)  
 **Status:** Published on Zenodo (2026-05-01) — Ready for arXiv submission (v1.0)
 
 ## Files
@@ -75,4 +75,4 @@ pdflatex main.tex
 - Cleaner margins and line measure
 - Rebuild script: `python build_pdf_v2.py`
 
-**Upload this file to Zenodo** as a new version of `10.5281/zenodo.19927649`.
+**Upload this file to Zenodo** as a new version of `10.5281/zenodo.19928385`.

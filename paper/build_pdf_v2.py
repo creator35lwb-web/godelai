@@ -38,18 +38,18 @@ BOX_BORDER    = HexColor("#D4D1CA")
 LINK_COLOR    = TEAL
 
 # ──────────────────────────── Fonts ────────────────────────────
-FONT_DIR  = "/home/user/workspace/godelai-paper/fonts"
-MONO_PATH = "/usr/local/lib/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf"
+import matplotlib
+_MONO_PATH = os.path.join(os.path.dirname(matplotlib.__file__), "mpl-data", "fonts", "ttf")
 
-pdfmetrics.registerFont(TTFont("Inter",      f"{FONT_DIR}/Inter-Regular.ttf"))
-pdfmetrics.registerFont(TTFont("Inter-Bold", f"{FONT_DIR}/Inter-Bold.ttf"))
-pdfmetrics.registerFont(TTFont("Inter-Italic",     f"{FONT_DIR}/Inter-Italic.ttf"))
-pdfmetrics.registerFont(TTFont("Inter-BoldItalic", f"{FONT_DIR}/Inter-BoldItalic.ttf"))
-pdfmetrics.registerFont(TTFont("DMSans-Bold", f"{FONT_DIR}/DMSans-Bold.ttf"))
-pdfmetrics.registerFont(TTFont("DMSans",      f"{FONT_DIR}/DMSans-Regular.ttf"))
-pdfmetrics.registerFont(TTFont("Mono",        f"{MONO_PATH}/DejaVuSansMono.ttf"))
-pdfmetrics.registerFont(TTFont("Mono-Bold",   f"{MONO_PATH}/DejaVuSansMono-Bold.ttf"))
-pdfmetrics.registerFont(TTFont("MathFB",      f"{MONO_PATH}/DejaVuSans.ttf"))  # math fallback for missing glyphs
+pdfmetrics.registerFont(TTFont("Inter",            f"{_MONO_PATH}/DejaVuSans.ttf"))
+pdfmetrics.registerFont(TTFont("Inter-Bold",       f"{_MONO_PATH}/DejaVuSans-Bold.ttf"))
+pdfmetrics.registerFont(TTFont("Inter-Italic",     f"{_MONO_PATH}/DejaVuSans-Oblique.ttf"))
+pdfmetrics.registerFont(TTFont("Inter-BoldItalic", f"{_MONO_PATH}/DejaVuSans-BoldOblique.ttf"))
+pdfmetrics.registerFont(TTFont("DMSans-Bold",      f"{_MONO_PATH}/DejaVuSans-Bold.ttf"))
+pdfmetrics.registerFont(TTFont("DMSans",           f"{_MONO_PATH}/DejaVuSans.ttf"))
+pdfmetrics.registerFont(TTFont("Mono",             f"{_MONO_PATH}/DejaVuSansMono.ttf"))
+pdfmetrics.registerFont(TTFont("Mono-Bold",        f"{_MONO_PATH}/DejaVuSansMono-Bold.ttf"))
+pdfmetrics.registerFont(TTFont("MathFB",           f"{_MONO_PATH}/DejaVuSans.ttf"))
 
 from reportlab.pdfbase.pdfmetrics import registerFontFamily
 registerFontFamily("Inter", normal="Inter", bold="Inter-Bold",
@@ -63,7 +63,7 @@ TOP_MARGIN    = 1.0  * inch
 BOTTOM_MARGIN = 1.0  * inch
 BODY_WIDTH    = PAGE_W - LEFT_MARGIN - RIGHT_MARGIN  # ~6.0 in (5.5–6.0 acceptable)
 
-OUT_PATH = "/home/user/workspace/godelai-paper/GodelAI_TwoLayer_Preprint_v2.pdf"
+OUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "GodelAI_TwoLayer_Preprint_v2.pdf")
 
 # ──────────────────────────── Styles ────────────────────────────
 styles = getSampleStyleSheet()
@@ -365,7 +365,7 @@ story.append(Paragraph(
     f'Dataset:&nbsp; {link("https://huggingface.co/datasets/YSenseAI/godelai-conflict-data")}',
     link_st))
 story.append(Paragraph(
-    f'<b>DOI:</b>&nbsp; {link("https://doi.org/10.5281/zenodo.19927649", "10.5281/zenodo.19927649")}',
+    f'<b>DOI:</b>&nbsp; {link("https://doi.org/10.5281/zenodo.19928385", "10.5281/zenodo.19928385")}',
     link_st))
 
 story.append(Spacer(1, 10))
