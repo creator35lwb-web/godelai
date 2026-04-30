@@ -10,7 +10,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19886315.svg)](https://doi.org/10.5281/zenodo.19886315)
 [![Whitepaper](https://zenodo.org/badge/DOI/10.5281/zenodo.18053612.svg)](https://doi.org/10.5281/zenodo.18053612)
 [![MACP & LEP](https://zenodo.org/badge/DOI/10.5281/zenodo.18504478.svg)](https://doi.org/10.5281/zenodo.18504478)
-[![Preprint](https://zenodo.org/badge/DOI/10.5281/zenodo.19925692.svg)](https://doi.org/10.5281/zenodo.19925692)
+[![Preprint](https://zenodo.org/badge/DOI/10.5281/zenodo.19927649.svg)](https://doi.org/10.5281/zenodo.19927649)
 [![GitHub Discussions](https://img.shields.io/github/discussions/creator35lwb-web/godelai)](https://github.com/creator35lwb-web/godelai/discussions)
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Model-blue)](https://huggingface.co/YSenseAI/godelai-manifesto-v1)
 [![Dataset](https://img.shields.io/badge/🤗%20Dataset-Conflict%20Data-orange)](https://huggingface.co/datasets/YSenseAI/godelai-conflict-data)
@@ -291,7 +291,7 @@ godelai/
 - ✅ **Memory buffer sweep** — [50, 200, 500]; sweet spot at mem=200 (+4.1%)
 - ✅ **Two-Layer Architecture** — GodelReplay (training) + GodelAI-Lite (inference) validated
 - ✅ **Zenodo v4.0.0** — DOI [10.5281/zenodo.19886315](https://doi.org/10.5281/zenodo.19886315)
-- ✅ **Preprint published** — DOI [10.5281/zenodo.19925692](https://doi.org/10.5281/zenodo.19925692) — *A Two-Layer Architecture for Continual Learning Identity Preservation*
+- ✅ **Preprint published** — DOI [10.5281/zenodo.19927649](https://doi.org/10.5281/zenodo.19927649) — *A Two-Layer Architecture for Continual Learning Identity Preservation*
 
 ### Q3-Q4 2026
 - 📋 arXiv submission (`cs.LG`, cross-list `cs.CL`, `cs.AI`)

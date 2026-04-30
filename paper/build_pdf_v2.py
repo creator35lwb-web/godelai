@@ -365,7 +365,7 @@ story.append(Paragraph(
     f'Dataset:&nbsp; {link("https://huggingface.co/datasets/YSenseAI/godelai-conflict-data")}',
     link_st))
 story.append(Paragraph(
-    f'<b>DOI:</b>&nbsp; {link("https://doi.org/10.5281/zenodo.19925692", "10.5281/zenodo.19925692")}',
+    f'<b>DOI:</b>&nbsp; {link("https://doi.org/10.5281/zenodo.19927649", "10.5281/zenodo.19927649")}',
     link_st))
 
 story.append(Spacer(1, 10))

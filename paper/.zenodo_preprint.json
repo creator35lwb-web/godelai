@@ -51,7 +51,7 @@
       "resource_type": "software"
     },
     {
-      "identifier": "https://github.com/creator35lwb-web/godelai/tree/main/datasets/conflict",
+      "identifier": "https://huggingface.co/datasets/YSenseAI/godelai-conflict-data",
       "relation": "isSupplementTo",
       "resource_type": "dataset"
     },
