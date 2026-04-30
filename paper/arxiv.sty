@@ -1,0 +1,47 @@
+% arxiv.sty — arXiv-compatible style for GodelAI paper
+% Compatible with article class, 12pt
+\ProvidesPackage{arxiv}[2026/04/30 arXiv style v1.1]
+
+% ── Page geometry ─────────────────────────────────────────────────────────────
+\RequirePackage{geometry}
+\geometry{
+  letterpaper,
+  top=1.0in, bottom=1.0in,
+  left=1.25in, right=1.25in
+}
+
+% ── Header / footer ───────────────────────────────────────────────────────────
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape Two-Layer Architecture for CL Identity Preservation}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ── Section formatting ────────────────────────────────────────────────────────
+\RequirePackage{titlesec}
+\titleformat{\section}
+  {\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalsize\itshape}{\thesubsubsection}{1em}{}
+
+% ── Paragraph spacing ─────────────────────────────────────────────────────────
+\setlength{\parskip}{4pt plus 1pt}
+\setlength{\parindent}{1.2em}
+
+% ── Abstract formatting ───────────────────────────────────────────────────────
+\renewenvironment{abstract}{%
+  \small
+  \begin{center}{\bfseries Abstract}\end{center}
+  \begin{quotation}
+}{%
+  \end{quotation}
+}
+
+% ── Float spacing ─────────────────────────────────────────────────────────────
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\floatsep}{10pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
