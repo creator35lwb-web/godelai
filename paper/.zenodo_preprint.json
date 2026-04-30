@@ -2,7 +2,7 @@
   "title": "A Two-Layer Architecture for Continual Learning Identity Preservation: Fisher Scaling, Gradient Diversity Monitoring, and Portable Inference-Time Memory",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "publication_date": "2026-04-30",
+  "publication_date": "2026-05-01",
   "description": "We present a Two-Layer Architecture for continual learning identity preservation in small language models (SLMs), addressing both training-time weight forgetting and inference-time context loss within a unified theoretical framework: the Compression–State–Propagation (C-S-P) framework.\n\nAt the training layer, we identify the Fisher Scale Problem: standard EWC silently fails in SLMs when Fisher Information diagonal values collapse to the 1e-4–1e-5 range, rendering the regularisation penalty numerically indistinguishable from zero. We introduce Fisher Scaling and GodelReplay (Fisher-scaled EWC-DR + experience replay), achieving 31.5% forgetting reduction over raw EWC on sequential tasks, 82.8% reduction on our curated Conflict Dataset (43× over standard EWC), and a 4.1% additive improvement over replay-alone at the empirically identified sweet spot of mem=200 across 10 PermutedMNIST tasks.\n\nAt the inference layer, GodelAI-Lite provides persistent episodic memory (MemPalace-Lite), structured reasoning continuity (MACP-Lite), and identity drift governance (GIFP-Lite) to any frozen SLM. Evaluated on Gemma 4: +31.2% overall performance, 3/3 memory retention vs. 0/3 baseline. Zero fine-tuning. Portable JSON memory transfers across model boundaries.\n\nBoth layers implement the same three C-S-P stages, validating a unified structural account. The T-score (gradient diversity diagnostic) and FLYWHEEL Self-Recursive Proof (54.6% identity preservation for the AI agents who built the system) are additional contributions.",
   "access_right": "open",
   "license": "cc-by-4.0",
@@ -51,13 +51,13 @@
       "resource_type": "software"
     },
     {
-      "identifier": "https://huggingface.co/datasets/creator35lwb-web/godelai-conflict-data",
+      "identifier": "https://github.com/creator35lwb-web/godelai/tree/main/datasets/conflict",
       "relation": "isSupplementTo",
       "resource_type": "dataset"
     },
     {
       "identifier": "10.5281/zenodo.19886315",
-      "relation": "isVersionOf",
+      "relation": "documents",
       "resource_type": "software"
     }
   ],
