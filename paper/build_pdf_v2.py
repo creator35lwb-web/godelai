@@ -362,7 +362,7 @@ story.append(Paragraph(
     f'Inference:&nbsp; {link("https://github.com/creator35lwb-web/godelai-lite")}',
     link_st))
 story.append(Paragraph(
-    f'Dataset:&nbsp; {link("https://huggingface.co/datasets/creator35lwb-web/godelai-conflict-data")}',
+    f'Dataset:&nbsp; {link("https://huggingface.co/datasets/YSenseAI/godelai-conflict-data")}',
     link_st))
 story.append(Paragraph(
     f'<b>DOI:</b>&nbsp; {link("https://doi.org/10.5281/zenodo.19925692", "10.5281/zenodo.19925692")}',
@@ -755,7 +755,7 @@ t4 = make_table(
 story.append(KeepTogether(t4))
 story.append(Paragraph(
     f'<b>Table 4.</b> GodelAI Conflict Dataset composition. '
-    f'{link("https://huggingface.co/datasets/creator35lwb-web/godelai-conflict-data")}',
+    f'{link("https://huggingface.co/datasets/YSenseAI/godelai-conflict-data")}',
     caption_st))
 
 story.append(Paragraph("Results.", h3))
